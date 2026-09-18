@@ -403,7 +403,9 @@
   // Setiap kartu sekarang LANGSUNG menautkan ke file bab asli (mis. 1.html),
   // bukan lagi membuka modal berisi placeholder. Ikon peta (📍) tetap membuka
   // pratinjau lokasi historis singkat lewat modal, jika ingin dilihat dulu.
+  // ---------- Render Syllabus Grid ----------
   const gridEl = document.getElementById("chapterGrid");
+
   function renderChapterGrid() {
     const progress = window.SKIProgress ? window.SKIProgress.getSummary() : null;
     gridEl.innerHTML = chapters.map((c) => {
@@ -436,86 +438,18 @@
     lucide.createIcons();
   }
 
-  // ---------- Modal: pratinjau lokasi historis singkat sebelum masuk ke bab ----------
-  const modal = document.getElementById("chapterModal");
-  const modalPanel = modal.querySelector(".modal-panel");
-  const modalContent = document.getElementById("modalContent");
+  // Render grid SEGERA, tidak menunggu progress.js — supaya 16 kartu
+  // selalu muncul walau script progres gagal/timeout.
+  renderChapterGrid();
 
-  function openLocationPreview(id) {
-    const chapter = chapters.find((c) => c.id === id);
-    if (!chapter) return;
-
-    modalContent.innerHTML = `
-      <span class="flex h-10 w-10 items-center justify-center rounded-xl text-sm font-bold ${chapter.isExam ? "bg-gold-500 text-emerald-950" : "bg-emerald-800 text-sand"}">${chapter.id}</span>
-      <p class="mt-4 text-xs font-semibold uppercase tracking-wide text-gold-600">${chapter.phase}</p>
-      <h2 class="mt-2 font-display text-2xl font-semibold leading-tight text-emerald-950 sm:text-[1.7rem]">${chapter.title}</h2>
-
-      <!-- Peta lokasi historis bab ini -->
-      <div class="mt-6 overflow-hidden rounded-2xl border border-emerald-900/10 shadow-premium">
-        <div id="modalMap" class="h-48 w-full"></div>
-        <div class="flex items-center gap-1.5 bg-white/80 px-4 py-2.5 text-xs font-medium text-emerald-900/70">
-          <i data-lucide="map-pin" class="h-3.5 w-3.5 text-gold-500"></i>
-          ${chapter.loc.name}
-        </div>
-      </div>
-
-      <div class="mt-7 flex flex-col gap-3 sm:flex-row">
-        <a href="${chapter.id}.html" class="flex-1 rounded-xl bg-emerald-800 px-5 py-3 text-center text-sm font-semibold text-sand transition hover:bg-emerald-700">
-          Buka Bab Lengkap &amp; Uji Formatif →
-        </a>
-        <button onclick="closeChapter()" class="rounded-xl border border-emerald-900/15 px-5 py-3 text-sm font-semibold text-emerald-900 transition hover:border-emerald-900/30">
-          Tutup
-        </button>
-      </div>
-    `;
-
-    modal.classList.remove("pointer-events-none");
-    modal.classList.remove("opacity-0");
-    requestAnimationFrame(() => {
-      modalPanel.classList.remove("opacity-0", "translate-y-6");
-    });
-    document.body.style.overflow = "hidden";
-    lucide.createIcons();
-    renderModalMap(chapter);
-  }
-
-  function closeChapter() {
-    modal.classList.add("opacity-0");
-    modalPanel.classList.add("opacity-0", "translate-y-6");
-    modal.classList.add("pointer-events-none");
-    document.body.style.overflow = "";
-    if (modalMap) { modalMap.remove(); modalMap = null; }
-  }
-
-  // ---------- Navbar scroll shadow ----------
-  const navInner = document.getElementById("navInner");
-  window.addEventListener("scroll", () => {
-    navInner.classList.toggle("shadow-premium", window.scrollY > 12);
-  });
-
-  // ---------- Menu mobile ----------
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
-  menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-    menuBtn.innerHTML = mobileMenu.classList.contains("hidden")
-      ? '<i data-lucide="menu" class="h-[22px] w-[22px]"></i>'
-      : '<i data-lucide="x" class="h-[22px] w-[22px]"></i>';
-    lucide.createIcons();
-  });
-
-  // ---------- Reveal on scroll ----------
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add("in-view"); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-
-  // ---------- Terapkan progres belajar NYATA (dari localStorage, bukan angka statis) ----------
+  // ---------- Terapkan progres belajar NYATA (dari localStorage) ----------
   function applyRealProgress() {
-    if (!window.SKIProgress) return;
+    if (!window.SKIProgress) {
+      renderChapterGrid(); // tetap render ulang tanpa data progres
+      return;
+    }
     const p = window.SKIProgress.getSummary();
 
-    // Bar & label progres di navbar (desktop & mobile)
     const fill = document.getElementById("progressBarFill");
     const label = document.getElementById("progressBarLabel");
     const labelMobile = document.getElementById("progressBarLabelMobile");
@@ -523,7 +457,6 @@
     if (label) label.textContent = p.percent + "%";
     if (labelMobile) labelMobile.textContent = p.percent + "%";
 
-    // Tombol "Mulai Belajar" / "Lanjutkan Belajar"
     const btn = document.getElementById("continueBtn");
     if (btn) {
       if (p.completedCount === 0) {
@@ -538,7 +471,6 @@
       }
     }
 
-    // Kartu progres
     const headline = document.getElementById("progressHeadline");
     const cardFill = document.getElementById("progressCardFill");
     const cardLabel = document.getElementById("progressCardLabel");
@@ -552,10 +484,13 @@
           : `Anda sudah menyelesaikan ${p.completedCount} dari ${p.totalChapters} bab`;
     }
 
-    // Tandai kartu bab yang sudah selesai di grid silabus
     renderChapterGrid();
   }
   applyRealProgress();
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  lucide.createIcons();
 
   document.getElementById("year").textContent = new Date().getFullYear();
 
