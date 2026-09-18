@@ -6,9 +6,119 @@
 <title>Bab 4: Era Madinah — Piagam Madinah dan Pembentukan Masyarakat Beradab | SKI Madrasah</title>
 <meta name="description" content="Bab 4 SKI Madrasah: Era Madinah, Piagam Madinah, dan Pembentukan Masyarakat Beradab. Materi lengkap, uji formatif, pembahasan, dan navigasi belajar.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%96%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/css/ski-madrasah.css">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --g950:#04281e;--g900:#0b3d2e;--g800:#10503c;--g700:#147d64;--g600:#0f9b7a;
+  --gold:#c9a227;--gold-d:#a8861b;--gold-s:#f6ead0;--cream:#f7f5ee;--card:#fff;
+  --ink:#1d2724;--muted:#5d6b66;--line:#e6e2d4;--red:#c0392b;--green-ok:#1e8e5a;
+  --radius:16px;--shadow:0 8px 28px rgba(11,61,46,.09);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--cream);color:var(--ink);line-height:1.75;font-size:16px}
+.container{width:min(1100px,92%);margin-inline:auto}
+.read{width:min(880px,92%);margin-inline:auto}
+a{color:var(--g700);text-decoration:none}a:hover{color:var(--gold-d)}
+section,div[id]{scroll-margin-top:120px}
+#rbar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--gold);z-index:99}
+.nav{position:sticky;top:0;z-index:50;background:rgba(11,61,46,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,162,39,.35)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 0}
+.brand{display:flex;align-items:center;gap:.6rem;color:#fff;font-weight:800;font-size:1.02rem}.brand:hover{color:#fff}
+.brand-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--gold),#e8c96a);color:var(--g950);font-weight:800;font-size:.72rem}
+.brand small{display:block;font-weight:500;font-size:.68rem;color:var(--gold-s);letter-spacing:.6px}
+.nav-links{display:flex;gap:1.2rem;align-items:center}
+.nav-links a{color:#e9efe9;font-weight:600;font-size:.9rem}.nav-links a:hover{color:var(--gold)}
+.nav-links a.pill{border:1px solid var(--gold);color:var(--gold);padding:.35rem .85rem;border-radius:99px}
+.crumbs{background:var(--g950);color:#cfe0d6;font-size:.86rem}
+.crumbs .container{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;flex-wrap:wrap}
+.crumbs a{color:#cfe0d6;font-weight:600}.crumbs a:hover{color:var(--gold)}
+.ch-hero{background:radial-gradient(circle at 85% 15%,rgba(201,162,39,.22),transparent 42%),radial-gradient(circle at 12% 90%,rgba(15,155,122,.28),transparent 45%),linear-gradient(150deg,var(--g950),var(--g900) 55%,var(--g800));color:#fff;padding:3.2rem 0 2.8rem;position:relative;overflow:hidden}
+.ch-hero::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.12;background-image:repeating-linear-gradient(45deg,transparent 0 22px,rgba(255,255,255,.5) 22px 23px),repeating-linear-gradient(-45deg,transparent 0 22px,rgba(255,255,255,.5) 22px 23px)}
+.bab-badge{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--gold);color:var(--gold);font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;padding:.4rem 1rem;border-radius:99px;background:rgba(0,0,0,.18);position:relative;z-index:1}
+.ch-hero h1{font-size:clamp(1.7rem,4.2vw,2.6rem);line-height:1.25;margin:1.1rem 0 .8rem;font-weight:800;max-width:24ch;position:relative;z-index:1}
+.ch-hero .lead{color:#dbe8e0;max-width:70ch;position:relative;z-index:1}
+.ch-meta{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem;position:relative;z-index:1}
+.ch-meta span{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);padding:.35rem .9rem;border-radius:99px;font-size:.8rem;color:#eef4ef}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.5rem;position:relative;z-index:1}
+.innav{position:sticky;top:63px;z-index:40;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);box-shadow:0 6px 18px rgba(11,61,46,.06)}
+.innav .container{display:flex;gap:.55rem;overflow:auto;padding:.6rem 0;white-space:nowrap}
+.innav a{background:#fbfaf5;border:1px solid var(--line);color:var(--g800);padding:.38rem .85rem;border-radius:99px;font-size:.82rem;font-weight:700;flex:0 0 auto}
+.innav a:hover{border-color:var(--gold);color:var(--gold-d)}
+.innav a.gold{background:var(--g900);color:var(--gold);border-color:rgba(201,162,39,.45)}
+.article{padding:2.5rem 0 3.2rem}
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:2rem clamp(1.2rem,4vw,2.4rem);margin-bottom:1.8rem}
+.sec-head{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.1rem}
+.sec-badge{flex:0 0 auto;width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--g900),var(--g700));color:var(--gold);font-weight:800;font-size:1.15rem;box-shadow:inset 0 0 0 1px rgba(201,162,39,.5)}
+.sec-title{font-size:clamp(1.15rem,2.4vw,1.45rem);font-weight:800;color:var(--g900);line-height:1.35}
+.sec-sub{font-size:.85rem;color:var(--muted);font-weight:600;letter-spacing:.4px}
+.sec p{margin-bottom:1rem;text-align:justify}
+.sec h3{color:var(--g800);margin:1.4rem 0 .7rem;font-size:1.05rem;font-weight:800}
+.sec h4{color:var(--g700);margin:1.2rem 0 .5rem;font-size:.95rem;font-weight:800}
+.sec ul,.sec ol{margin:0 0 1.1rem 1.4rem}
+.sec li{margin-bottom:.45rem}.sec li::marker{color:var(--gold-d);font-weight:700}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.map-card{background:#fbfaf5;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:12px;padding:1rem 1.15rem}
+.map-card b{color:var(--g900);font-size:.95rem}
+.map-card ol{margin:.5rem 0 0 1.1rem}.map-card li{font-size:.85rem;color:var(--muted);margin-bottom:.15rem}
+.callout{border-radius:12px;padding:1rem 1.2rem;margin:1.2rem 0;border-left:5px solid;font-size:.95rem}
+.callout b.tag{display:block;font-size:.75rem;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:.35rem}
+.c-case{background:#fbf7ea;border-color:#b98a1e}.c-case b.tag{color:#8a650f}
+.c-warn{background:#fdf0ee;border-color:var(--red)}.c-warn b.tag{color:var(--red)}
+.c-prin{background:#f0f4fb;border-color:#3b6fb5}.c-prin b.tag{color:#2d578f}
+.c-note{background:#eef7f3;border-color:var(--g600)}.c-note b.tag{color:var(--g700)}
+.table-wrap{overflow-x:auto;margin:1rem 0}
+table.tbl{width:100%;border-collapse:collapse;font-size:.88rem;min-width:650px}
+.tbl th{background:var(--g900);color:#fff;padding:.6rem .7rem;text-align:left;font-weight:700}
+.tbl td{border:1px solid var(--line);padding:.6rem .7rem;vertical-align:top}
+.tbl tr:nth-child(even) td{background:#fbfaf5}
+.cta{background:linear-gradient(135deg,var(--g900),var(--g700));color:#fff;border-radius:var(--radius);padding:2rem;display:flex;flex-wrap:wrap;gap:1.4rem;align-items:center;justify-content:space-between;border:1px solid rgba(201,162,39,.4);margin:1.8rem 0}
+.cta h3{font-size:1.2rem;margin-bottom:.35rem}.cta p{color:#dbe8e0;font-size:.92rem;max-width:56ch}
+.btn{display:inline-block;border:none;cursor:pointer;font-family:inherit;font-weight:800;padding:.85rem 1.6rem;border-radius:12px;font-size:.92rem;transition:.2s;text-align:center}
+.btn-gold{background:linear-gradient(135deg,var(--gold),#e3c25c);color:var(--g950)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(201,162,39,.35);color:var(--g950)}
+.btn-line{background:transparent;border:1.5px solid var(--gold);color:var(--gold)}.btn-line:hover{background:rgba(201,162,39,.12)}
+.btn-dark{background:var(--g900);color:#fff}.btn-dark:hover{background:var(--g800)}
+.pager{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:.5rem}
+.pager a{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.9rem 1.3rem;font-weight:700;font-size:.9rem;box-shadow:var(--shadow)}
+.pager a:hover{border-color:var(--gold)}.pager small{display:block;font-weight:600;color:var(--muted);font-size:.75rem}
+.footer{background:var(--g950);color:#c8d6cd;margin-top:3rem;border-top:3px solid var(--gold)}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2rem;padding:2.8rem 0}
+.footer h4{color:var(--gold);font-size:.85rem;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:.9rem}
+.footer p,.footer li{font-size:.88rem;line-height:1.7}.footer ul{list-style:none}.footer li{margin-bottom:.45rem}
+.footer a{color:#c8d6cd}.footer a:hover{color:var(--gold)}
+.foot-bar{border-top:1px solid rgba(255,255,255,.12);padding:1.1rem 0;font-size:.8rem;text-align:center;color:#9db3a8}
+.scorebar{position:sticky;top:118px;z-index:39;background:var(--g900);color:#fff;border-radius:14px;padding:.8rem 1.2rem;display:flex;flex-wrap:wrap;gap:1.1rem;align-items:center;justify-content:space-between;box-shadow:var(--shadow);margin:1.2rem 0 1.6rem;border:1px solid rgba(201,162,39,.4)}
+.scorebar b{color:var(--gold)}.scorebar .item{font-size:.88rem;font-weight:600}
+.form-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.field label{display:block;font-size:.8rem;font-weight:700;color:var(--g800);margin-bottom:.3rem}
+.field input,.field select,.field textarea{width:100%;font-family:inherit;font-size:.92rem;border:1.5px solid var(--line);border-radius:10px;padding:.65rem .8rem;background:#fff;color:var(--ink)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--g600);box-shadow:0 0 0 3px rgba(15,155,122,.15)}
+.q-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.5rem;margin-bottom:1.1rem;box-shadow:0 4px 16px rgba(11,61,46,.06)}
+.q-num{display:inline-grid;place-items:center;min-width:34px;height:34px;border-radius:10px;background:var(--g900);color:var(--gold);font-weight:800;font-size:.9rem;margin-right:.7rem}
+.q-text{font-weight:700;color:var(--ink);margin-bottom:.9rem;display:flex;align-items:flex-start}
+.opts{display:grid;gap:.5rem}
+.opt{display:flex;gap:.7rem;align-items:flex-start;border:1.5px solid var(--line);border-radius:10px;padding:.6rem .8rem;cursor:pointer;font-size:.92rem;background:#fff;transition:.15s}
+.opt:hover{border-color:var(--g600);background:#f2faf6}
+.opt input{margin-top:.28rem;accent-color:var(--g700)}
+.opt.correct{border-color:var(--green-ok);background:#eaf7f0}
+.opt.wrong{border-color:var(--red);background:#fdeeec}
+.feedback{font-size:.82rem;font-weight:800;margin-top:.6rem}
+.feedback.ok{color:var(--green-ok)}.feedback.no{color:var(--red)}
+.pembahasan{margin-top:.8rem;background:#fbf7ea;border-left:4px solid var(--gold);border-radius:8px;padding:.7rem .9rem;font-size:.86rem}
+.pembahasan b{color:var(--gold-d)}
+textarea.essay{min-height:130px;resize:vertical}
+.result{display:none;background:linear-gradient(150deg,var(--g950),var(--g800));color:#fff;border-radius:var(--radius);padding:2rem;margin:1.6rem 0;border:1px solid rgba(201,162,39,.45)}
+.result .big{font-size:2.4rem;font-weight:800;color:var(--gold)}
+.actions{display:flex;gap:.8rem;flex-wrap:wrap;margin:1.4rem 0}
+details{background:#fbfaf5;border:1px solid var(--line);border-radius:10px;padding:.8rem 1rem;margin-top:.9rem}
+details summary{cursor:pointer;font-weight:700;color:var(--g800);font-size:.9rem}
+details .body{font-size:.86rem;color:var(--muted);padding-top:.6rem}
+@media(max-width:900px){.grid3{grid-template-columns:repeat(2,1fr)}.form-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.nav-links a:not(.pill){display:none}.grid2,.grid3,.form-grid{grid-template-columns:1fr}.sec{padding:1.4rem 1.1rem}.cta{flex-direction:column;align-items:flex-start}.pager{flex-direction:column}.scorebar{top:108px}.innav{top:58px}}
+@media print{.nav,.crumbs,.innav,.cta,.pager,.actions,.footer,#rbar,.scorebar,.btn,.hero-actions{display:none!important}body{background:#fff}.sec,.q-card{box-shadow:none;border:1px solid #ccc;break-inside:avoid}.ch-hero{background:#0b3d2e!important;-webkit-print-color-adjust:exact}}
+</style>
 </head>
 <body id="atas">
 <div id="rbar"></div>
@@ -445,8 +555,6 @@
   </div>
 </footer>
 
-<script src="assets/js/progress.js"></script>
-<script src="assets/js/quiz-engine.js"></script>
 <script>
 const PG=[
 {q:`Hijrah Rasulullah saw. dari Makkah menuju Yatsrib berlangsung pada tahun …`,o:[`610 M`,`615 M`,`622 M`,`630 M`,`632 M`],k:2,p:`Hijrah Rasulullah saw. berlangsung pada 622 M dan kemudian menjadi titik awal kalender Hijriah.`},
@@ -494,17 +602,73 @@ rub:`1) ketepatan tujuan: 3 poin; 2) sumber sejarah: 3 poin; 3) aktivitas analis
 model:`Tujuan: siswa mampu mengidentifikasi tiga prinsip kehidupan bersama dalam Piagam Madinah dan menerapkannya pada kasus keberagaman di sekolah. Aktivitas: siswa membaca tiga sampai lima klausul, mengelompokkan prinsipnya, kemudian menganalisis sebuah kasus konflik kegiatan keagamaan di sekolah. Produk: poster "Kesepakatan Hidup Bersama". Asesmen: akurasi sejarah 30%, analisis 30%, solusi 25%, presentasi 15%.`}
 ];
 
-initQuizEngine({
-  chapterId: 4,
-  chapterLabel: 'Bab 4',
-  PG, ES,
-  pointsPerQuestionPG: 4,
-  maxScorePG: 100,
-  showConversion: false,
-  essayWeightPerQuestion: 20,
-  downloadFileName: 'Skor-Uji-Formatif-Bab4-SKI.txt',
-  resultTitlePrefix: 'HASIL UJI FORMATIF BAB 4',
+const H=['A','B','C','D','E'];
+const pgBox=document.getElementById('pgBox');
+const esBox=document.getElementById('esBox');
+
+PG.forEach((s,i)=>{
+  pgBox.insertAdjacentHTML('beforeend',`<div class="q-card" id="qc${i}"><div class="q-text"><span class="q-num">${i+1}</span><span>${s.q}</span></div><div class="opts">${s.o.map((o,j)=>`<label class="opt" id="op${i}-${j}"><input type="radio" name="q${i}" value="${j}"><span><b>${H[j]}.</b> ${o}</span></label>`).join('')}</div><div class="feedback" id="fb${i}"></div></div>`);
 });
+
+ES.forEach((s,i)=>{
+  esBox.insertAdjacentHTML('beforeend',`<div class="q-card"><div class="q-text"><span class="q-num">${i+1}</span><span>${s.q}</span></div><textarea class="essay" id="es${i}" placeholder="Tulis jawaban argumentatif Anda di sini..."></textarea></div>`);
+});
+
+document.getElementById('rubrikBox').innerHTML=ES.map((s,i)=>`<p><b>Soal ${i+1} — Bobot 20.</b><br><b>Rubrik:</b> ${s.rub}</p>${s.model?`<p><b>Jawaban model/contoh:</b> ${s.model}</p>`:``}`).join('');
+
+let submitted=false;
+
+document.getElementById('btnSubmit').onclick=()=>{
+  const nama=document.getElementById('fNama').value.trim();
+  const nim=document.getElementById('fNim').value.trim();
+  if(!nama||!nim){alert('⚠️ Silakan isi Nama Lengkap dan NIM terlebih dahulu.');document.getElementById('identitas').scrollIntoView({behavior:'smooth'});return;}
+  let benar=0;
+  PG.forEach((s,i)=>{
+    const pick=document.querySelector(`input[name="q${i}"]:checked`);
+    const val=pick?parseInt(pick.value):-1;
+    const fb=document.getElementById('fb'+i);
+    if(val===s.k){benar++;fb.textContent='✔ Benar';fb.className='feedback ok';document.getElementById(`op${i}-${s.k}`).classList.add('correct');}
+    else{fb.textContent=`✘ Salah — Kunci jawaban: ${H[s.k]}`;fb.className='feedback no';if(val>-1){document.getElementById(`op${i}-${val}`).classList.add('wrong');}document.getElementById(`op${i}-${s.k}`).classList.add('correct');}
+    document.querySelectorAll(`input[name="q${i}"]`).forEach(r=>r.disabled=true);
+  });
+  const skorPG=benar*4;let esTerjawab=0;
+  ES.forEach((_,i)=>{const ta=document.getElementById('es'+i);ta.disabled=true;if(ta.value.trim())esTerjawab++;});
+  document.getElementById('sAkhir').textContent=skorPG;
+  document.getElementById('sBenar').textContent=benar;
+  document.getElementById('sEs').textContent=esTerjawab;
+  document.getElementById('rBig').textContent=skorPG+' / 100';
+  document.getElementById('rName').textContent='👤 '+nama+' · NIM '+nim;
+  document.getElementById('rPG').textContent=skorPG+'/100 ('+benar+' benar dari 25)';
+  document.getElementById('rEs').textContent=esTerjawab+'/5 terjawab';
+  const rb=document.getElementById('reviewBox');rb.innerHTML='';
+  PG.forEach((s,i)=>{
+    const pick=document.querySelector(`input[name="q${i}"]:checked`);
+    const val=pick?parseInt(pick.value):-1;
+    rb.insertAdjacentHTML('beforeend',`<div class="q-card"><div class="q-text"><span class="q-num">${i+1}</span><span>${s.q}</span></div><p style="font-size:.88rem;margin-bottom:.4rem">Jawaban Anda: <b>${val>-1?H[val]:'—'}</b> · Kunci: <b>${H[s.k]}</b></p><div class="pembahasan"><b>Pembahasan:</b> ${s.p}</div></div>`);
+  });
+  document.getElementById('hasil').style.display='block';
+  document.getElementById('reviewSec').style.display='block';
+  document.getElementById('hasil').scrollIntoView({behavior:'smooth'});
+  submitted=true;
+};
+
+document.getElementById('btnTxt').onclick=()=>{
+  if(!submitted){alert('Silakan kirim jawaban terlebih dahulu.');return;}
+  const g=id=>document.getElementById(id).value||'-';
+  let t='=== HASIL UJI FORMATIF BAB 4 — SKI MADRASAH ===\n\n';
+  t+='Nama\t: '+g('fNama')+'\n';t+='NIM\t: '+g('fNim')+'\n';t+='Tanggal\t: '+g('fTgl')+'\n';
+  t+='Fakultas/Institusi\t: '+g('fFak')+'\n';t+='Prodi\t: '+g('fProdi')+'\n';t+='Semester\t: '+g('fSmt')+'\n';t+='Kelas\t: '+g('fKls')+'\n\n';
+  t+='--- BAGIAN A: PILIHAN GANDA ---\n';let benar=0;
+  PG.forEach((s,i)=>{const pick=document.querySelector(`input[name="q${i}"]:checked`);const val=pick?parseInt(pick.value):-1;const ok=val===s.k;if(ok)benar++;t+=`No ${i+1}: ${val>-1?H[val]:'-'} (kunci ${H[s.k]}) ${ok?'BENAR':'SALAH'}\n`;});
+  t+='\nSkor PG: '+(benar*4)+' / 100\n';t+='\n--- BAGIAN B: ESSAY ---\n';
+  ES.forEach((s,i)=>{t+=`\nEssay ${i+1}: ${s.q}\nJawaban:\n${document.getElementById('es'+i).value||'(kosong)'}\n`;});
+  t+='\nCatatan: Essay dinilai manual oleh dosen berdasarkan rubrik (maks 20 poin per soal).\n';
+  const blob=new Blob([t],{type:'text/plain;charset=utf-8'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='Skor-Uji-Formatif-Bab4-SKI.txt';a.click();
+};
+
+const rbar=document.getElementById('rbar');
+addEventListener('scroll',()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;rbar.style.width=p+'%';},{passive:true});
 </script>
 </body>
 </html>
