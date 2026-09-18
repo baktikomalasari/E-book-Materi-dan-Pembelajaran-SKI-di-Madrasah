@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 <title>SKI Madrasah | Sejarah Kebudayaan Islam Interaktif</title>
 <meta name="description" content="Web-Book progresif Pembelajaran Sejarah Kebudayaan Islam (SKI) di Madrasah — 16 bab, kuis interaktif, dan linimasa sejarah." />
-<meta name="theme-color" content="#065f46" />
+<meta name="theme-color" content="#0b3d2e" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%96%3C/text%3E%3C/svg%3E" />
 
-<!-- Google Fonts -->
+<!-- Google Fonts: Plus Jakarta Sans dipakai juga di semua halaman bab, agar tipografi konsisten di seluruh produk -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 <!-- Tailwind CDN -->
 <script src="https://cdn.tailwindcss.com"></script>
@@ -19,13 +20,16 @@
     theme: {
       extend: {
         colors: {
-          emerald: { 950: "#052e21", 900: "#053a29", 800: "#065f46", 700: "#0a7458" },
-          sand: { DEFAULT: "#FDFBF7", 100: "#F7F2E9", 200: "#EFE7D6" },
-          gold: { 400: "#D9A441", 500: "#C08A2E", 600: "#A6741F" },
+          // Nilai hex ini SENGAJA disamakan persis dengan --g950/--g900/... dan --gold
+          // di assets/css/ski-madrasah.css (dipakai semua halaman bab), supaya landing
+          // page dan halaman bab terlihat sebagai satu produk yang sama, bukan dua situs.
+          emerald: { 950: "#04281e", 900: "#0b3d2e", 800: "#10503c", 700: "#147d64" },
+          sand: { DEFAULT: "#f7f5ee", 100: "#F7F2E9", 200: "#EFE7D6" },
+          gold: { 400: "#d9b95a", 500: "#c9a227", 600: "#a8861b" },
         },
         fontFamily: {
           display: ["'Playfair Display'", "serif"],
-          body: ["Inter", "sans-serif"],
+          body: ["'Plus Jakarta Sans'", "sans-serif"],
         },
         boxShadow: { premium: "0 8px 30px rgba(5, 58, 41, 0.12)" },
       },
@@ -43,14 +47,14 @@
 <style>
   html { scroll-behavior: smooth; }
   body {
-    background-color: #FDFBF7;
-    background-image: radial-gradient(circle at 1px 1px, rgba(6,95,70,0.06) 1px, transparent 0);
+    background-color: #f7f5ee;
+    background-image: radial-gradient(circle at 1px 1px, rgba(11,61,46,0.06) 1px, transparent 0);
     background-size: 22px 22px;
   }
-  .leaflet-container { font-family: Inter, sans-serif; background: #DCEEF3; }
+  .leaflet-container { font-family: 'Plus Jakarta Sans', sans-serif; background: #DCEEF3; }
   .map-pin-label {
-    background: #052e21;
-    color: #FDFBF7;
+    background: #04281e;
+    color: #f7f5ee;
     padding: 2px 8px;
     border-radius: 999px;
     font-size: 11px;
@@ -67,7 +71,7 @@
   #chapterModal { transition: opacity .25s ease; }
   #chapterModal .modal-panel { transition: transform .3s ease, opacity .3s ease; }
 
-  input[type="range"] { accent-color: #065f46; }
+  input[type="range"] { accent-color: #10503c; }
 
   @media (prefers-reduced-motion: reduce) {
     * { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
@@ -96,13 +100,13 @@
     <div class="flex items-center gap-4">
       <div class="hidden items-center gap-2.5 sm:flex">
         <div class="h-1.5 w-24 overflow-hidden rounded-full bg-emerald-900/10">
-          <div class="h-full rounded-full bg-gradient-to-r from-gold-500 to-gold-400" style="width:32%"></div>
+          <div id="progressBarFill" class="h-full rounded-full bg-gradient-to-r from-gold-500 to-gold-400" style="width:0%"></div>
         </div>
-        <span class="text-xs font-semibold text-emerald-800">32%</span>
+        <span id="progressBarLabel" class="text-xs font-semibold text-emerald-800">0%</span>
       </div>
-      <button onclick="document.getElementById('silabus').scrollIntoView()" class="hidden rounded-lg bg-emerald-800 px-4 py-2 text-sm font-semibold text-sand transition hover:bg-emerald-700 md:block">
-        Lanjutkan Belajar
-      </button>
+      <a id="continueBtn" href="1.html" class="hidden rounded-lg bg-emerald-800 px-4 py-2 text-sm font-semibold text-sand transition hover:bg-emerald-700 md:block">
+        Mulai Belajar
+      </a>
       <button id="menuBtn" class="text-emerald-900 md:hidden" aria-label="Buka menu">
         <i data-lucide="menu" class="h-[22px] w-[22px]"></i>
       </button>
@@ -112,7 +116,7 @@
   <div id="mobileMenu" class="mx-4 mt-2 hidden rounded-2xl border border-white/40 bg-white/80 p-4 backdrop-blur-xl md:hidden">
     <div class="mb-3 flex items-center justify-between rounded-lg bg-sand-100 px-3 py-2">
       <span class="text-xs font-medium text-emerald-900/70">Progres belajar</span>
-      <span class="text-xs font-semibold text-emerald-800">32%</span>
+      <span id="progressBarLabelMobile" class="text-xs font-semibold text-emerald-800">0%</span>
     </div>
     <div class="flex flex-col gap-3">
       <a href="#timeline" class="py-1 text-sm font-medium text-emerald-900">Linimasa</a>
@@ -143,10 +147,10 @@
         </p>
 
         <div class="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <button onclick="openChapter(1)" class="group inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-800 px-6 py-3.5 text-sm font-semibold text-sand shadow-premium transition hover:bg-emerald-700">
+          <a href="1.html" class="group inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-800 px-6 py-3.5 text-sm font-semibold text-sand shadow-premium transition hover:bg-emerald-700">
             Mulai Bab 1
             <i data-lucide="arrow-right" class="h-4 w-4 transition group-hover:translate-x-0.5"></i>
-          </button>
+          </a>
           <button onclick="document.getElementById('silabus').scrollIntoView({behavior:'smooth'})" class="inline-flex items-center justify-center rounded-xl border border-emerald-900/15 bg-white/50 px-6 py-3.5 text-sm font-semibold text-emerald-900 backdrop-blur-sm transition hover:border-emerald-900/30">
             Lihat Silabus
           </button>
@@ -174,37 +178,30 @@
     </div>
   </section>
 
-  <!-- ============ GAMIFICATION CARD ============ -->
+  <!-- ============ KARTU PROGRES ============ -->
   <section class="px-5 py-4 sm:px-8 lg:px-12">
     <div class="reveal mx-auto flex max-w-6xl flex-col gap-5 rounded-2xl border border-emerald-900/10 bg-white/70 p-5 shadow-premium backdrop-blur-sm sm:flex-row sm:items-center sm:justify-between sm:p-6">
       <div class="flex items-center gap-4">
-        <div class="relative flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-emerald-800 to-emerald-950 text-sand">
-          <span class="font-display text-lg font-semibold">A</span>
-          <span class="absolute -bottom-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-gold-500 text-[10px] font-bold text-emerald-950 ring-2 ring-white">4</span>
+        <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-emerald-800 to-emerald-950 text-sand">
+          <i data-lucide="book-open-check" class="h-6 w-6"></i>
         </div>
         <div>
-          <p class="text-sm font-semibold text-emerald-950">Ahmad Fauzan</p>
-          <p class="flex items-center gap-1 text-xs text-emerald-900/60">
-            <i data-lucide="trophy" class="h-3 w-3 text-gold-500"></i>
-            Level 4 · Penjelajah Sejarah
-          </p>
+          <p id="progressHeadline" class="text-sm font-semibold text-emerald-950">Anda belum memulai bab manapun</p>
+          <p class="mt-0.5 text-xs text-emerald-900/55">Progres tersimpan otomatis di peramban ini (belum tersinkron ke akun/perangkat lain)</p>
         </div>
       </div>
 
       <div class="flex items-center gap-6 sm:gap-8">
         <div>
           <p class="flex items-center gap-1.5 text-xs text-emerald-900/60">
-            <i data-lucide="target" class="h-[13px] w-[13px]"></i> Penyelesaian Kuis
+            <i data-lucide="target" class="h-[13px] w-[13px]"></i> Bab Selesai
           </p>
           <div class="mt-1.5 flex items-center gap-2">
             <div class="h-2 w-28 overflow-hidden rounded-full bg-emerald-900/10 sm:w-36">
-              <div class="h-full rounded-full bg-emerald-700" style="width:68%"></div>
+              <div id="progressCardFill" class="h-full rounded-full bg-emerald-700" style="width:0%"></div>
             </div>
-            <span class="text-xs font-semibold text-emerald-900">68%</span>
+            <span id="progressCardLabel" class="text-xs font-semibold text-emerald-900">0/16</span>
           </div>
-        </div>
-        <div class="flex items-center gap-1.5 rounded-lg bg-gold-500/10 px-3 py-2 text-xs font-semibold text-gold-600">
-          <i data-lucide="flame" class="h-[14px] w-[14px]"></i> 5 hari beruntun
         </div>
       </div>
     </div>
@@ -238,7 +235,7 @@
       <div class="mb-10 max-w-lg">
         <p class="text-xs font-semibold uppercase tracking-wide text-gold-600">Silabus</p>
         <h2 class="mt-2 font-display text-2xl font-semibold text-emerald-950 sm:text-3xl">16 bab, dari fondasi hingga evaluasi akhir</h2>
-        <p class="mt-3 text-sm leading-relaxed text-emerald-900/65">Klik "Baca Sekarang" pada tiap bab untuk mulai menyusun materi dan uji formatif satu per satu.</p>
+        <p class="mt-3 text-sm leading-relaxed text-emerald-900/65">Klik kartu bab untuk langsung membuka materi lengkap dan uji formatifnya. Ikon peta menampilkan pratinjau lokasi historisnya.</p>
       </div>
       <div id="chapterGrid" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"></div>
     </div>
@@ -295,6 +292,7 @@
   </div>
 </div>
 
+<script src="assets/js/progress.js"></script>
 <script>
   lucide.createIcons();
 
@@ -327,22 +325,6 @@
     { label: "Islam di Nusantara", range: "Abad ke-13 M –" },
   ];
 
-  // Contoh 1 soal per bab — silakan tambah butir soal sesuai materi asli
-  function sampleQuiz(chapter) {
-    return [{
-      id: "q1",
-      question: "Pertanyaan contoh terkait materi \"" + chapter.title + "\".",
-      options: [
-        { id: "a", text: "Pilihan jawaban A" },
-        { id: "b", text: "Pilihan jawaban B" },
-        { id: "c", text: "Pilihan jawaban C" },
-        { id: "d", text: "Pilihan jawaban D" },
-      ],
-      correct: "b",
-      explanation: "Penjelasan singkat mengapa jawaban ini benar — isi sesuai materi bab.",
-    }];
-  }
-
   // ---------- Peta hero: rute penyebaran Islam (Leaflet + tile CARTO) ----------
   const heroMap = L.map("heroMap", {
     zoomControl: false,
@@ -370,12 +352,12 @@
 
   L.polyline(
     [routeCities[4], routeCities[2], routeCities[3], routeCities[0], routeCities[1], routeCities[5]].map((c) => [c.lat, c.lng]),
-    { color: "#C08A2E", weight: 2.5, dashArray: "7 6", opacity: 0.85 }
+    { color: "#c9a227", weight: 2.5, dashArray: "7 6", opacity: 0.85 }
   ).addTo(heroMap);
 
   routeCities.forEach((c) => {
     L.circleMarker([c.lat, c.lng], {
-      radius: 6, color: "#FDFBF7", weight: 2, fillColor: "#D9A441", fillOpacity: 1,
+      radius: 6, color: "#f7f5ee", weight: 2, fillColor: "#d9b95a", fillOpacity: 1,
     }).addTo(heroMap).bindTooltip(c.name, {
       permanent: true, direction: "top", offset: [0, -6], className: "map-pin-label",
     });
@@ -395,7 +377,7 @@
     }).addTo(modalMap);
 
     L.circleMarker([lat, lng], {
-      radius: 8, color: "#FDFBF7", weight: 2.5, fillColor: "#065f46", fillOpacity: 1,
+      radius: 8, color: "#f7f5ee", weight: 2.5, fillColor: "#10503c", fillOpacity: 1,
     }).addTo(modalMap).bindTooltip(name, {
       permanent: true, direction: "top", offset: [0, -8], className: "map-pin-label",
     });
@@ -418,41 +400,55 @@
   }
 
   // ---------- Render Syllabus Grid ----------
+  // Setiap kartu sekarang LANGSUNG menautkan ke file bab asli (mis. 1.html),
+  // bukan lagi membuka modal berisi placeholder. Ikon peta (📍) tetap membuka
+  // pratinjau lokasi historis singkat lewat modal, jika ingin dilihat dulu.
   const gridEl = document.getElementById("chapterGrid");
-  gridEl.innerHTML = chapters.map((c) => `
-    <article class="reveal in-view group flex flex-col justify-between rounded-2xl border p-5 transition duration-300 hover:-translate-y-1 hover:shadow-premium ${
-      c.isExam ? "border-gold-500/30 bg-gold-500/[0.06]" : "border-emerald-900/10 bg-white/70 backdrop-blur-sm hover:border-emerald-800/25"
-    }">
-      <div>
-        <span class="flex h-9 w-9 items-center justify-center rounded-lg text-xs font-bold ${c.isExam ? "bg-gold-500 text-emerald-950" : "bg-emerald-800 text-sand"}">
-          ${c.isExam ? `<i data-lucide="clipboard-check" class="h-4 w-4"></i>` : c.id}
-        </span>
-        <p class="mt-4 text-[11px] font-semibold uppercase tracking-wide text-emerald-900/45">Nomor Bab</p>
-        <h3 class="mt-1 font-display text-[1.05rem] font-semibold leading-snug text-emerald-950">Bab ${c.id}: ${c.title}</h3>
-        <p class="mt-3 text-[11px] font-semibold uppercase tracking-wide text-emerald-900/45">Subjudul</p>
-        <p class="mt-1 text-xs leading-relaxed text-emerald-900/55">${c.phase} — materi &amp; uji formatif belum diisi</p>
-      </div>
-      <button onclick="openChapter(${c.id})" class="mt-5 w-full rounded-lg bg-emerald-800 py-2.5 text-sm font-semibold text-sand transition hover:bg-emerald-700">
-        Baca Sekarang
-      </button>
-    </article>
-  `).join("");
+  function renderChapterGrid() {
+    const progress = window.SKIProgress ? window.SKIProgress.getSummary() : null;
+    gridEl.innerHTML = chapters.map((c) => {
+      const done = progress ? progress.isChapterComplete(c.id) : false;
+      return `
+      <article class="reveal in-view group relative flex flex-col justify-between rounded-2xl border p-5 transition duration-300 hover:-translate-y-1 hover:shadow-premium ${
+        c.isExam ? "border-gold-500/30 bg-gold-500/[0.06]" : "border-emerald-900/10 bg-white/70 backdrop-blur-sm hover:border-emerald-800/25"
+      }">
+        ${done ? `<span class="absolute right-4 top-4 flex items-center gap-1 rounded-full bg-emerald-700/10 px-2.5 py-1 text-[10px] font-bold text-emerald-700"><i data-lucide="check" class="h-3 w-3"></i> Selesai</span>` : ""}
+        <div>
+          <div class="flex items-center justify-between">
+            <span class="flex h-9 w-9 items-center justify-center rounded-lg text-xs font-bold ${c.isExam ? "bg-gold-500 text-emerald-950" : "bg-emerald-800 text-sand"}">
+              ${c.isExam ? `<i data-lucide="clipboard-check" class="h-4 w-4"></i>` : c.id}
+            </span>
+            <button onclick="openLocationPreview(${c.id})" aria-label="Lihat lokasi historis" class="flex h-8 w-8 items-center justify-center rounded-lg text-emerald-900/40 transition hover:bg-emerald-900/5 hover:text-emerald-800">
+              <i data-lucide="map-pin" class="h-4 w-4"></i>
+            </button>
+          </div>
+          <p class="mt-4 text-[11px] font-semibold uppercase tracking-wide text-emerald-900/45">${c.isExam ? "Evaluasi" : "Nomor Bab"}</p>
+          <h3 class="mt-1 font-display text-[1.05rem] font-semibold leading-snug text-emerald-950">Bab ${c.id}: ${c.title}</h3>
+          <p class="mt-3 text-[11px] font-semibold uppercase tracking-wide text-emerald-900/45">Fase</p>
+          <p class="mt-1 text-xs leading-relaxed text-emerald-900/55">${c.phase}</p>
+        </div>
+        <a href="${c.id}.html" class="mt-5 block w-full rounded-lg bg-emerald-800 py-2.5 text-center text-sm font-semibold text-sand transition hover:bg-emerald-700">
+          ${done ? "Buka Kembali" : "Baca Sekarang"}
+        </a>
+      </article>
+    `;
+    }).join("");
+    lucide.createIcons();
+  }
 
-  // ---------- Modal: buka detail bab & kuis ----------
+  // ---------- Modal: pratinjau lokasi historis singkat sebelum masuk ke bab ----------
   const modal = document.getElementById("chapterModal");
   const modalPanel = modal.querySelector(".modal-panel");
   const modalContent = document.getElementById("modalContent");
 
-  function openChapter(id) {
+  function openLocationPreview(id) {
     const chapter = chapters.find((c) => c.id === id);
     if (!chapter) return;
-    const quiz = sampleQuiz(chapter);
 
     modalContent.innerHTML = `
       <span class="flex h-10 w-10 items-center justify-center rounded-xl text-sm font-bold ${chapter.isExam ? "bg-gold-500 text-emerald-950" : "bg-emerald-800 text-sand"}">${chapter.id}</span>
       <p class="mt-4 text-xs font-semibold uppercase tracking-wide text-gold-600">${chapter.phase}</p>
       <h2 class="mt-2 font-display text-2xl font-semibold leading-tight text-emerald-950 sm:text-[1.7rem]">${chapter.title}</h2>
-      <p class="mt-3 text-sm leading-relaxed text-emerald-900/70">Ringkasan materi bab ini akan diisi dari draf bahan ajar SKI yang telah divalidasi ahli materi, media, dan bahasa.</p>
 
       <!-- Peta lokasi historis bab ini -->
       <div class="mt-6 overflow-hidden rounded-2xl border border-emerald-900/10 shadow-premium">
@@ -463,31 +459,13 @@
         </div>
       </div>
 
-      <!-- Tes formatif -->
-      <div class="mt-7 rounded-2xl border border-emerald-900/10 bg-white/70 p-5">
-        <div class="mb-4 flex items-center gap-2.5">
-          <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-gold-500/15 text-gold-600"><i data-lucide="clipboard-check" class="h-[17px] w-[17px]"></i></span>
-          <h3 class="font-display text-base font-semibold text-emerald-950">Tes Formatif</h3>
-        </div>
-        <div id="quizArea">
-          ${quiz.map((q) => `
-            <p class="text-sm font-semibold text-emerald-950">${q.question}</p>
-            <div class="mt-3 grid gap-2 sm:grid-cols-2" id="quizOptions">
-              ${q.options.map((o) => `
-                <button data-opt="${o.id}" data-correct="${q.correct}" onclick="selectAnswer(this)"
-                  class="quiz-opt rounded-xl border border-emerald-900/10 px-3.5 py-2.5 text-left text-sm text-emerald-900/75 transition hover:border-emerald-800/30">
-                  ${o.text}
-                </button>
-              `).join("")}
-            </div>
-            <p id="quizExplain" class="mt-2.5 hidden text-xs text-emerald-900/55">${q.explanation}</p>
-          `).join("")}
-        </div>
-      </div>
-
-      <div class="mt-8 flex items-center justify-between border-t border-emerald-900/10 pt-5">
-        ${chapter.id > 1 ? `<button onclick="openChapter(${chapter.id - 1})" class="flex items-center gap-2 text-sm text-emerald-900/60 hover:text-emerald-900"><i data-lucide="arrow-left" class="h-[15px] w-[15px]"></i> Bab ${chapter.id - 1}</button>` : `<span></span>`}
-        ${chapter.id < 16 ? `<button onclick="openChapter(${chapter.id + 1})" class="flex items-center gap-2 text-sm font-medium text-emerald-900">Bab ${chapter.id + 1} <i data-lucide="arrow-right" class="h-[15px] w-[15px]"></i></button>` : `<span></span>`}
+      <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+        <a href="${chapter.id}.html" class="flex-1 rounded-xl bg-emerald-800 px-5 py-3 text-center text-sm font-semibold text-sand transition hover:bg-emerald-700">
+          Buka Bab Lengkap &amp; Uji Formatif →
+        </a>
+        <button onclick="closeChapter()" class="rounded-xl border border-emerald-900/15 px-5 py-3 text-sm font-semibold text-emerald-900 transition hover:border-emerald-900/30">
+          Tutup
+        </button>
       </div>
     `;
 
@@ -507,23 +485,6 @@
     modal.classList.add("pointer-events-none");
     document.body.style.overflow = "";
     if (modalMap) { modalMap.remove(); modalMap = null; }
-  }
-
-  function selectAnswer(btn) {
-    const options = btn.parentElement.querySelectorAll(".quiz-opt");
-    const correct = btn.dataset.correct;
-    options.forEach((o) => {
-      o.disabled = true;
-      o.classList.remove("hover:border-emerald-800/30");
-      if (o.dataset.opt === correct) {
-        o.classList.add("border-emerald-700", "bg-emerald-700/10", "text-emerald-900");
-      } else if (o === btn) {
-        o.classList.add("border-red-300", "bg-red-50", "text-red-700");
-      } else {
-        o.classList.add("opacity-50");
-      }
-    });
-    document.getElementById("quizExplain").classList.remove("hidden");
   }
 
   // ---------- Navbar scroll shadow ----------
@@ -548,6 +509,53 @@
     entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add("in-view"); });
   }, { threshold: 0.1 });
   document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+  // ---------- Terapkan progres belajar NYATA (dari localStorage, bukan angka statis) ----------
+  function applyRealProgress() {
+    if (!window.SKIProgress) return;
+    const p = window.SKIProgress.getSummary();
+
+    // Bar & label progres di navbar (desktop & mobile)
+    const fill = document.getElementById("progressBarFill");
+    const label = document.getElementById("progressBarLabel");
+    const labelMobile = document.getElementById("progressBarLabelMobile");
+    if (fill) fill.style.width = p.percent + "%";
+    if (label) label.textContent = p.percent + "%";
+    if (labelMobile) labelMobile.textContent = p.percent + "%";
+
+    // Tombol "Mulai Belajar" / "Lanjutkan Belajar"
+    const btn = document.getElementById("continueBtn");
+    if (btn) {
+      if (p.completedCount === 0) {
+        btn.textContent = "Mulai Belajar";
+        btn.href = "1.html";
+      } else if (p.completedCount >= p.totalChapters) {
+        btn.textContent = "Ulas Kembali";
+        btn.href = `${p.totalChapters}.html`;
+      } else {
+        btn.textContent = "Lanjutkan Belajar";
+        btn.href = `${p.nextChapter}.html`;
+      }
+    }
+
+    // Kartu progres
+    const headline = document.getElementById("progressHeadline");
+    const cardFill = document.getElementById("progressCardFill");
+    const cardLabel = document.getElementById("progressCardLabel");
+    if (cardFill) cardFill.style.width = p.percent + "%";
+    if (cardLabel) cardLabel.textContent = `${p.completedCount}/${p.totalChapters}`;
+    if (headline) {
+      headline.textContent = p.completedCount === 0
+        ? "Anda belum memulai bab manapun"
+        : p.completedCount >= p.totalChapters
+          ? "Anda telah menyelesaikan semua 16 bab 🎉"
+          : `Anda sudah menyelesaikan ${p.completedCount} dari ${p.totalChapters} bab`;
+    }
+
+    // Tandai kartu bab yang sudah selesai di grid silabus
+    renderChapterGrid();
+  }
+  applyRealProgress();
 
   document.getElementById("year").textContent = new Date().getFullYear();
 
