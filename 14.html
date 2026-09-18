@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bab 14: Pengembangan Media dan Teknologi Digital Pembelajaran SKI (TPACK) | SKI Madrasah</title>
+<meta name="description" content="Bab 14 SKI Madrasah: Pengembangan Media dan Teknologi Digital Pembelajaran SKI (TPACK). Materi lengkap, uji formatif, pembahasan, dan navigasi belajar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--g950:#04281e;--g900:#0b3d2e;--g800:#10503c;--g700:#147d64;--g600:#0f9b7a;--gold:#c9a227;--gold-d:#a8861b;--gold-s:#f6ead0;--cream:#f7f5ee;--card:#fff;--ink:#1d2724;--muted:#5d6b66;--line:#e6e2d4;--red:#c0392b;--green-ok:#1e8e5a;--radius:16px;--shadow:0 8px 28px rgba(11,61,46,.09)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--cream);color:var(--ink);line-height:1.75;font-size:16px}
+.container{width:min(1100px,92%);margin-inline:auto}.read{width:min(880px,92%);margin-inline:auto}
+a{color:var(--g700);text-decoration:none}a:hover{color:var(--gold-d)}
+section,div[id]{scroll-margin-top:120px}
+#rbar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--gold);z-index:99}
+.nav{position:sticky;top:0;z-index:50;background:rgba(11,61,46,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,162,39,.35)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 0}
+.brand{display:flex;align-items:center;gap:.6rem;color:#fff;font-weight:800;font-size:1.02rem}.brand:hover{color:#fff}
+.brand-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--gold),#e8c96a);color:var(--g950);font-weight:800;font-size:.72rem}
+.brand small{display:block;font-weight:500;font-size:.68rem;color:var(--gold-s);letter-spacing:.6px}
+.nav-links{display:flex;gap:1.2rem;align-items:center}
+.nav-links a{color:#e9efe9;font-weight:600;font-size:.9rem}.nav-links a:hover{color:var(--gold)}
+.nav-links a.pill{border:1px solid var(--gold);color:var(--gold);padding:.35rem .85rem;border-radius:99px}
+.crumbs{background:var(--g950);color:#cfe0d6;font-size:.86rem}
+.crumbs .container{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;flex-wrap:wrap}
+.crumbs a{color:#cfe0d6;font-weight:600}.crumbs a:hover{color:var(--gold)}
+.ch-hero{background:radial-gradient(circle at 85% 15%,rgba(201,162,39,.22),transparent 42%),radial-gradient(circle at 12% 90%,rgba(15,155,122,.28),transparent 45%),linear-gradient(150deg,var(--g950),var(--g900) 55%,var(--g800));color:#fff;padding:3.2rem 0 2.8rem;position:relative;overflow:hidden}
+.ch-hero::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.12;background-image:repeating-linear-gradient(45deg,transparent 0 22px,rgba(255,255,255,.5) 22px 23px),repeating-linear-gradient(-45deg,transparent 0 22px,rgba(255,255,255,.5) 22px 23px)}
+.bab-badge{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--gold);color:var(--gold);font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;padding:.4rem 1rem;border-radius:99px;background:rgba(0,0,0,.18);position:relative;z-index:1}
+.ch-hero h1{font-size:clamp(1.7rem,4.2vw,2.6rem);line-height:1.25;margin:1.1rem 0 .8rem;font-weight:800;max-width:24ch;position:relative;z-index:1}
+.ch-hero .lead{color:#dbe8e0;max-width:70ch;position:relative;z-index:1}
+.ch-meta{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem;position:relative;z-index:1}
+.ch-meta span{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);padding:.35rem .9rem;border-radius:99px;font-size:.8rem;color:#eef4ef}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.5rem;position:relative;z-index:1}
+.innav{position:sticky;top:63px;z-index:40;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);box-shadow:0 6px 18px rgba(11,61,46,.06)}
+.innav .container{display:flex;gap:.55rem;overflow:auto;padding:.6rem 0;white-space:nowrap}
+.innav a{background:#fbfaf5;border:1px solid var(--line);color:var(--g800);padding:.38rem .85rem;border-radius:99px;font-size:.82rem;font-weight:700;flex:0 0 auto}
+.innav a:hover{border-color:var(--gold);color:var(--gold-d)}
+.innav a.gold{background:var(--g900);color:var(--gold);border-color:rgba(201,162,39,.45)}
+.article{padding:2.5rem 0 3.2rem}
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:2rem clamp(1.2rem,4vw,2.4rem);margin-bottom:1.8rem}
+.sec-head{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.1rem}
+.sec-badge{flex:0 0 auto;width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--g900),var(--g700));color:var(--gold);font-weight:800;font-size:1.15rem;box-shadow:inset 0 0 0 1px rgba(201,162,39,.5)}
+.sec-title{font-size:clamp(1.15rem,2.4vw,1.45rem);font-weight:800;color:var(--g900);line-height:1.35}
+.sec-sub{font-size:.85rem;color:var(--muted);font-weight:600;letter-spacing:.4px}
+.sec p{margin-bottom:1rem;text-align:justify}
+.sec h3{color:var(--g800);margin:1.4rem 0 .7rem;font-size:1.05rem;font-weight:800}
+.sec h4{color:var(--g700);margin:1.2rem 0 .5rem;font-size:.95rem;font-weight:800}
+.sec ul,.sec ol{margin:0 0 1.1rem 1.4rem}.sec li{margin-bottom:.45rem}.sec li::marker{color:var(--gold-d);font-weight:700}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.map-card{background:#fbfaf5;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:12px;padding:1rem 1.15rem}
+.map-card b{color:var(--g900);font-size:.95rem}.map-card ol{margin:.5rem 0 0 1.1rem}.map-card li{font-size:.85rem;color:var(--muted);margin-bottom:.15rem}
+.callout{border-radius:12px;padding:1rem 1.2rem;margin:1.2rem 0;border-left:5px solid;font-size:.95rem}
+.callout b.tag{display:block;font-size:.75rem;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:.35rem}
+.c-case{background:#fbf7ea;border-color:#b98a1e}.c-case b.tag{color:#8a650f}
+.c-warn{background:#fdf0ee;border-color:var(--red)}.c-warn b.tag{color:var(--red)}
+.c-prin{background:#f0f4fb;border-color:#3b6fb5}.c-prin b.tag{color:#2d578f}
+.c-note{background:#eef7f3;border-color:var(--g600)}.c-note b.tag{color:var(--g700)}
+.table-wrap{overflow-x:auto;margin:1rem 0}
+table.tbl{width:100%;border-collapse:collapse;font-size:.88rem;min-width:650px}
+.tbl th{background:var(--g900);color:#fff;padding:.6rem .7rem;text-align:left;font-weight:700}
+.tbl td{border:1px solid var(--line);padding:.6rem .7rem;vertical-align:top}
+.tbl tr:nth-child(even) td{background:#fbfaf5}
+.cta{background:linear-gradient(135deg,var(--g900),var(--g700));color:#fff;border-radius:var(--radius);padding:2rem;display:flex;flex-wrap:wrap;gap:1.4rem;align-items:center;justify-content:space-between;border:1px solid rgba(201,162,39,.4);margin:1.8rem 0}
+.cta h3{font-size:1.2rem;margin-bottom:.35rem}.cta p{color:#dbe8e0;font-size:.92rem;max-width:56ch}
+.btn{display:inline-block;border:none;cursor:pointer;font-family:inherit;font-weight:800;padding:.85rem 1.6rem;border-radius:12px;font-size:.92rem;transition:.2s;text-align:center}
+.btn-gold{background:linear-gradient(135deg,var(--gold),#e3c25c);color:var(--g950)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(201,162,39,.35);color:var(--g950)}
+.btn-line{background:transparent;border:1.5px solid var(--gold);color:var(--gold)}.btn-line:hover{background:rgba(201,162,39,.12)}
+.btn-dark{background:var(--g900);color:#fff}.btn-dark:hover{background:var(--g800)}
+.pager{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:.5rem}
+.pager a{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.9rem 1.3rem;font-weight:700;font-size:.9rem;box-shadow:var(--shadow)}
+.pager a:hover{border-color:var(--gold)}.pager small{display:block;font-weight:600;color:var(--muted);font-size:.75rem}
+.footer{background:var(--g950);color:#c8d6cd;margin-top:3rem;border-top:3px solid var(--gold)}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2rem;padding:2.8rem 0}
+.footer h4{color:var(--gold);font-size:.85rem;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:.9rem}
+.footer p,.footer li{font-size:.88rem;line-height:1.7}.footer ul{list-style:none}.footer li{margin-bottom:.45rem}
+.footer a{color:#c8d6cd}.footer a:hover{color:var(--gold)}
+.foot-bar{border-top:1px solid rgba(255,255,255,.12);padding:1.1rem 0;font-size:.8rem;text-align:center;color:#9db3a8}
+.scorebar{position:sticky;top:118px;z-index:39;background:var(--g900);color:#fff;border-radius:14px;padding:.8rem 1.2rem;display:flex;flex-wrap:wrap;gap:1.1rem;align-items:center;justify-content:space-between;box-shadow:var(--shadow);margin:1.2rem 0 1.6rem;border:1px solid rgba(201,162,39,.4)}
+.scorebar b{color:var(--gold)}.scorebar .item{font-size:.88rem;font-weight:600}
+.form-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.field label{display:block;font-size:.8rem;font-weight:700;color:var(--g800);margin-bottom:.3rem}
+.field input,.field select,.field textarea{width:100%;font-family:inherit;font-size:.92rem;border:1.5px solid var(--line);border-radius:10px;padding:.65rem .8rem;background:#fff;color:var(--ink)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--g600);box-shadow:0 0 0 3px rgba(15,155,122,.15)}
+.q-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.5rem;margin-bottom:1.1rem;box-shadow:0 4px 16px rgba(11,61,46,.06)}
+.q-num{display:inline-grid;place-items:center;min-width:34px;height:34px;border-radius:10px;background:var(--g900);color:var(--gold);font-weight:800;font-size:.9rem;margin-right:.7rem}
+.q-text{font-weight:700;color:var(--ink);margin-bottom:.9rem;display:flex;align-items:flex-start}
+.opts{display:grid;gap:.5rem}
+.opt{display:flex;gap:.7rem;align-items:flex-start;border:1.5px solid var(--line);border-radius:10px;padding:.6rem .8rem;cursor:pointer;font-size:.92rem;background:#fff;transition:.15s}
+.opt:hover{border-color:var(--g600);background:#f2faf6}.opt input{margin-top:.28rem;accent-color:var(--g700)}
+.opt.correct{border-color:var(--green-ok);background:#eaf7f0}.opt.wrong{border-color:var(--red);background:#fdeeec}
+.feedback{font-size:.82rem;font-weight:800;margin-top:.6rem}.feedback.ok{color:var(--green-ok)}.feedback.no{color:var(--red)}
+.pembahasan{margin-top:.8rem;background:#fbf7ea;border-left:4px solid var(--gold);border-radius:8px;padding:.7rem .9rem;font-size:.86rem}
+.pembahasan b{color:var(--gold-d)}
+textarea.essay{min-height:130px;resize:vertical}
+.result{display:none;background:linear-gradient(150deg,var(--g950),var(--g800));color:#fff;border-radius:var(--radius);padding:2rem;margin:1.6rem 0;border:1px solid rgba(201,162,39,.45)}
+.result .big{font-size:2.4rem;font-weight:800;color:var(--gold)}
+.actions{display:flex;gap:.8rem;flex-wrap:wrap;margin:1.4rem 0}
+details{background:#fbfaf5;border:1px solid var(--line);border-radius:10px;padding:.8rem 1rem;margin-top:.9rem}
+details summary{cursor:pointer;font-weight:700;color:var(--g800);font-size:.9rem}
+details .body{font-size:.86rem;color:var(--muted);padding-top:.6rem}
+@media(max-width:900px){.grid3{grid-template-columns:repeat(2,1fr)}.form-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.nav-links a:not(.pill){display:none}.grid2,.grid3,.form-grid{grid-template-columns:1fr}.sec{padding:1.4rem 1.1rem}.cta{flex-direction:column;align-items:flex-start}.pager{flex-direction:column}.scorebar{top:108px}.innav{top:58px}}
+</style>
+</head>
+<body id="atas">
+<div id="rbar"></div>
+
+<header class="nav">
+  <div class="container nav-in">
+    <a class="brand" href="index.html"><span class="brand-mark">SKI</span><span>SKI Madrasah<small>Sejarah Kebudayaan Islam Interaktif</small></span></a>
+    <nav class="nav-links">
+      <a href="index.html#timeline">Linimasa</a><a href="index.html#silabus">16 Bab</a><a href="index.html#tentang">Tentang</a>
+      <a class="pill" href="#uji-formatif">📝 Uji Formatif</a>
+    </nav>
+  </div>
+</header>
+
+<div class="crumbs">
+  <div class="container">
+    <a href="13.html">← Bab 13</a>
+    <span>Web-Book SKI · Bab 14 dari 16</span>
+    <a href="15.html">Bab 15 →</a>
+  </div>
+</div>
+
+<section class="ch-hero">
+  <div class="container">
+    <span class="bab-badge">✦ Web-Book Progresif · Bab 14 dari 16</span>
+    <h1>Pengembangan Media dan Teknologi Digital Pembelajaran SKI (TPACK)</h1>
+    <p class="lead">Prinsip pengembangan media digital untuk SKI; peta digital (GIS History), museum virtual, AR, komik Canva, animasi, dan podcast; kerangka TPACK (Technological Pedagogical Content Knowledge); serta evaluasi kritis kesesuaian teknologi dengan tujuan pedagogis dan konteks madrasah.</p>
+    <div class="ch-meta">
+      <span>🏛️ IAIN Curup</span><span>📚 Materi dan Pembelajaran SKI di Madrasah</span>
+      <span>📝 25 Pilihan Ganda + 5 Essay HOTS</span><span>📜 Kepdirjen Pendis No. 9941/2025</span>
+    </div>
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="#materi">📖 Baca Materi</a>
+      <a class="btn btn-line" href="#uji-formatif">📝 Langsung ke Uji Formatif</a>
+      <a class="btn btn-line" href="15.html">Lanjut Bab 15 →</a>
+    </div>
+  </div>
+</section>
+
+<nav class="innav">
+  <div class="container">
+    <a href="#cp">Capaian &amp; Tujuan</a><a href="#peta">Peta Konsep</a>
+    <a href="#s14-1">14.1 GIS</a><a href="#s14-2">14.2 Museum/AR</a>
+    <a href="#s14-3">14.3 Komik</a><a href="#s14-4">14.4 Animasi/Podcast</a>
+    <a href="#s14-5">14.5 TPACK</a><a href="#s14-6">14.6 Studi Kasus</a>
+    <a href="#s14-7">14.7 Praktik</a><a href="#s14-8">14.8 HOTS</a>
+    <a href="#rangkuman">Rangkuman</a><a href="#pustaka">Pustaka</a><a href="#penutup">Penutup</a>
+    <a class="gold" href="#uji-formatif">Uji Formatif</a>
+  </div>
+</nav>
+
+<main class="article" id="materi">
+<div class="read">
+
+<!-- ===== A. CAPAIAN & TUJUAN ===== -->
+<section class="sec" id="cp">
+  <div class="sec-head"><span class="sec-badge">A</span><div><div class="sec-sub">CAPAIAN PEMBELAJARAN &amp; TUJUAN PEMBELAJARAN</div><h2 class="sec-title">Arah Belajar Bab 14</h2></div></div>
+  <h3>Capaian Pembelajaran Bab</h3>
+  <p>Setelah mempelajari bab ini, mahasiswa mampu memahami prinsip pengembangan media digital untuk pembelajaran Sejarah Kebudayaan Islam (SKI), menganalisis hubungan antara karakteristik konten sejarah, strategi pedagogis, dan teknologi, serta merancang media digital yang relevan, akurat, inklusif, ringan, dan sesuai dengan kondisi nyata madrasah. Mahasiswa juga mampu menjelaskan kerangka <em>Technological Pedagogical Content Knowledge</em> (TPACK), menganalisis integrasi teknologi, pedagogi, dan konten, serta memilih teknologi secara kritis berdasarkan tujuan pembelajaran, bukan sekadar mengikuti tren digital.</p>
+  <h3>Tujuan Pembelajaran</h3>
+  <ol>
+    <li>menjelaskan fungsi media dan teknologi digital dalam pembelajaran SKI;</li>
+    <li>menjelaskan konsep peta digital dan <em>GIS History</em> untuk visualisasi spasial;</li>
+    <li>merancang penggunaan museum virtual dan <em>Augmented Reality</em> (AR) secara pedagogis;</li>
+    <li>membuat rancangan komik sejarah berbasis Canva yang membedakan fakta dan rekonstruksi;</li>
+    <li>mengembangkan gagasan animasi interaktif dan podcast sejarah;</li>
+    <li>menjelaskan kerangka TPACK dan komponen-komponennya (CK, PK, TK, PCK, TCK, TPK, TPACK);</li>
+    <li>merancang media digital sederhana untuk satu topik SKI berdasarkan kondisi madrasah;</li>
+    <li>menilai kualitas media digital berdasarkan akurasi sejarah, tujuan pedagogis, dan aksesibilitas;</li>
+    <li>mengevaluasi kesesuaian media digital dengan karakteristik peserta didik (MI, MTs, MA);</li>
+    <li>memahami prinsip literasi informasi dan verifikasi digital dalam penggunaan AI dan internet.</li>
+  </ol>
+</section>
+
+<!-- ===== B. PETA KONSEP ===== -->
+<section class="sec" id="peta">
+  <div class="sec-head"><span class="sec-badge">B</span><div><div class="sec-sub">KERANGKA MATERI</div><h2 class="sec-title">Peta Konsep Bab 14</h2></div></div>
+  <div class="grid2">
+    <div class="map-card"><b>A. Media Digital dalam SKI</b><ol type="a"><li>Peta Digital / GIS History</li><li>Museum Virtual &amp; AR</li><li>Komik Digital (Canva)</li><li>Animasi &amp; Podcast</li></ol></div>
+    <div class="map-card"><b>B. Kerangka TPACK</b><ol type="a"><li>Content Knowledge (CK)</li><li>Pedagogical Knowledge (PK)</li><li>Technological Knowledge (TK)</li><li>Integrasi (PCK, TCK, TPK)</li><li>TPACK (Puncak Integrasi)</li></ol></div>
+    <div class="map-card"><b>C. Prinsip Desain &amp; Aksesibilitas</b><ol type="a"><li>Akurasi Sejarah</li><li>Kesesuaian dengan Tujuan</li><li>Versi Offline &amp; Alternatif</li><li>Etika Digital &amp; Atribusi</li></ol></div>
+    <div class="map-card"><b>D. Literasi Informasi &amp; AI</b><ol type="a"><li>Verifikasi Sumber Digital</li><li>Risiko Halusinasi AI</li><li>AI sebagai Alat Bantu, Bukan Sumber Mutlak</li></ol></div>
+  </div>
+</section>
+
+<!-- ===== C. 14.1 GIS ===== -->
+<section class="sec" id="s14-1">
+  <div class="sec-head"><span class="sec-badge">C</span><div><div class="sec-sub">URAIAN MATERI · 14.1</div><h2 class="sec-title">Pemanfaatan Peta Digital (GIS History) untuk Visualisasi Ekspansi Islam</h2></div></div>
+  <h3>A. Sejarah Memiliki Dimensi Ruang</h3>
+  <p>Sejarah sering diajarkan melalui dimensi waktu ("kapan"), padahal sejarah juga selalu memiliki dimensi ruang ("di mana"). Pertanyaan spasial sangat penting dalam SKI karena perkembangan Islam berhubungan erat dengan jalur perdagangan, pusat kota, pelabuhan, wilayah kekuasaan, dan jaringan ulama. Karena itu, peta bukan sekadar ilustrasi atau dekorasi, melainkan <b>sumber informasi historis</b> dan alat analisis spasial.</p>
+  <h3>B. Apa Itu GIS History?</h3>
+  <p><em>Geographic Information System</em> (GIS) memungkinkan data geografis dikumpulkan, divisualisasikan, dan dianalisis. Dalam pembelajaran sejarah, GIS dapat digunakan untuk membuat peta perubahan wilayah kerajaan, jalur migrasi tokoh, persebaran pusat keilmuan, hingga jaringan kesultanan Nusantara.</p>
+  <h3>C. Contoh Pemanfaatan &amp; Prinsip Desain</h3>
+  <p>Alih-alih hanya menampilkan peta jadi, guru dapat meminta siswa menelusuri jalur ekspansi Umayyah atau jalur Islamisasi Nusantara, lalu menjawab pertanyaan analitis: "Mengapa letak geografis berpengaruh terhadap pengelolaan pemerintahan?"</p>
+  <div class="callout c-note">
+    <b class="tag">📌 Prinsip Desain Peta Digital</b>
+    <p style="margin:0;text-align:left">1. Tidak terlalu penuh; 2. Simbol konsisten &amp; ada legenda; 3. Mencantumkan sumber data &amp; tahun/periode; 4. <b>Tidak mencampur wilayah dari periode berbeda tanpa penanda</b> (Kesalahan umum: menggunakan peta Abbasiyah abad ke-9 untuk mewakili seluruh sejarah Abbasiyah).</p>
+  </div>
+</section>
+
+<!-- ===== D. 14.2 MUSEUM/AR ===== -->
+<section class="sec" id="s14-2">
+  <div class="sec-head"><span class="sec-badge">D</span><div><div class="sec-sub">URAIAN MATERI · 14.2</div><h2 class="sec-title">Museum Virtual 3D dan Tur Sejarah Augmented Reality (AR)</h2></div></div>
+  <h3>A. Hakikat Museum Virtual &amp; AR</h3>
+  <p>Museum virtual memberikan kesempatan kepada siswa yang tidak dapat melakukan kunjungan fisik untuk mengakses representasi koleksi secara daring. Sementara itu, <em>Augmented Reality</em> (AR) menambahkan informasi digital ke lingkungan nyata melalui perangkat (misal: memindai kode QR pada gambar masjid untuk memunculkan video narasi sejarah). AR berbeda dari VR; pada AR, dunia nyata tetap menjadi bagian dari pengalaman.</p>
+  <h3>B. Potensi &amp; Keterbatasan</h3>
+  <p>Teknologi imersif berpotensi memvisualisasikan konsep kompleks, tetapi efektivitasnya sangat bergantung pada desain pedagogis dan konteks sosial-teknologis. Teknologi imersif bukan solusi universal. Guru harus memastikan bahwa AR/VR digunakan untuk menambahkan nilai analisis, bukan sekadar efek visual.</p>
+  <h3>C. Etika Digital</h3>
+  <p>Siswa perlu membiasakan mencantumkan sumber, tidak menghapus atribusi, membedakan rekonstruksi digital dari objek asli, dan memberi label ketika sebuah gambar merupakan ilustrasi modern.</p>
+</section>
+
+<!-- ===== E. 14.3 KOMIK ===== -->
+<section class="sec" id="s14-3">
+  <div class="sec-head"><span class="sec-badge">E</span><div><div class="sec-sub">URAIAN MATERI · 14.3</div><h2 class="sec-title">Pembuatan Komik Sejarah Berbasis Canva</h2></div></div>
+  <p>Komik memiliki kombinasi narasi, gambar, dialog, dan urutan visual yang sangat membantu menyajikan peristiwa sejarah, terutama untuk MI dan MTs. Namun, komik sejarah harus dibedakan dari dokumentasi sejarah.</p>
+  <h4>Struktur Komik Sejarah yang Baik:</h4>
+  <ol>
+    <li><b>Panel Konteks:</b> Ruang, waktu, keadaan.</li>
+    <li><b>Panel Masalah:</b> Muncul persoalan.</li>
+    <li><b>Panel Proses:</b> Keputusan atau perubahan.</li>
+    <li><b>Panel Akibat &amp; Refleksi:</b> Konsekuensi dan <em>ibrah</em>.</li>
+  </ol>
+  <div class="callout c-warn">
+    <b class="tag">⚠️ Catatan Historiografis</b>
+    <p style="margin:0;text-align:left">Gunakan label: <em>"Rekonstruksi dialog untuk tujuan pembelajaran."</em> Jangan menulis dialog fiktif seolah-olah itu kutipan asli sumber sejarah. Komik dapat diakhiri dengan pertanyaan HOTS: "Keputusan apa yang mungkin Anda ambil berdasarkan kondisi saat itu?"</p>
+  </div>
+</section>
+
+<!-- ===== F. 14.4 ANIMASI/PODCAST ===== -->
+<section class="sec" id="s14-4">
+  <div class="sec-head"><span class="sec-badge">F</span><div><div class="sec-sub">URAIAN MATERI · 14.4</div><h2 class="sec-title">Animasi Interaktif dan Podcast Sejarah</h2></div></div>
+  <p><b>Animasi</b> cocok untuk memvisualisasikan perubahan wilayah, kronologi, atau mekanisme. Namun, animasi yang terlalu dekoratif (banyak efek transisi/musik) dapat meningkatkan beban perhatian dan mengalihkan fokus dari materi inti.</p>
+  <p><b>Podcast</b> merupakan media audio yang efektif untuk cerita sejarah, wawancara imajiner, debat historiografi, atau format <em>History Mystery</em>. Podcast juga menjadi solusi aksesibilitas yang baik untuk madrasah dengan keterbatasan bandwidth internet (siswa dapat mengunduh audio dan mendengarkannya secara offline).</p>
+</section>
+
+<!-- ===== G. 14.5 TPACK ===== -->
+<section class="sec" id="s14-5">
+  <div class="sec-head"><span class="sec-badge">G</span><div><div class="sec-sub">URAIAN MATERI · 14.5</div><h2 class="sec-title">Kerangka TPACK: Memadukan Pedagogi, Konten, dan Teknologi</h2></div></div>
+  <p>TPACK (<em>Technological Pedagogical Content Knowledge</em>) dikembangkan oleh Mishra dan Koehler. Kerangka ini menegaskan bahwa integrasi teknologi bukan sekadar keterampilan mengoperasikan alat, melainkan pengetahuan kompleks tentang bagaimana teknologi, pedagogi, dan konten berinteraksi.</p>
+  <div class="table-wrap">
+    <table class="tbl">
+      <tr><th>Komponen</th><th>Pertanyaan Guru</th><th>Contoh SKI</th></tr>
+      <tr><td><b>CK</b> (Content)</td><td>Apa isi sejarah yang harus dikuasai?</td><td>Teori masuknya Islam ke Nusantara</td></tr>
+      <tr><td><b>PK</b> (Pedagogy)</td><td>Bagaimana siswa mempelajarinya?</td><td>Discovery Learning &amp; diskusi kelompok</td></tr>
+      <tr><td><b>TK</b> (Technology)</td><td>Teknologi apa yang tersedia?</td><td>Peta digital interaktif &amp; dokumen digital</td></tr>
+      <tr><td><b>TPACK</b></td><td>Bagaimana ketiganya menyatu?</td><td>Siswa menggunakan peta digital untuk membandingkan jalur perdagangan dengan bukti teori Islamisasi, lalu menyusun peta argumentatif.</td></tr>
+    </table>
+  </div>
+  <div class="callout c-prin">
+    <b class="tag">📌 Prinsip Utama TPACK</b>
+    <p style="margin:0;text-align:left">Teknologi harus mengikuti fungsi pedagogis. Jangan memilih teknologi karena "menarik" atau "tren", tetapi pilihlah karena ia membuat tujuan pembelajaran sejarah menjadi lebih jelas, lebih bermakna, atau lebih mudah diselidiki.</p>
+  </div>
+</section>
+
+<!-- ===== H. 14.6 STUDI KASUS ===== -->
+<section class="sec" id="s14-6">
+  <div class="sec-head"><span class="sec-badge">H</span><div><div class="sec-sub">URAIAN MATERI · 14.6</div><h2 class="sec-title">Studi Kasus: Media Digital Sederhana untuk Satu Topik SKI</h2></div></div>
+  <div class="callout c-case">
+    <b class="tag">🗂️ Kasus</b>
+    <p style="margin:0;text-align:left">Sebuah MTs akan mengajarkan "Masuknya Islam di Nusantara". Fasilitas: satu proyektor, internet terbatas, sebagian besar siswa punya HP, tidak ada lab komputer. Guru merancang: <b>"Peta Interaktif Sederhana Jalur Islamisasi Nusantara"</b> menggunakan aplikasi peta dasar yang diberi titik-titik (Aceh, Malaka, Jawa, dll) berisi deskripsi, gambar, dan pertanyaan. Siswa berkelompok menganalisis satu wilayah dan mempresentasikan hubungan antara posisi geografis dengan bukti perkembangan Islam.</p>
+  </div>
+  <p><b>Analisis TPACK:</b> CK (sejarah Islamisasi), PK (inquiry/discovery), TK (peta digital). TPACK tercapai karena peta digunakan untuk membantu siswa menemukan hubungan spasial yang sulit dipahami melalui teks saja, sesuai dengan keterbatasan fasilitas madrasah.</p>
+</section>
+
+<!-- ===== I. 14.7 PRAKTIK ===== -->
+<section class="sec" id="s14-7">
+  <div class="sec-head"><span class="sec-badge">I</span><div><div class="sec-sub">URAIAN MATERI · 14.7</div><h2 class="sec-title">Aktivitas: Praktik Membuat Media Digital Ringan</h2></div></div>
+  <h3>Proyek Mahasiswa</h3>
+  <p>Buat satu media pembelajaran digital sederhana (Komik / Infografik / Timeline / Podcast / Peta Digital) untuk satu topik SKI.</p>
+  <h3>Langkah Produksi:</h3>
+  <ol>
+    <li><b>Pilih Materi &amp; Rumuskan Tujuan:</b> Hubungkan media dengan tujuan (misal: "Peta digital dipilih karena tujuan menuntut siswa memahami hubungan spasial").</li>
+    <li><b>Kumpulkan Sumber:</b> Minimal 2 sumber akademik, 1 sumber visual yang jelas asal-usulnya.</li>
+    <li><b>Produksi:</b> Pertimbangkan akurasi, keterbacaan, akses, dan durasi.</li>
+    <li><b>Uji Media:</b> Tanyakan kepada teman: "Apakah tujuan pembelajaran terlihat? Apakah ada informasi tanpa sumber?"</li>
+    <li><b>Revisi &amp; Refleksi TPACK:</b> "Apa yang akan terjadi pada pembelajaran jika teknologi tersebut dihilangkan? Jika tidak ada yang hilang, berarti teknologi hanya dekorasi."</li>
+  </ol>
+</section>
+
+<!-- ===== J. 14.8 HOTS ===== -->
+<section class="sec" id="s14-8">
+  <div class="sec-head"><span class="sec-badge">J</span><div><div class="sec-sub">URAIAN MATERI · 14.8</div><h2 class="sec-title">Latihan HOTS: Mengevaluasi Kesesuaian Media Digital</h2></div></div>
+  <h3>Kasus Evaluasi</h3>
+  <ol>
+    <li><b>Kasus 1 (VR tanpa tujuan):</b> Madrasah membeli VR dan guru menggunakannya untuk seluruh pelajaran SKI. <em>Analisis:</em> Teknologi mahal tidak otomatis efektif. Guru harus bertanya: "Apa yang tidak dapat dicapai dengan media biasa?"</li>
+    <li><b>Kasus 2 (Komik salah):</b> Komik Sultan Agung sangat indah, tetapi dialog seluruhnya dibuat tanpa sumber. <em>Analisis:</em> Masalah historiografis. Solusi: Bedakan fakta dan rekonstruksi, cantumkan sumber, beri label adegan ilustratif.</li>
+    <li><b>Kasus 3 (Podcast &amp; Internet):</b> Siswa kesulitan streaming. <em>Solusi:</b> Unduh audio, bagikan via Bluetooth/offline sharing, sediakan transkrip.</li>
+    <li><b>Kasus 4 (Peta untuk MI):</b> Peta terlalu kompleks (25 titik, teks panjang). <em>Solusi:</em> Sederhanakan menjadi 3-5 titik utama, ikon besar, narasi singkat.</li>
+  </ol>
+  <h3>Tugas Esai HOTS</h3>
+  <p>Evaluasilah pernyataan: <em>"Semakin canggih teknologi yang digunakan, semakin berkualitas pembelajaran SKI."</em> Setujui atau tolak dengan menggunakan prinsip TPACK, literasi informasi, dan contoh konkret terkait penggunaan AI dalam sejarah.</p>
+</section>
+
+<!-- ===== K. RANGKUMAN ===== -->
+<section class="sec" id="rangkuman">
+  <div class="sec-head"><span class="sec-badge">K</span><div><div class="sec-sub">SIMAK KEMBALI</div><h2 class="sec-title">Rangkuman Materi</h2></div></div>
+  <ol>
+    <li>Teknologi digital memperluas pembelajaran SKI, tetapi teknologi bukan pusat pembelajaran; pusatnya adalah tujuan pendidikan dan pengalaman belajar peserta didik.</li>
+    <li>Peta digital dan GIS membantu siswa memahami dimensi spasial sejarah ("di mana" dan "mengapa lokasi itu penting").</li>
+    <li>Museum virtual dan AR berpotensi memvisualisasikan konsep kompleks, tetapi efektivitasnya bergantung pada desain pedagogis, bukan kecanggihan alat.</li>
+    <li>Komik digital (Canva) efektif untuk visualisasi, tetapi guru harus memastikan dialog dan ilustrasi tidak disajikan sebagai fakta historis apabila tidak didukung sumber.</li>
+    <li>Animasi cocok untuk kronologi/perubahan, podcast efektif untuk pengalaman audio dan alternatif saat internet terbatas.</li>
+    <li>TPACK menekankan integrasi <em>Content Knowledge</em> (CK), <em>Pedagogical Knowledge</em> (PK), dan <em>Technological Knowledge</em> (TK).</li>
+    <li>Kesalahan umum: <em>Technology-driven teaching</em> (memilih aplikasi dulu baru mencari materi) dan <em>Digitalisasi ceramah</em> (hanya memindahkan PPT ke PDF).</li>
+    <li>Media harus menyesuaikan jenjang (MI butuh visual konkret &amp; sederhana; MA butuh analisis sumber &amp; historiografi).</li>
+    <li>Aksesibilitas (versi offline, transkrip, font terbaca) dan etika digital (atribusi sumber) wajib diperhatikan.</li>
+    <li>Penggunaan AI untuk sejarah harus diikuti verifikasi dengan sumber kredibel untuk menghindari halusinasi fakta dan bias data.</li>
+  </ol>
+</section>
+
+<!-- ===== L. DAFTAR PUSTAKA ===== -->
+<section class="sec" id="pustaka">
+  <div class="sec-head"><span class="sec-badge">L</span><div><div class="sec-sub">RUJUKAN BAB 14</div><h2 class="sec-title">Daftar Pustaka</h2></div></div>
+  <ul style="font-size:.88rem;color:var(--muted)">
+    <li>Clark, R. C., &amp; Mayer, R. E. (2016). <em>E-learning and the science of instruction</em> (4th ed.). Wiley.</li>
+    <li>Koehler, M. J., &amp; Mishra, P. (2009). What is technological pedagogical content knowledge? <em>Contemporary Issues in Technology and Teacher Education</em>.</li>
+    <li>Mayer, R. E. (2021). <em>Multimedia learning</em> (3rd ed.). Cambridge University Press.</li>
+    <li>Mishra, P., &amp; Koehler, M. J. (2006). Technological pedagogical content knowledge: A framework for teacher knowledge. <em>Teachers College Record</em>.</li>
+    <li>Zhou, Y., Chen, J., &amp; Wang, M. (2022). A meta-analytic review on incorporating virtual and augmented reality in museum learning. <em>Educational Research Review</em>.</li>
+    <li>Badrudin, B. (2023). Pemanfaatan media digital berbasis Canva dalam pembelajaran sejarah. <em>KALA MANCA</em>.</li>
+    <li>Ilham, M., et al. (2026). The effectiveness of developing Canva web-based interactive learning media. <em>Jurnal Teknologi Pendidikan</em>.</li>
+  </ul>
+</section>
+
+<!-- ===== M. PENUTUP ===== -->
+<section class="sec" id="penutup">
+  <div class="sec-head"><span class="sec-badge">M</span><div><div class="sec-sub">PENUTUP BAB</div><h2 class="sec-title">Penutup</h2></div></div>
+  <p>Guru SKI masa kini perlu memiliki tiga kemampuan yang saling berhubungan: memahami materi sejarah secara akurat (CK), merancang pedagogi yang sesuai (PK), dan memilih teknologi secara fungsional (TK). Itulah inti TPACK.</p>
+  <p>Dalam pembelajaran sejarah, teknologi harus digunakan secara lebih hati-hati karena media digital dapat dengan mudah menciptakan representasi masa lalu yang tampak meyakinkan tetapi tidak akurat (peta salah, gambar tokoh tidak terverifikasi, video AI yang menyajikan rekonstruksi sebagai fakta). Karena itu, literasi digital dan literasi sejarah harus berjalan bersama.</p>
+  <p>Prinsip yang perlu diingat oleh calon guru: <b>Jangan memilih teknologi karena teknologi itu menarik. Pilihlah teknologi karena ia membuat tujuan pembelajaran sejarah menjadi lebih jelas, lebih bermakna, lebih dapat diselidiki, atau lebih mudah dikomunikasikan.</b> Dengan prinsip tersebut, bahkan madrasah dengan fasilitas terbatas tetap dapat menerapkan pembelajaran digital yang bermakna.</p>
+</section>
+
+<!-- ===== CTA UJI FORMATIF ===== -->
+<div class="cta">
+  <div>
+    <h3>📝 Uji Pemahaman Anda</h3>
+    <p>Setelah mempelajari Bab 14, kerjakan uji formatif berikut: 25 soal pilihan ganda dengan skor otomatis dan pembahasan, serta 5 soal essay HOTS dengan pedoman penskoran.</p>
+  </div>
+  <a class="btn btn-gold" href="#uji-formatif">Mulai Uji Formatif ↓</a>
+</div>
+
+<!-- ===== UJI FORMATIF ===== -->
+<section class="sec" id="uji-formatif">
+  <div class="sec-head"><span class="sec-badge">📝</span><div><div class="sec-sub">UJI FORMATIF BAB 14</div><h2 class="sec-title">Pengembangan Media dan Teknologi Digital Pembelajaran SKI (TPACK)</h2></div></div>
+  <p><b>Materi:</b> Peta Digital (GIS), Museum Virtual &amp; AR, Komik Canva, Animasi &amp; Podcast, Kerangka TPACK, serta evaluasi kritis kesesuaian media digital.</p>
+  <p><b>Bagian A:</b> 25 soal pilihan ganda, skor 4 per soal.<br><b>Bagian B:</b> 5 soal essay HOTS, skor 20 per soal dan dinilai berdasarkan rubrik.</p>
+  
+  <h3>📋 Identitas Mahasiswa</h3>
+  <div class="form-grid" id="identitas">
+    <div class="field"><label>Nama Lengkap *</label><input id="fNama" type="text" placeholder="Nama lengkap"></div>
+    <div class="field"><label>NIM *</label><input id="fNim" type="text" placeholder="Nomor induk mahasiswa"></div>
+    <div class="field"><label>📅 Tanggal Ujian</label><input id="fTgl" type="date"></div>
+    <div class="field"><label>Fakultas / Institusi</label><input id="fFak" type="text" placeholder="mis. Tarbiyah — IAIN Curup"></div>
+    <div class="field"><label>Program Studi</label><input id="fProdi" type="text" placeholder="mis. PAI / SKI"></div>
+    <div class="field"><label>Semester</label>
+      <select id="fSmt"><option value="">Pilih Semester</option><option>Semester 1</option><option>Semester 2</option><option>Semester 3</option><option>Semester 4</option><option>Semester 5</option><option>Semester 6</option></select>
+    </div>
+    <div class="field"><label>Kelas</label><input id="fKls" type="text" placeholder="mis. A / B"></div>
+  </div>
+  
+  <div class="callout c-warn" style="margin-top:1.2rem">
+    <b class="tag">⚠️ Perhatian</b>
+    <p style="margin:0">Harap selesaikan semua 25 soal pilihan ganda dan 5 soal essay dengan teliti! Isi Nama Lengkap dan NIM terlebih dahulu sebelum mengerjakan.</p>
+  </div>
+  
+  <div class="scorebar">
+    <span class="item">🏆 Skor Akhir PG: <b id="sAkhir">0</b>/100</span>
+    <span class="item">📋 PG Benar: <b id="sBenar">0</b>/25</span>
+    <span class="item">✍️ Essay: <b id="sEs">0</b>/5 terjawab</span>
+  </div>
+  
+  <h3>📋 Bagian A: Pilihan Ganda</h3>
+  <div id="pgBox"></div>
+  
+  <h3>✍️ Bagian B: Essay HOTS</h3>
+  <div id="esBox"></div>
+  
+  <div class="actions">
+    <button class="btn btn-gold" id="btnSubmit">✉️ KIRIM JAWABAN &amp; LIHAT HASIL</button>
+    <a class="btn btn-dark" href="#atas">↑ Kembali ke Atas</a>
+  </div>
+  
+  <section class="result" id="hasil">
+    <h2>🎉 Ujian Selesai!</h2>
+    <p style="color:#dbe8e0;margin:.4rem 0 1rem">Selamat! Anda telah menyelesaikan Uji Formatif Bab 14.</p>
+    <div class="big" id="rBig">0 / 100</div>
+    <p id="rName" style="margin-top:.5rem;font-weight:700"></p>
+    <p style="color:#dbe8e0;font-size:.9rem">📋 Pilihan Ganda: <b id="rPG" style="color:var(--gold)"></b> · ✍️ Essay: <b id="rEs" style="color:var(--gold)"></b>.</p>
+    <div class="actions">
+      <button class="btn btn-gold" onclick="window.print()">📥 UNDUH PDF LENGKAP</button>
+      <button class="btn btn-line" id="btnTxt">📄 UNDUH SKOR (TXT)</button>
+      <button class="btn btn-line" onclick="location.reload()">🔄 MULAI ULANG</button>
+    </div>
+    <details><summary>📊 Pedoman Penskoran Essay (untuk dosen)</summary><div class="body" id="rubrikBox"></div></details>
+  </section>
+  
+  <section class="sec" id="reviewSec" style="display:none;margin-top:1.5rem">
+    <div class="sec-head"><span class="sec-badge">🔍</span><div><h2 class="sec-title">Kunci Jawaban &amp; Pembahasan Pilihan Ganda</h2><div class="sec-sub">Tampil otomatis setelah Anda mengirim jawaban</div></div></div>
+    <div id="reviewBox"></div>
+  </section>
+</section>
+
+<div class="pager">
+  <a href="13.html"><small>← Sebelumnya</small>Bab 13</a>
+  <a href="index.html" style="text-align:center"><small>Navigasi</small>Daftar Isi</a>
+  <a href="15.html" style="text-align:right"><small>Selanjutnya →</small>Bab 15</a>
+</div>
+
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><h4>SKI Madrasah</h4><p>Web-Book progresif Pembelajaran Sejarah Kebudayaan Islam di Madrasah, IAIN Curup.</p></div>
+      <div><h4>Referensi</h4><ul><li>Kepdirjen Pendis No. 9941/2025</li><li>Bahan Ajar SKI Berbasis Deep Learning — IAIN Curup</li><li>Kurikulum Madrasah — Kementerian Agama RI</li></ul></div>
+      <div><h4>Infrastruktur</h4><ul><li>Backend: Supabase</li><li>Deploy: GitHub Pages</li></ul></div>
+    </div>
+    <div class="foot-bar">© SKI Madrasah — IAIN Curup. Hak cipta dilindungi.</div>
+  </div>
+</footer>
+
+<script>
+const PG=[
+{q:`Fungsi utama GIS dalam pembelajaran sejarah adalah …`,o:[`menggantikan guru`,`memperkuat pemahaman dimensi ruang sejarah`,`menghapus kebutuhan sumber`,`membuat siswa menghafal peta`,`menggantikan asesmen`],k:1,p:`GIS membantu siswa memahami dimensi spasial ("di mana" dan "mengapa lokasi penting").`},
+{q:`Peta sejarah sebaiknya dipahami sebagai …`,o:[`dekorasi`,`hiburan`,`sumber dan alat analisis spasial`,`latar belakang presentasi`,`pengganti buku`],k:2,p:`Peta merupakan sumber informasi historis dan alat analisis.`},
+{q:`Hal yang harus dicantumkan pada peta digital adalah …`,o:[`animasi sebanyak mungkin`,`sumber data`,`musik`,`efek transisi`,`meme sejarah`],k:1,p:`Mencantumkan sumber data adalah prinsip etika akademik dan literasi informasi.`},
+{q:`Museum virtual terutama dapat membantu siswa …`,o:[`menghilangkan sumber fisik`,`mengakses pengalaman dan representasi koleksi secara digital`,`menghafalkan lebih banyak tanggal`,`menghindari analisis`,`menggantikan museum secara permanen`],k:1,p:`Museum virtual memberikan akses digital terhadap representasi koleksi.`},
+{q:`AR berbeda dari VR terutama karena …`,o:[`AR hanya audio`,`VR selalu menggunakan buku`,`AR menambahkan objek/informasi digital ke lingkungan nyata`,`VR tidak menggunakan teknologi`,`keduanya tidak berkaitan dengan pembelajaran`],k:2,p:`Augmented Reality (AR) menambahkan lapisan digital pada dunia nyata.`},
+{q:`Salah satu potensi AR/VR dalam pembelajaran museum adalah …`,o:[`memvisualisasikan konsep atau konteks yang kompleks`,`menghapus benda sejarah`,`mengganti semua pembelajaran`,`menghilangkan sumber`,`membuat siswa pasif`],k:0,p:`Teknologi imersif membantu memvisualisasikan konsep yang abstrak/kompleks.`},
+{q:`Dialog dalam komik sejarah sebaiknya …`,o:[`selalu dianggap kutipan asli`,`boleh dibuat tanpa konteks`,`dibedakan antara fakta dan rekonstruksi pedagogis`,`tidak membutuhkan sumber`,`hanya berupa humor`],k:2,p:`Guru dan siswa harus memahami batas antara fakta sejarah dan rekonstruksi kreatif.`},
+{q:`Canva terutama dapat digunakan untuk membuat …`,o:[`artefak asli`,`komik dan infografik digital`,`sumber primer baru`,`arsip negara`,`manuskrip asli`],k:1,p:`Canva adalah alat desain untuk membuat media visual seperti komik dan infografik.`},
+{q:`Podcast cocok terutama untuk …`,o:[`pengalaman berbasis audio`,`menggambar peta`,`menyimpan artefak fisik`,`menggantikan semua sumber`,`memperbaiki fakta sejarah`],k:0,p:`Podcast adalah media audio yang efektif untuk cerita, wawancara, atau refleksi sejarah.`},
+{q:`Komponen pertama TPACK adalah salah satu dari …`,o:[`Content Knowledge`,`Financial Knowledge`,`Military Knowledge`,`Archival Knowledge`,`Political Knowledge`],k:0,p:`TPACK terdiri dari Content, Pedagogical, dan Technological Knowledge.`},
+{q:`Pedagogical Knowledge mengacu pada …`,o:[`kemampuan menghafal sejarah`,`pengetahuan tentang proses mengajar dan belajar`,`kemampuan desain grafis saja`,`kemampuan memperbaiki komputer`,`pengetahuan tentang internet`],k:1,p:`PK berkaitan dengan strategi, model, dan metode pembelajaran.`},
+{q:`Technological Knowledge dalam TPACK adalah …`,o:[`penguasaan teknologi yang relevan`,`hafalan sejarah`,`kemampuan membaca manuskrip saja`,`pengetahuan pedagogis saja`,`kemampuan berbicara`],k:0,p:`TK adalah kemampuan mengoperasikan dan memahami teknologi digital.`},
+{q:`TCK berarti hubungan antara …`,o:[`teknologi dan konten`,`pedagogi dan karakter`,`sejarah dan moral`,`asesmen dan karakter`,`guru dan kepala sekolah`],k:0,p:`Technological Content Knowledge (TCK) adalah bagaimana teknologi merepresentasikan konten.`},
+{q:`TPK menunjukkan hubungan antara …`,o:[`teknologi dan pedagogi`,`sejarah dan politik`,`siswa dan orang tua`,`buku dan internet`,`tokoh dan wilayah`],k:0,p:`Technological Pedagogical Knowledge (TPK) adalah bagaimana teknologi mengubah strategi pembelajaran.`},
+{q:`TPACK menekankan …`,o:[`penggunaan teknologi sebanyak mungkin`,`integrasi teknologi, pedagogi, dan konten`,`penggunaan satu aplikasi`,`pengurangan peran guru`,`penghapusan buku`],k:1,p:`TPACK adalah puncak integrasi ketiga pengetahuan dasar.`},
+{q:`Jika tujuan pembelajaran adalah memahami jalur ekspansi kerajaan, media yang paling langsung relevan adalah …`,o:[`peta digital`,`podcast saja`,`komik tanpa peta`,`kuis hafalan`,`wallpaper`],k:0,p:`Peta digital memvisualisasikan dimensi ruang dan jalur ekspansi.`},
+{q:`Jika tujuan siswa adalah melakukan wawancara sejarah imajiner berdasarkan sumber, media yang dapat dipilih adalah …`,o:[`podcast`,`peta saja`,`tabel angka`,`poster kosong`,`kalender`],k:0,p:`Podcast sangat cocok untuk format wawancara atau debat sejarah.`},
+{q:`Kesalahan utama dalam penggunaan teknologi adalah …`,o:[`menyesuaikan teknologi dengan tujuan`,`menyediakan versi offline`,`memilih teknologi berdasarkan tren tanpa tujuan pedagogis`,`memeriksa sumber`,`melakukan asesmen`],k:2,p:`Ini disebut kesalahan technology-driven teaching.`},
+{q:`Sebuah media dengan desain sangat indah tetapi berisi fakta sejarah yang salah memiliki masalah utama pada …`,o:[`Content Knowledge`,`ukuran file`,`warna`,`resolusi`,`animasi`],k:0,p:`Akurasi konten sejarah (CK) adalah fondasi utama sebelum aspek visual.`},
+{q:`Media harus menyesuaikan jenjang karena …`,o:[`semua siswa memiliki kemampuan yang sama`,`perkembangan kognitif dan kebutuhan belajar berbeda`,`teknologi hanya untuk MA`,`MI tidak membutuhkan media`,`MTs selalu menggunakan VR`],k:1,p:`Karakteristik kognitif siswa MI, MTs, dan MA sangat berbeda.`},
+{q:`Salah satu bentuk alternatif ketika internet terbatas adalah …`,o:[`menghentikan pembelajaran`,`menyediakan file offline`,`membatalkan aktivitas`,`menggunakan teknologi lebih mahal`,`menambah video streaming`],k:1,p:`Prinsip aksesibilitas: sediakan versi offline (transkrip, audio unduhan).`},
+{q:`Dalam penggunaan media digital, atribusi sumber penting karena …`,o:[`mempercantik media`,`mendukung etika dan literasi akademik`,`menambah animasi`,`membuat file lebih kecil`,`memperpanjang video`],k:1,p:`Atribusi mengajarkan siswa menghargai hak cipta dan melacak validitas informasi.`},
+{q:`Penggunaan AI untuk menghasilkan informasi sejarah harus diikuti …`,o:[`penerimaan tanpa verifikasi`,`verifikasi dengan sumber yang kredibel`,`penghapusan sumber`,`publikasi otomatis`,`pengurangan peran guru`],k:1,p:`AI rentan terhadap halusinasi fakta; verifikasi silang dengan sumber akademik wajib dilakukan.`},
+{q:`Jika tujuan hanya mengetahui urutan lima peristiwa, penggunaan VR kompleks mungkin …`,o:[`pasti lebih baik`,`tidak otomatis diperlukan`,`wajib`,`selalu paling efektif`,`tidak boleh digunakan`],k:1,p:`Teknologi harus proporsional dengan tujuan pembelajaran (prinsip TPACK).`},
+{q:`Prinsip paling tepat dalam memilih media pembelajaran adalah …`,o:[`teknologi paling mahal`,`teknologi paling baru`,`teknologi paling populer`,`teknologi paling sesuai dengan tujuan, konten, pedagogi, dan konteks`,`teknologi yang paling banyak efek visual`],k:3,p:`Kesesuaian pedagogis dan kontekstual jauh lebih penting daripada kecanggihan alat.`}
+];
+
+const ES=[
+{q:`Jelaskan mengapa guru SKI tidak cukup hanya memiliki kemampuan menggunakan aplikasi digital. Hubungkan jawaban Anda dengan kerangka TPACK.`,
+rub:`Penjelasan TPACK: 5 poin; Analisis CK, PK, TK: 5 poin; Contoh konkret integrasi: 5 poin; Kesimpulan: 5 poin.`,
+model:`Guru tidak cukup hanya menguasai aplikasi (TK) karena teknologi tanpa pemahaman konten sejarah (CK) yang akurat akan menghasilkan media yang menyesatkan, dan tanpa pedagogi (PK) yang tepat, teknologi hanya menjadi hiburan. TPACK menuntut integrasi ketiga elemen: guru harus tahu materi sejarahnya, tahu cara siswa memahaminya, dan tahu mengapa teknologi tertentu dipilih untuk memfasilitasi proses tersebut.`},
+{q:`Anda diminta mengajarkan "Ekspansi Islam pada Masa Bani Umayyah". Bandingkan penggunaan peta cetak, GIS digital, dan video animasi. Jelaskan kelebihan, keterbatasan, dan tujuan pembelajaran yang paling sesuai untuk masing-masing.`,
+rub:`Analisis Peta Cetak: 5 poin; Analisis GIS: 5 poin; Analisis Animasi: 5 poin; Kesimpulan kesesuaian tujuan: 5 poin.`,
+model:`Peta cetak: Murah dan mudah, tetapi statis dan tidak interaktif (cocok untuk observasi awal). GIS digital: Memungkinkan analisis spasial, overlay data, dan interaktivitas siswa (cocok untuk tujuan penyelidikan "mengapa lokasi berpengaruh"). Video animasi: Bagus untuk menunjukkan kronologi pergerakan pasukan secara dinamis, tetapi bersifat pasif jika tidak disertai tugas analisis (cocok untuk stimulasi visual).`},
+{q:`Rancang media komik digital tentang satu peristiwa sejarah Islam. Jelaskan bagaimana Anda membedakan fakta sejarah, rekonstruksi dialog, dan ilustrasi.`,
+rub:`Pemilihan peristiwa: 3 poin; Pembedaan fakta & rekonstruksi: 7 poin; Strategi visual: 5 poin; Etika akademik: 5 poin.`,
+model:`Saya memilih peristiwa "Fathu Makkah". Fakta sejarah (tahun 8 H, strategi masuk kota, amnesti umum) disajikan dalam narasi dan panel konteks. Rekonstruksi dialog (percakapan antara Rasulullah saw. dan Abu Sufyan) diberi label jelas "Rekonstruksi pedagogis berdasarkan konteks historis" agar siswa tidak mengira itu adalah transkrip literal. Ilustrasi menggunakan gaya visual yang menghormati kesakralan tokoh (tidak mendramatisasi kekerasan) dan menyertakan daftar pustaka di panel terakhir.`},
+{q:`Sebuah madrasah hanya memiliki satu proyektor dan koneksi internet yang tidak stabil. Buat rancangan pembelajaran SKI berbasis TPACK yang tetap dapat dilaksanakan dengan kondisi tersebut.`,
+rub:`Analisis kendala: 4 poin; Pemilihan media alternatif: 6 poin; Integrasi pedagogi: 5 poin; Asesmen: 5 poin.`,
+model:`Kendala: Internet tidak stabil dan perangkat terbatas. Solusi TPACK: Guru mengunduh materi (video/peta interaktif) di rumah menggunakan WiFi stabil, lalu membawanya via flashdisk. Di kelas, guru menggunakan proyektor untuk menampilkan peta digital GIS sebagai stimulus (TK). Pedagogi (PK): Siswa tidak menonton pasif, tetapi guru menghentikan tayangan di titik tertentu untuk melakukan diskusi tanya-jawab dan analisis sebab-akibat (CK). Asesmen: Siswa bekerja berkelompok menggunakan LKPD cetak yang merujuk pada tayangan untuk menyusun kesimpulan spasial.`},
+{q:`Evaluasilah pernyataan berikut: "Semakin canggih teknologi yang digunakan, semakin berkualitas pembelajaran SKI." Setujui atau tolak pernyataan tersebut dengan menggunakan prinsip TPACK dan contoh konkret terkait penggunaan AI dalam sejarah.`,
+rub:`Posisi evaluatif: 4 poin; Analisis prinsip TPACK: 6 poin; Contoh konkret AI: 5 poin; Kesimpulan: 5 poin.`,
+model:`Saya menolak pernyataan tersebut. Kecanggihan teknologi tidak berkorelasi linear dengan kualitas pembelajaran jika tidak didukung integrasi TPACK yang tepat. Contoh: Penggunaan AI generatif untuk membuat "rekonstruksi wajah tokoh sejarah" mungkin sangat canggih secara visual (TK), tetapi jika siswa menerimanya sebagai fakta sejarah tanpa verifikasi (CK lemah) dan guru tidak mendesain aktivitas kritik sumber (PK lemah), maka teknologi tersebut justru merusak literasi sejarah. Kualitas pembelajaran ditentukan oleh seberapa baik teknologi melayani tujuan pedagogis, bukan oleh spesifikasi perangkatnya.`}
+];
+
+const H=['A','B','C','D','E'];
+const pgBox=document.getElementById('pgBox');
+const esBox=document.getElementById('esBox');
+
+PG.forEach((s,i)=>{
+  pgBox.insertAdjacentHTML('beforeend',`<div class="q-card" id="qc${i}"><div class="q-text"><span class="q-num">${i+1}</span><span>${s.q}</span></div><div class="opts">${s.o.map((o,j)=>`<label class="opt" id="op${i}-${j}"><input type="radio" name="q${i}" value="${j}"><span><b>${H[j]}.</b> ${o}</span></label>`).join('')}</div><div class="feedback" id="fb${i}"></div></div>`);
+});
+
+ES.forEach((s,i)=>{
+  esBox.insertAdjacentHTML('beforeend',`<div class="q-card"><div class="q-text"><span class="q-num">${i+1}</span><span>${s.q}</span></div><textarea class="essay" id="es${i}" placeholder="Tulis jawaban argumentatif Anda di sini..."></textarea></div>`);
+});
+
+document.getElementById('rubrikBox').innerHTML=ES.map((s,i)=>`<p><b>Soal ${i+1} — Bobot 20.</b><br><b>Rubrik:</b> ${s.rub}</p>${s.model?`<p><b>Jawaban model/contoh:</b> ${s.model}</p>`:``}`).join('');
+
+let submitted=false;
+
+document.getElementById('btnSubmit').onclick=()=>{
+  const nama=document.getElementById('fNama').value.trim();
+  const nim=document.getElementById('fNim').value.trim();
+  if(!nama||!nim){alert('⚠️ Silakan isi Nama Lengkap dan NIM terlebih dahulu.');document.getElementById('identitas').scrollIntoView({behavior:'smooth'});return;}
+  let benar=0;
+  PG.forEach((s,i)=>{
+    const pick=document.querySelector(`input[name="q${i}"]:checked`);
+    const val=pick?parseInt(pick.value):-1;
+    const fb=document.getElementById('fb'+i);
+    if(val===s.k){benar++;fb.textContent='✔ Benar';fb.className='feedback ok';document.getElementById(`op${i}-${s.k}`).classList.add('correct');}
+    else{fb.textContent=`✘ Salah — Kunci jawaban: ${H[s.k]}`;fb.className='feedback no';if(val>-1){document.getElementById(`op${i}-${val}`).classList.add('wrong');}document.getElementById(`op${i}-${s.k}`).classList.add('correct');}
+    document.querySelectorAll(`input[name="q${i}"]`).forEach(r=>r.disabled=true);
+  });
+  const skorPG=benar*4;let esTerjawab=0;
+  ES.forEach((_,i)=>{const ta=document.getElementById('es'+i);ta.disabled=true;if(ta.value.trim())esTerjawab++;});
+  document.getElementById('sAkhir').textContent=skorPG;
+  document.getElementById('sBenar').textContent=benar;
+  document.getElementById('sEs').textContent=esTerjawab;
+  document.getElementById('rBig').textContent=skorPG+' / 100';
+  document.getElementById('rName').textContent='👤 '+nama+' · NIM '+nim;
+  document.getElementById('rPG').textContent=skorPG+'/100 ('+benar+' benar dari 25)';
+  document.getElementById('rEs').textContent=esTerjawab+'/5 terjawab';
+  const rb=document.getElementById('reviewBox');rb.innerHTML='';
+  PG.forEach((s,i)=>{
+    const pick=document.querySelector(`input[name="q${i}"]:checked`);
+    const val=pick?parseInt(pick.value):-1;
+    rb.insertAdjacentHTML('beforeend',`<div class="q-card"><div class="q-text"><span class="q-num">${i+1}</span><span>${s.q}</span></div><p style="font-size:.88rem;margin-bottom:.4rem">Jawaban Anda: <b>${val>-1?H[val]:'—'}</b> · Kunci: <b>${H[s.k]}</b></p><div class="pembahasan"><b>Pembahasan:</b> ${s.p}</div></div>`);
+  });
+  document.getElementById('hasil').style.display='block';
+  document.getElementById('reviewSec').style.display='block';
+  document.getElementById('hasil').scrollIntoView({behavior:'smooth'});
+  submitted=true;
+};
+
+document.getElementById('btnTxt').onclick=()=>{
+  if(!submitted){alert('Silakan kirim jawaban terlebih dahulu.');return;}
+  const g=id=>document.getElementById(id).value||'-';
+  let t='=== HASIL UJI FORMATIF BAB 14 — SKI MADRASAH ===\n\n';
+  t+='Nama\t: '+g('fNama')+'\n';t+='NIM\t: '+g('fNim')+'\n';t+='Tanggal\t: '+g('fTgl')+'\n';
+  t+='Fakultas/Institusi\t: '+g('fFak')+'\n';t+='Prodi\t: '+g('fProdi')+'\n';t+='Semester\t: '+g('fSmt')+'\n';t+='Kelas\t: '+g('fKls')+'\n\n';
+  t+='--- BAGIAN A: PILIHAN GANDA ---\n';let benar=0;
+  PG.forEach((s,i)=>{const pick=document.querySelector(`input[name="q${i}"]:checked`);const val=pick?parseInt(pick.value):-1;const ok=val===s.k;if(ok)benar++;t+=`No ${i+1}: ${val>-1?H[val]:'-'} (kunci ${H[s.k]}) ${ok?'BENAR':'SALAH'}\n`;});
+  t+='\nSkor PG: '+(benar*4)+' / 100\n';t+='\n--- BAGIAN B: ESSAY ---\n';
+  ES.forEach((s,i)=>{t+=`\nEssay ${i+1}: ${s.q}\nJawaban:\n${document.getElementById('es'+i).value||'(kosong)'}\n`;});
+  t+='\nCatatan: Essay dinilai manual oleh dosen berdasarkan rubrik (maks 20 poin per soal).\n';
+  const blob=new Blob([t],{type:'text/plain;charset=utf-8'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='Skor-Uji-Formatif-Bab14-SKI.txt';a.click();
+};
+
+const rbar=document.getElementById('rbar');
+addEventListener('scroll',()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;rbar.style.width=p+'%';},{passive:true});
+</script>
+</body>
+</html>

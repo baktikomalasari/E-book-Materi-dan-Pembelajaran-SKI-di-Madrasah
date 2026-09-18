@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ujian Akhir Semester (UAS) | SKI Madrasah</title>
+<meta name="description" content="Ujian Akhir Semester (UAS) Mata Kuliah Pembelajaran Sejarah Kebudayaan Islam (SKI) di Madrasah. Mencakup Bab 1–15, soal interaktif, dan refleksi akhir.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--g950:#04281e;--g900:#0b3d2e;--g800:#10503c;--g700:#147d64;--g600:#0f9b7a;--gold:#c9a227;--gold-d:#a8861b;--gold-s:#f6ead0;--cream:#f7f5ee;--card:#fff;--ink:#1d2724;--muted:#5d6b66;--line:#e6e2d4;--red:#c0392b;--green-ok:#1e8e5a;--radius:16px;--shadow:0 8px 28px rgba(11,61,46,.09)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--cream);color:var(--ink);line-height:1.75;font-size:16px}
+.container{width:min(1100px,92%);margin-inline:auto}.read{width:min(880px,92%);margin-inline:auto}
+a{color:var(--g700);text-decoration:none}a:hover{color:var(--gold-d)}
+section,div[id]{scroll-margin-top:120px}
+#rbar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--gold);z-index:99}
+.nav{position:sticky;top:0;z-index:50;background:rgba(11,61,46,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,162,39,.35)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 0}
+.brand{display:flex;align-items:center;gap:.6rem;color:#fff;font-weight:800;font-size:1.02rem}.brand:hover{color:#fff}
+.brand-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--gold),#e8c96a);color:var(--g950);font-weight:800;font-size:.72rem}
+.brand small{display:block;font-weight:500;font-size:.68rem;color:var(--gold-s);letter-spacing:.6px}
+.nav-links{display:flex;gap:1.2rem;align-items:center}
+.nav-links a{color:#e9efe9;font-weight:600;font-size:.9rem}.nav-links a:hover{color:var(--gold)}
+.nav-links a.pill{border:1px solid var(--gold);color:var(--gold);padding:.35rem .85rem;border-radius:99px}
+.crumbs{background:var(--g950);color:#cfe0d6;font-size:.86rem}
+.crumbs .container{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;flex-wrap:wrap}
+.crumbs a{color:#cfe0d6;font-weight:600}.crumbs a:hover{color:var(--gold)}
+.ch-hero{background:radial-gradient(circle at 85% 15%,rgba(201,162,39,.22),transparent 42%),radial-gradient(circle at 12% 90%,rgba(15,155,122,.28),transparent 45%),linear-gradient(150deg,var(--g950),var(--g900) 55%,var(--g800));color:#fff;padding:3.2rem 0 2.8rem;position:relative;overflow:hidden}
+.ch-hero::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.12;background-image:repeating-linear-gradient(45deg,transparent 0 22px,rgba(255,255,255,.5) 22px 23px),repeating-linear-gradient(-45deg,transparent 0 22px,rgba(255,255,255,.5) 22px 23px)}
+.bab-badge{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--gold);color:var(--gold);font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;padding:.4rem 1rem;border-radius:99px;background:rgba(0,0,0,.18);position:relative;z-index:1}
+.ch-hero h1{font-size:clamp(1.7rem,4.2vw,2.6rem);line-height:1.25;margin:1.1rem 0 .8rem;font-weight:800;max-width:24ch;position:relative;z-index:1}
+.ch-hero .lead{color:#dbe8e0;max-width:70ch;position:relative;z-index:1}
+.ch-meta{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem;position:relative;z-index:1}
+.ch-meta span{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);padding:.35rem .9rem;border-radius:99px;font-size:.8rem;color:#eef4ef}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.5rem;position:relative;z-index:1}
+.innav{position:sticky;top:63px;z-index:40;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);box-shadow:0 6px 18px rgba(11,61,46,.06)}
+.innav .container{display:flex;gap:.55rem;overflow:auto;padding:.6rem 0;white-space:nowrap}
+.innav a{background:#fbfaf5;border:1px solid var(--line);color:var(--g800);padding:.38rem .85rem;border-radius:99px;font-size:.82rem;font-weight:700;flex:0 0 auto}
+.innav a:hover{border-color:var(--gold);color:var(--gold-d)}
+.innav a.gold{background:var(--g900);color:var(--gold);border-color:rgba(201,162,39,.45)}
+.article{padding:2.5rem 0 3.2rem}
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:2rem clamp(1.2rem,4vw,2.4rem);margin-bottom:1.8rem}
+.sec-head{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.1rem}
+.sec-badge{flex:0 0 auto;width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--g900),var(--g700));color:var(--gold);font-weight:800;font-size:1.15rem;box-shadow:inset 0 0 0 1px rgba(201,162,39,.5)}
+.sec-title{font-size:clamp(1.15rem,2.4vw,1.45rem);font-weight:800;color:var(--g900);line-height:1.35}
+.sec-sub{font-size:.85rem;color:var(--muted);font-weight:600;letter-spacing:.4px}
+.sec p{margin-bottom:1rem;text-align:justify}
+.sec h3{color:var(--g800);margin:1.4rem 0 .7rem;font-size:1.05rem;font-weight:800}
+.sec h4{color:var(--g700);margin:1.2rem 0 .5rem;font-size:.95rem;font-weight:800}
+.sec ul,.sec ol{margin:0 0 1.1rem 1.4rem}.sec li{margin-bottom:.45rem}.sec li::marker{color:var(--gold-d);font-weight:700}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.map-card{background:#fbfaf5;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:12px;padding:1rem 1.15rem}
+.map-card b{color:var(--g900);font-size:.95rem}.map-card ol{margin:.5rem 0 0 1.1rem}.map-card li{font-size:.85rem;color:var(--muted);margin-bottom:.15rem}
+.callout{border-radius:12px;padding:1rem 1.2rem;margin:1.2rem 0;border-left:5px solid;font-size:.95rem}
+.callout b.tag{display:block;font-size:.75rem;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:.35rem}
+.c-case{background:#fbf7ea;border-color:#b98a1e}.c-case b.tag{color:#8a650f}
+.c-warn{background:#fdf0ee;border-color:var(--red)}.c-warn b.tag{color:var(--red)}
+.c-prin{background:#f0f4fb;border-color:#3b6fb5}.c-prin b.tag{color:#2d578f}
+.c-note{background:#eef7f3;border-color:var(--g600)}.c-note b.tag{color:var(--g700)}
+.table-wrap{overflow-x:auto;margin:1rem 0}
+table.tbl{width:100%;border-collapse:collapse;font-size:.88rem;min-width:650px}
+.tbl th{background:var(--g900);color:#fff;padding:.6rem .7rem;text-align:left;font-weight:700}
+.tbl td{border:1px solid var(--line);padding:.6rem .7rem;vertical-align:top}
+.tbl tr:nth-child(even) td{background:#fbfaf5}
+.cta{background:linear-gradient(135deg,var(--g900),var(--g700));color:#fff;border-radius:var(--radius);padding:2rem;display:flex;flex-wrap:wrap;gap:1.4rem;align-items:center;justify-content:space-between;border:1px solid rgba(201,162,39,.4);margin:1.8rem 0}
+.cta h3{font-size:1.2rem;margin-bottom:.35rem}.cta p{color:#dbe8e0;font-size:.92rem;max-width:56ch}
+.btn{display:inline-block;border:none;cursor:pointer;font-family:inherit;font-weight:800;padding:.85rem 1.6rem;border-radius:12px;font-size:.92rem;transition:.2s;text-align:center}
+.btn-gold{background:linear-gradient(135deg,var(--gold),#e3c25c);color:var(--g950)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(201,162,39,.35);color:var(--g950)}
+.btn-line{background:transparent;border:1.5px solid var(--gold);color:var(--gold)}.btn-line:hover{background:rgba(201,162,39,.12)}
+.btn-dark{background:var(--g900);color:#fff}.btn-dark:hover{background:var(--g800)}
+.pager{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:.5rem}
+.pager a{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.9rem 1.3rem;font-weight:700;font-size:.9rem;box-shadow:var(--shadow)}
+.pager a:hover{border-color:var(--gold)}.pager small{display:block;font-weight:600;color:var(--muted);font-size:.75rem}
+.footer{background:var(--g950);color:#c8d6cd;margin-top:3rem;border-top:3px solid var(--gold)}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2rem;padding:2.8rem 0}
+.footer h4{color:var(--gold);font-size:.85rem;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:.9rem}
+.footer p,.footer li{font-size:.88rem;line-height:1.7}.footer ul{list-style:none}.footer li{margin-bottom:.45rem}
+.footer a{color:#c8d6cd}.footer a:hover{color:var(--gold)}
+.foot-bar{border-top:1px solid rgba(255,255,255,.12);padding:1.1rem 0;font-size:.8rem;text-align:center;color:#9db3a8}
+.scorebar{position:sticky;top:118px;z-index:39;background:var(--g900);color:#fff;border-radius:14px;padding:.8rem 1.2rem;display:flex;flex-wrap:wrap;gap:1.1rem;align-items:center;justify-content:space-between;box-shadow:var(--shadow);margin:1.2rem 0 1.6rem;border:1px solid rgba(201,162,39,.4)}
+.scorebar b{color:var(--gold)}.scorebar .item{font-size:.88rem;font-weight:600}
+.form-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.field label{display:block;font-size:.8rem;font-weight:700;color:var(--g800);margin-bottom:.3rem}
+.field input,.field select,.field textarea{width:100%;font-family:inherit;font-size:.92rem;border:1.5px solid var(--line);border-radius:10px;padding:.65rem .8rem;background:#fff;color:var(--ink)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--g600);box-shadow:0 0 0 3px rgba(15,155,122,.15)}
+.q-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.5rem;margin-bottom:1.1rem;box-shadow:0 4px 16px rgba(11,61,46,.06)}
+.q-num{display:inline-grid;place-items:center;min-width:34px;height:34px;border-radius:10px;background:var(--g900);color:var(--gold);font-weight:800;font-size:.9rem;margin-right:.7rem}
+.q-text{font-weight:700;color:var(--ink);margin-bottom:.9rem;display:flex;align-items:flex-start}
+.opts{display:grid;gap:.5rem}
+.opt{display:flex;gap:.7rem;align-items:flex-start;border:1.5px solid var(--line);border-radius:10px;padding:.6rem .8rem;cursor:pointer;font-size:.92rem;background:#fff;transition:.15s}
+.opt:hover{border-color:var(--g600);background:#f2faf6}.opt input{margin-top:.28rem;accent-color:var(--g700)}
+.opt.correct{border-color:var(--green-ok);background:#eaf7f0}.opt.wrong{border-color:var(--red);background:#fdeeec}
+.feedback{font-size:.82rem;font-weight:800;margin-top:.6rem}.feedback.ok{color:var(--green-ok)}.feedback.no{color:var(--red)}
+.pembahasan{margin-top:.8rem;background:#fbf7ea;border-left:4px solid var(--gold);border-radius:8px;padding:.7rem .9rem;font-size:.86rem}
+.pembahasan b{color:var(--gold-d)}
+textarea.essay{min-height:130px;resize:vertical}
+.result{display:none;background:linear-gradient(150deg,var(--g950),var(--g800));color:#fff;border-radius:var(--radius);padding:2rem;margin:1.6rem 0;border:1px solid rgba(201,162,39,.45)}
+.result .big{font-size:2.4rem;font-weight:800;color:var(--gold)}
+.actions{display:flex;gap:.8rem;flex-wrap:wrap;margin:1.4rem 0}
+details{background:#fbfaf5;border:1px solid var(--line);border-radius:10px;padding:.8rem 1rem;margin-top:.9rem}
+details summary{cursor:pointer;font-weight:700;color:var(--g800);font-size:.9rem}
+details .body{font-size:.86rem;color:var(--muted);padding-top:.6rem}
+@media(max-width:900px){.grid3{grid-template-columns:repeat(2,1fr)}.form-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.nav-links a:not(.pill){display:none}.grid2,.grid3,.form-grid{grid-template-columns:1fr}.sec{padding:1.4rem 1.1rem}.cta{flex-direction:column;align-items:flex-start}.pager{flex-direction:column}.scorebar{top:108px}.innav{top:58px}}
+</style>
+</head>
+<body id="atas">
+<div id="rbar"></div>
+
+<header class="nav">
+  <div class="container nav-in">
+    <a class="brand" href="index.html"><span class="brand-mark">SKI</span><span>SKI Madrasah<small>Sejarah Kebudayaan Islam Interaktif</small></span></a>
+    <nav class="nav-links">
+      <a href="index.html#timeline">Linimasa</a><a href="index.html#silabus">16 Bab</a><a href="index.html#tentang">Tentang</a>
+      <a class="pill" href="#uas-pg">📝 Mulai UAS</a>
+    </nav>
+  </div>
+</header>
+
+<div class="crumbs">
+  <div class="container">
+    <a href="15.html">← Bab 15</a>
+    <span>Web-Book SKI · Ujian Akhir Semester</span>
+    <a href="index.html">Daftar Isi →</a>
+  </div>
+</div>
+
+<section class="ch-hero">
+  <div class="container">
+    <span class="bab-badge">✦ Evaluasi Progresif · Bab 16 dari 16</span>
+    <h1>Ujian Akhir Semester (UAS)</h1>
+    <p class="lead">Mata Kuliah: Pembelajaran Sejarah Kebudayaan Islam (SKI) di Madrasah. Ujian komprehensif mencakup seluruh materi Bab 1–15: Hakikat SKI, Kurikulum, Sejarah Islam Klasik hingga Kontemporer, Model Pembelajaran, TPACK, dan Asesmen HOTS.</p>
+    <div class="ch-meta">
+      <span>🏛️ IAIN Curup</span><span>📚 35 Pilihan Ganda + 15 Essay</span>
+      <span>📝 Waktu: 120 Menit</span><span>📜 Kepdirjen Pendis No. 9941/2025</span>
+    </div>
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="#uas-pg">📝 Kerjakan Soal UAS</a>
+      <a class="btn btn-line" href="#refleksi">📂 Refleksi Akhir</a>
+    </div>
+  </div>
+</section>
+
+<nav class="innav">
+  <div class="container">
+    <a href="#cp-uas">Capaian & Tujuan</a>
+    <a href="#kisi">Kisi-Kisi</a>
+    <a href="#uas-pg">Soal PG</a>
+    <a href="#uas-es">Soal Essay</a>
+    <a href="#rubrik-uas">Rubrik Penilaian</a>
+    <a href="#refleksi">Refleksi</a>
+  </div>
+</nav>
+
+<main class="article" id="materi">
+<div class="read">
+
+<!-- ===== CAPAIAN & TUJUAN ===== -->
+<section class="sec" id="cp-uas">
+  <div class="sec-head"><span class="sec-badge">A</span><div><div class="sec-sub">EVALUASI AKHIR SEMESTER</div><h2 class="sec-title">Capaian dan Tujuan UAS</h2></div></div>
+  <h3>Tujuan UAS</h3>
+  <p>Ujian Akhir Semester dirancang untuk mengetahui sejauh mana mahasiswa mampu mengintegrasikan pengetahuan sejarah, pedagogi, media pembelajaran, keterampilan proses, asesmen, dan nilai <em>ibrah</em> dalam satu kesatuan kompetensi calon guru SKI. Setelah menyelesaikan UAS, mahasiswa diharapkan mampu:</p>
+  <ol>
+    <li>menjelaskan konsep dan hakikat pembelajaran SKI serta kurikulum (CP, TP, ATP);</li>
+    <li>menganalisis peristiwa sejarah dari masa Nabi hingga perkembangan Islam Nusantara berdasarkan sebab, proses, konteks, dan akibat;</li>
+    <li>membandingkan berbagai perspektif historiografis secara kritis;</li>
+    <li>merancang dan menerapkan model pembelajaran interaktif berbasis TPACK;</li>
+    <li>menyusun asesmen berbasis HOTS dan merancang modul ajar yang kontekstual;</li>
+    <li>melakukan refleksi terhadap kemampuan profesional sebagai calon guru SKI.</li>
+  </ol>
+</section>
+
+<!-- ===== KISI-KISI ===== -->
+<section class="sec" id="kisi">
+  <div class="sec-head"><span class="sec-badge">B</span><div><div class="sec-sub">STRUKTUR PENILAIAN</div><h2 class="sec-title">Kisi-Kisi dan Distribusi Kognitif</h2></div></div>
+  <div class="table-wrap">
+    <table class="tbl">
+      <tr><th>Level Kognitif</th><th>Jumlah Soal PG</th><th>Fokus Kompetensi</th></tr>
+      <tr><td>C1–C2 (Pemahaman)</td><td>15 Soal</td><td>Ingatan fakta, kronologi, tokoh, konsep dasar SKI & sejarah.</td></tr>
+      <tr><td>C3–C4 (Aplikasi & Analisis)</td><td>10 Soal</td><td>Menerapkan model, menganalisis sebab-akibat, membandingkan sumber.</td></tr>
+      <tr><td>C5–C6 (Evaluasi & Kreasi)</td><td>10 Soal</td><td>Merancang asesmen, mengevaluasi media, menciptakan produk pembelajaran.</td></tr>
+    </table>
+  </div>
+  <div class="callout c-note">
+    <b class="tag">📌 Bobot Penilaian UAS</b>
+    <p style="margin:0;text-align:left">Ujian tertulis (PG & Essay) merupakan instrumen utama untuk mengukur penguasaan substansi dan kemampuan pedagogis. Nilai PG dikonversi ke skala 100, sedangkan Essay dinilai manual oleh dosen menggunakan rubrik komprehensif yang mencakup 15 topik lintas bab.</p>
+  </div>
+</section>
+
+<!-- ===== SOAL PG ===== -->
+<section class="sec" id="uas-pg">
+  <div class="sec-head"><span class="sec-badge">C</span><div><div class="sec-sub">UJIAN AKHIR SEMESTER</div><h2 class="sec-title">Bagian I: Pilihan Ganda (35 Soal)</h2></div></div>
+  <p><b>Instruksi:</b> Pilihlah satu jawaban yang paling tepat. Setiap soal memiliki bobot yang setara.</p>
+  
+  <h3>📋 Identitas Mahasiswa</h3>
+  <div class="form-grid" id="identitas">
+    <div class="field"><label>Nama Lengkap *</label><input id="fNama" type="text" placeholder="Nama lengkap"></div>
+    <div class="field"><label>NIM *</label><input id="fNim" type="text" placeholder="Nomor induk mahasiswa"></div>
+    <div class="field"><label>📅 Tanggal Ujian</label><input id="fTgl" type="date"></div>
+    <div class="field"><label>Fakultas / Institusi</label><input id="fFak" type="text" placeholder="mis. Tarbiyah — IAIN Curup"></div>
+    <div class="field"><label>Program Studi</label><input id="fProdi" type="text" placeholder="mis. PAI / SKI"></div>
+    <div class="field"><label>Semester</label>
+      <select id="fSmt"><option value="">Pilih Semester</option><option>Semester 1</option><option>Semester 2</option><option>Semester 3</option><option>Semester 4</option><option>Semester 5</option><option>Semester 6</option></select>
+    </div>
+    <div class="field"><label>Kelas</label><input id="fKls" type="text" placeholder="mis. A / B"></div>
+  </div>
+
+  <div class="callout c-warn" style="margin-top:1.2rem">
+    <b class="tag">⚠️ Perhatian</b>
+    <p style="margin:0">Harap selesaikan semua 35 soal pilihan ganda dan 15 soal essay dengan teliti! Isi Nama Lengkap dan NIM terlebih dahulu. Skor PG dihitung otomatis. Essay dinilai manual berdasarkan rubrik.</p>
+  </div>
+
+  <div class="scorebar">
+    <span class="item">🏆 Skor PG: <b id="sAkhir">0</b>/35</span>
+    <span class="item">📋 Benar: <b id="sBenar">0</b>/35</span>
+    <span class="item">📈 Nilai Konversi: <b id="sKonversi">0</b>/100</span>
+    <span class="item">✍️ Essay: <b id="sEs">0</b>/15 terjawab</span>
+  </div>
+
+  <div id="pgBox"></div>
+
+  <div class="actions">
+    <button class="btn btn-gold" id="btnSubmit">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+    <a class="btn btn-dark" href="#atas">↑ Kembali ke Atas</a>
+  </div>
+
+  <section class="result" id="hasil">
+    <h2>🎉 Ujian Selesai!</h2>
+    <p style="color:#dbe8e0;margin:.4rem 0 1rem">Selamat! Anda telah menyelesaikan Bagian I UAS. Berikut ringkasan skor Anda:</p>
+    <div class="big" id="rBig">0 / 35</div>
+    <p id="rName" style="margin-top:.5rem;font-weight:700"></p>
+    <p style="color:#dbe8e0;font-size:.9rem">📋 Pilihan Ganda: <b id="rPG" style="color:var(--gold)"></b> · ✍️ Essay: <b id="rEs" style="color:var(--gold)"></b>. Essay dinilai manual oleh dosen sesuai rubrik.</p>
+    <div class="actions">
+      <button class="btn btn-gold" onclick="window.print()">📥 UNDUH PDF LENGKAP</button>
+      <button class="btn btn-line" id="btnTxt">📄 UNDUH SKOR (TXT)</button>
+      <button class="btn btn-line" onclick="location.reload()">🔄 MULAI ULANG</button>
+    </div>
+    <details><summary>📊 Pedoman Penskoran Essay (untuk dosen)</summary><div class="body" id="rubrikBox"></div></details>
+  </section>
+
+  <section class="sec" id="reviewSec" style="display:none;margin-top:1.5rem">
+    <div class="sec-head"><span class="sec-badge">🔍</span><div><h2 class="sec-title">Kunci Jawaban & Pembahasan Pilihan Ganda</h2><div class="sec-sub">Tampil otomatis setelah Anda mengirim jawaban</div></div></div>
+    <div id="reviewBox"></div>
+  </section>
+</section>
+
+<!-- ===== SOAL ESSAY ===== -->
+<section class="sec" id="uas-es">
+  <div class="sec-head"><span class="sec-badge">D</span><div><div class="sec-sub">UJIAN AKHIR SEMESTER</div><h2 class="sec-title">Bagian II: Esai Komprehensif (15 Soal)</h2></div></div>
+  <p><b>Instruksi:</b> Jawablah pertanyaan berikut dengan jelas, sistematis, dan berdasarkan argumen yang kuat. Setiap soal mencakup analisis lintas bab (Sejarah, Pedagogi, TPACK, Asesmen).</p>
+  <div id="esBox"></div>
+</section>
+
+<!-- ===== RUBRIK ===== -->
+<section class="sec" id="rubrik-uas">
+  <div class="sec-head"><span class="sec-badge">E</span><div><div class="sec-sub">PEDOMAN</div><h2 class="sec-title">Rubrik Penilaian UAS</h2></div></div>
+  <div class="table-wrap">
+    <table class="tbl">
+      <tr><th>Komponen</th><th>Indikator Sangat Baik (90–100)</th></tr>
+      <tr><td>Penguasaan Konten SKI</td><td>Memahami sejarah, ketepatan tokoh/kronologi, hubungan sebab-akibat, membedakan fakta & interpretasi.</td></tr>
+      <tr><td>Desain Pembelajaran</td><td>CP–TP–aktivitas–asesmen sangat selaras; kreatif, kontekstual, realistis, terdapat diferensiasi.</td></tr>
+      <tr><td>Analisis Kritis/Historiografi</td><td>Analisis mendalam, sumber kuat, membandingkan perspektif, mampu mengkritisi narasi.</td></tr>
+      <tr><td>Integrasi TPACK & HOTS</td><td>Teknologi dipilih berdasarkan tujuan pedagogis, soal benar-benar menuntut C4-C6 dengan stimulus.</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ===== REFLEKSI ===== -->
+<section class="sec" id="refleksi">
+  <div class="sec-head"><span class="sec-badge">F</span><div><div class="sec-sub">PENUTUP UAS</div><h2 class="sec-title">Refleksi Akhir Semester</h2></div></div>
+  <p>Sebagai penutup mata kuliah, mahasiswa diharapkan menulis refleksi singkat (500–750 kata) dalam portofolio akhir dengan menjawab pertanyaan berikut:</p>
+  <ol>
+    <li>Materi sejarah Islam apa yang paling mengubah cara pandang saya?</li>
+    <li>Bagaimana pemahaman saya mengenai HOTS dan TPACK berubah setelah mempelajari Bab 13–15?</li>
+    <li>Apa satu perubahan konkret yang akan saya lakukan ketika menjadi guru SKI di madrasah?</li>
+    <li>Bagaimana saya akan memastikan pembelajaran sejarah tidak berubah menjadi hafalan atau propaganda?</li>
+  </ol>
+  <p>Lima pertanyaan inti pembelajaran SKI yang harus selalu dibawa ke depan adalah: <em>Apa yang terjadi? Mengapa terjadi? Bagaimana kita mengetahui bahwa peristiwa itu terjadi? Mengapa sumber dapat memberikan interpretasi berbeda? Bagaimana peristiwa tersebut dapat diajarkan secara bertanggung jawab kepada peserta didik?</em></p>
+</section>
+
+<div class="pager">
+  <a href="15.html"><small>← Sebelumnya</small>Bab 15</a>
+  <a href="index.html" style="text-align:center"><small>Navigasi</small>Daftar Isi</a>
+  <a href="#" style="text-align:right; opacity:0.5; pointer-events:none;"><small>Selesai</small>Selamat Lulus!</a>
+</div>
+
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><h4>SKI Madrasah</h4><p>Web-Book progresif Pembelajaran Sejarah Kebudayaan Islam di Madrasah, IAIN Curup.</p></div>
+      <div><h4>Referensi</h4><ul><li>Kepdirjen Pendis No. 9941/2025</li><li>Bahan Ajar SKI Berbasis Deep Learning — IAIN Curup</li><li>Kurikulum Madrasah — Kementerian Agama RI</li></ul></div>
+      <div><h4>Infrastruktur</h4><ul><li>Backend: Supabase</li><li>Deploy: GitHub Pages</li></ul></div>
+    </div>
+    <div class="foot-bar">© SKI Madrasah — IAIN Curup. Hak cipta dilindungi. Dibangun untuk mata kuliah Materi dan Pembelajaran SKI di Madrasah.</div>
+  </div>
+</footer>
+
+<script>
+const PG=[
+{q:`Hakikat utama pembelajaran SKI di madrasah adalah ...`,o:[`Menghafalkan seluruh tahun sejarah`,`Memahami sejarah Islam sekaligus mengambil nilai pembelajaran yang relevan`,`Menggantikan seluruh mata pelajaran PAI`,`Mempelajari politik Islam kontemporer saja`,`Menghafalkan biografi tokoh`],k:1,p:`SKI bertujuan membangun pemahaman sejarah sekaligus pembelajaran dan ibrah.`},
+{q:`CP dalam pembelajaran merupakan ...`,o:[`Daftar tugas siswa`,`Kompetensi yang harus dicapai pada akhir fase`,`Jadwal mengajar guru`,`Daftar nilai`,`Daftar media`],k:1,p:`CP menjadi dasar pengembangan tujuan pembelajaran.`},
+{q:`Peristiwa wahyu pertama Nabi Muhammad saw. berlangsung di ...`,o:[`Madinah`,`Thaif`,`Gua Hira`,`Masjidil Aqsa`,`Mina`],k:2,p:`Wahyu pertama diterima Rasulullah saw. di Gua Hira.`},
+{q:`Hijrah Rasulullah saw. menuju Madinah menjadi salah satu titik penting karena ...`,o:[`Menghentikan dakwah`,`Membuka fase pembentukan masyarakat Muslim Madinah`,`Mengakhiri Islam`,`Menghentikan perdagangan`,`Membubarkan kaum Muhajirin`],k:1,p:`Hijrah membuka fase pembentukan masyarakat Madinah.`},
+{q:`Salah satu prinsip penting Piagam Madinah adalah ...`,o:[`Memaksakan satu identitas agama`,`Mengatur hubungan kelompok masyarakat dalam satu komunitas politik`,`Menghapus seluruh kelompok nonmuslim`,`Melarang kerja sama`,`Membatasi perdagangan`],k:1,p:`Piagam Madinah mengatur hubungan berbagai kelompok dalam masyarakat Madinah.`},
+{q:`Salah satu inovasi pemerintahan Umar bin Khattab adalah ...`,o:[`Sistem Diwan`,`Sistem millet`,`Mansabdari`,`Qizilbash`,`Janissari`],k:0,p:`Umar mengembangkan sistem administrasi termasuk Diwan.`},
+{q:`Pusat pemerintahan Bani Umayyah adalah ...`,o:[`Baghdad`,`Damaskus`,`Kairo`,`Istanbul`,`Cordoba`],k:1,p:`Damaskus menjadi pusat pemerintahan Umayyah.`},
+{q:`Baitul Hikmah paling erat dikaitkan dengan ...`,o:[`Perkembangan intelektual Abbasiyah`,`Pendirian VOC`,`Berdirinya Demak`,`Kerajaan Mataram`,`Perang Makassar`],k:0,p:`Baitul Hikmah dikaitkan dengan perkembangan ilmu pada masa Abbasiyah.`},
+{q:`Pertempuran Hattin berlangsung pada ...`,o:[`1099`,`1144`,`1171`,`1187`,`1260`],k:3,p:`Hattin berlangsung pada 1187.`},
+{q:`Perang ‘Ain Jalut mempertemukan Mamluk dengan ...`,o:[`Bizantium`,`Mongol`,`Portugis`,`Safawi`,`Mughal`],k:1,p:`Mamluk menghadapi pasukan Mongol di ‘Ain Jalut.`},
+{q:`Muhammad Al-Fatih menaklukkan Konstantinopel pada ...`,o:[`1258`,`1299`,`1453`,`1511`,`1526`],k:2,p:`Konstantinopel ditaklukkan Muhammad Al-Fatih pada 1453.`},
+{q:`Dinasti Safawi berkembang terutama di ...`,o:[`Persia`,`India`,`Anatolia`,`Andalusia`,`Mesir`],k:0,p:`Safawi berkembang di wilayah Persia.`},
+{q:`Tokoh yang mendirikan Muhammadiyah adalah ...`,o:[`K.H. Hasyim Asy'ari`,`K.H. Ahmad Dahlan`,`Ahmad Hassan`,`H.O.S. Tjokroaminoto`,`Agus Salim`],k:1,p:`Muhammadiyah didirikan K.H. Ahmad Dahlan.`},
+{q:`NU berdiri pada tahun ...`,o:[`1905`,`1912`,`1923`,`1926`,`1945`],k:3,p:`NU berdiri pada 1926.`},
+{q:`Salah satu model pembelajaran interaktif adalah ...`,o:[`Role Playing`,`Drilling saja`,`Hafalan satu arah`,`Penyalinan teks`,`Dikte`],k:0,p:`Role Playing merupakan model pembelajaran interaktif.`},
+{q:`Guru meminta siswa membandingkan dua sumber tentang Perang Salib dan menemukan perbedaan perspektif. Aktivitas tersebut paling dekat dengan ...`,o:[`Mengingat`,`Memahami`,`Menganalisis`,`Menyalin`,`Mendikte`],k:2,p:`Membandingkan sumber dan perspektif merupakan analisis.`},
+{q:`Guru ingin mengajarkan kronologi perkembangan Islam Nusantara dengan kartu peristiwa. Model yang paling sesuai adalah ...`,o:[`Timeline Games`,`Ceramah penuh`,`Demonstrasi sains`,`Drill`,`Hafalan individual`],k:0,p:`Timeline Games secara khusus melatih kronologi.`},
+{q:`Dalam siklus Kolb, siswa setelah Role Playing mendiskusikan apa yang dialaminya. Tahap tersebut adalah ...`,o:[`Concrete Experience`,`Reflective Observation`,`Abstract Conceptualization`,`Active Experimentation`,`Assessment`],k:1,p:`Refleksi setelah pengalaman merupakan Reflective Observation.`},
+{q:`Siswa dibantu dengan pertanyaan bertahap agar mampu menganalisis sumber sejarah yang awalnya terlalu sulit untuk mereka kerjakan secara mandiri. Prinsip yang paling sesuai adalah ...`,o:[`ZPD dan scaffolding`,`Behaviorisme murni`,`Hafalan`,`Kompetisi`,`Ceramah`],k:0,p:`Dukungan bertahap terkait dengan ZPD/scaffolding.`},
+{q:`Guru menggunakan peta digital untuk menunjukkan hubungan pelabuhan dengan penyebaran Islam Nusantara. Teknologi tersebut terutama memperkuat ...`,o:[`Dimensi spasial pembelajaran sejarah`,`Kemampuan hafalan`,`Penilaian karakter`,`Kemampuan olahraga`,`Keterampilan musik`],k:0,p:`GIS membantu memahami dimensi ruang.`},
+{q:`Guru membuat komik Walisongo dengan dialog rekaan tetapi menampilkannya sebagai kutipan sejarah asli. Masalah utama tindakan tersebut adalah ...`,o:[`Kreativitas terlalu tinggi`,`Terjadi pencampuran antara fakta dan rekonstruksi`,`Media terlalu singkat`,`Font terlalu besar`,`Warna terlalu sedikit`],k:1,p:`Dialog rekaan harus dibedakan dari kutipan historis.`},
+{q:`Tujuan pembelajaran adalah siswa mampu menilai efektivitas strategi Sultan Agung berdasarkan tujuan politik, logistik, dan hasil. Bentuk asesmen yang paling sesuai adalah ...`,o:[`Pilihan ganda hafalan`,`Esai evaluatif berbasis kriteria`,`Mencocokkan tahun`,`Menghafal nama`,`Menyalin biografi`],k:1,p:`Evaluasi memerlukan kriteria dan argumentasi.`},
+{q:`Sebuah kelompok membuat video sejarah dengan visual menarik tetapi tidak mencantumkan sumber. Aspek yang paling perlu diperbaiki adalah ...`,o:[`Resolusi`,`Sumber dan literasi akademik`,`Musik`,`Transisi`,`Warna`],k:1,p:`Sumber merupakan bagian dari integritas akademik.`},
+{q:`Guru mengajarkan teori masuknya Islam di Nusantara dengan empat sumber berbeda lalu meminta siswa membandingkannya. Model yang paling sesuai adalah ...`,o:[`Discovery Learning/PBL`,`Hafalan`,`Dikte`,`Ceramah tunggal`,`Demonstrasi`],k:0,p:`Perbandingan teori dan sumber sesuai dengan discovery/PBL.`},
+{q:`Jika tujuan pembelajaran adalah menganalisis sebab kegagalan serangan Mataram terhadap Batavia, siswa harus terutama ...`,o:[`Menghafal 1628`,`Mengidentifikasi dan menghubungkan berbagai faktor`,`Menggambar Sultan Agung`,`Menyebutkan nama VOC`,`Menghafalkan lokasi`],k:1,p:`Analisis membutuhkan hubungan berbagai faktor.`},
+{q:`Seorang guru menggunakan VR untuk materi yang hanya menuntut siswa mengurutkan lima peristiwa. Penilaian paling tepat terhadap keputusan tersebut adalah ...`,o:[`VR selalu pilihan terbaik`,`Teknologi perlu dipilih berdasarkan tujuan, sehingga VR mungkin tidak diperlukan`,`Semakin mahal semakin baik`,`Teknologi tidak boleh digunakan`,`Semua materi wajib VR`],k:1,p:`Teknologi harus mengikuti tujuan pembelajaran.`},
+{q:`Dalam menilai dua kebijakan khalifah, kriteria paling penting agar evaluasi tidak menjadi opini bebas adalah ...`,o:[`Popularitas tokoh`,`Panjang jawaban`,`Tujuan, konteks, bukti, dan dampak`,`Jumlah pengikut`,`Kesukaan siswa`],k:2,p:`Evaluasi historis harus berbasis konteks dan bukti.`},
+{q:`Mahasiswa diminta membuat podcast “Satu Peristiwa, Dua Perspektif”. Produk tersebut paling tepat untuk menilai kemampuan ...`,o:[`Menghafal`,`Mencipta dan mengomunikasikan hasil analisis`,`Menyalin`,`Menghitung`,`Menggambar`],k:1,p:`Podcast proyek menggabungkan analisis dan penciptaan.`},
+{q:`Rubrik yang paling baik adalah rubrik yang ...`,o:[`Hanya berisi angka`,`Menjelaskan kriteria dan tingkat kualitas secara operasional`,`Berbeda untuk setiap siswa`,`Tidak diketahui siswa`,`Hanya menilai tampilan`],k:1,p:`Rubrik harus menjelaskan standar secara operasional.`},
+{q:`Jika tujuan pembelajaran berbunyi “siswa mampu menganalisis sumber sejarah”, tetapi seluruh asesmen hanya meminta siswa menyebutkan tahun dan tokoh, masalah utamanya adalah ...`,o:[`Teknologi`,`Ketidaksesuaian tujuan dan asesmen`,`Jumlah siswa`,`Waktu`,`Kehadiran`],k:1,p:`Instrumen tidak selaras dengan tujuan.`},
+{q:`Portofolio paling tepat digunakan ketika guru ingin ...`,o:[`Melihat satu hasil akhir saja`,`Melihat proses dan perkembangan belajar`,`Mengurangi bukti`,`Menggantikan semua asesmen`,`Hanya menilai hafalan`],k:1,p:`Portofolio menunjukkan proses dan perkembangan.`},
+{q:`Mahasiswa merancang pembelajaran Walisongo dengan peta digital, Discovery Learning, analisis sumber, dan podcast sebagai produk akhir. Rancangan tersebut menunjukkan ...`,o:[`TPACK dan keterampilan proses`,`Hafalan saja`,`Penggunaan teknologi tanpa pedagogi`,`Pembelajaran tanpa asesmen`,`Ceramah tradisional`],k:0,p:`Terdapat integrasi konten, pedagogi, teknologi, dan keterampilan proses.`},
+{q:`Produk mahasiswa sangat kreatif, tetapi fakta sejarahnya banyak salah. Dalam rubrik, bobot yang perlu diperkuat adalah ...`,o:[`Dekorasi`,`Akurasi sejarah`,`Efek visual`,`Warna`,`Musik`],k:1,p:`Akurasi merupakan komponen utama dalam karya sejarah.`},
+{q:`Guru ingin mengembangkan proyek “Jejak Islam di Daerah Saya”. Komponen paling penting agar proyek tersebut benar-benar PBL adalah ...`,o:[`Produk poster`,`Pertanyaan pemantik, penyelidikan berkelanjutan, sumber, revisi, dan presentasi`,`Penggunaan Canva`,`Video berdurasi panjang`,`Kerja kelompok semata`],k:1,p:`PBL membutuhkan penyelidikan, pertanyaan, produk, refleksi, dan revisi.`},
+{q:`Seorang calon guru membuat modul ajar lengkap, media digital, asesmen HOTS, dan mampu menjelaskan alasan setiap pilihan pedagogisnya. Kompetensi paling komprehensif yang ditunjukkan adalah ...`,o:[`Hafalan sejarah`,`Integrasi kompetensi historis, pedagogis, teknologi, dan asesmen`,`Keterampilan desain`,`Kemampuan berbicara saja`,`Keterampilan administrasi`],k:1,p:`Kompetensi calon guru mencakup integrasi sejarah, pedagogi, teknologi, dan asesmen.`}
+];
+
+const ES=[
+{q:`1. Sejarah dan Pedagogi: Jelaskan perbedaan antara Sejarah Islam sebagai disiplin akademik dan SKI sebagai mata pelajaran. Mengapa perbedaan tersebut penting ketika guru memilih metode pembelajaran?`,rub:`Menjelaskan karakter sejarah akademik & SKI pedagogis: 4 poin; Orientasi ibrah: 3 poin; Hubungan dengan metode: 3 poin.`,model:`Sejarah akademik berorientasi rekonstruksi masa lalu. SKI berorientasi pendidikan, terdapat unsur ibrah dan pembentukan karakter. Guru harus mengubah hasil kajian sejarah menjadi pengalaman belajar sesuai perkembangan siswa.`},
+{q:`2. CP, TP, dan ATP: Ambil satu materi SKI dari Bab 3–12. Turunkan secara singkat: CP → TP → aktivitas pembelajaran → asesmen.`,rub:`Keselarasan CP-TP-Aktivitas-Asesmen: 10 poin.`,model:`Jawaban harus membentuk rantai yang selaras, bukan mencantumkan keempat komponen secara terpisah.`},
+{q:`3. Periode Makkah: Analisislah mengapa strategi dakwah Rasulullah saw. pada periode Makkah berkembang secara bertahap. Hubungkan jawaban dengan kondisi sosial-politik Quraisy.`,rub:`Analisis kondisi Quraisy & strategi bertahap: 10 poin.`,model:`Penolakan Quraisy, kondisi minoritas, strategi keamanan, pembentukan kader.`},
+{q:`4. Madinah: Evaluasilah Piagam Madinah sebagai model pengelolaan masyarakat yang beragam dengan memperhatikan konteks sejarahnya.`,rub:`Konteks Madinah & prinsip hidup bersama: 10 poin.`,model:`Menjelaskan konteks, prinsip kesepakatan, dan menghindari klaim anakronistik dengan konstitusi modern.`},
+{q:`5. Khulafaur Rasyidin: Bandingkan satu kebijakan Abu Bakar dan satu kebijakan Umar bin Khattab. Analisislah masalah yang hendak diselesaikan dan dampaknya.`,rub:`Perbandingan kebijakan & dampak: 10 poin.`,model:`Abu Bakar (konsolidasi/Riddah), Umar (administrasi/Diwan).`},
+{q:`6. Umayyah: Analisislah hubungan antara ekspansi wilayah dan tantangan administrasi pada masa Bani Umayyah.`,rub:`Analisis ekspansi & administrasi: 10 poin.`,model:`Luas wilayah menuntut sistem pajak, komunikasi, dan birokrasi yang kuat.`},
+{q:`7. Abbasiyah: Evaluasilah faktor yang mendukung perkembangan ilmu pengetahuan pada masa Abbasiyah. Apakah keberadaan Baitul Hikmah saja cukup menjelaskan “zaman keemasan”?`,rub:`Faktor ekosistem ilmu: 10 poin.`,model:`Patronase, penerjemahan, kertas, perdagangan. Baitul Hikmah adalah simbol, bukan satu-satunya penyebab.`},
+{q:`8. Salahuddin dan Mamluk: Bandingkan strategi Salahuddin Al-Ayyubi dan Mamluk dalam menghadapi ancaman eksternal. Gunakan minimal tiga variabel.`,rub:`Perbandingan strategi (militer, diplomasi, logistik): 10 poin.`,model:`Salahuddin (konsolidasi & diplomasi), Mamluk (mobilisasi militer & administrasi).`},
+{q:`9. Tiga Kerajaan Besar: Bandingkan Usmani, Safawi, dan Mughal dari aspek: agama, administrasi, militer, dan budaya.`,rub:`Tabel komparatif 4 aspek: 10 poin.`,model:`Mahasiswa harus menyusun tabel komparatif, bukan tiga uraian yang berdiri sendiri.`},
+{q:`10. Islamisasi Nusantara: Evaluasilah empat teori masuknya Islam ke Nusantara. Mengapa pendekatan satu teori tunggal memiliki keterbatasan?`,rub:`Evaluasi 4 teori & kesimpulan multidimensional: 10 poin.`,model:`Gujarat, Makkah, Persia, Cina. Proses Islamisasi multi-jalur dan multi-agen.`},
+{q:`11. Walisongo: Analisislah strategi dakwah kultural Walisongo dan jelaskan bagaimana guru dapat mengajarkan strategi tersebut tanpa mencampurkan legenda dengan fakta sejarah.`,rub:`Dakwah kultural & kritik sumber: 10 poin.`,model:`Membedakan tradisi/hagiografi dengan fakta sejarah terverifikasi.`},
+{q:`12. Kerajaan dan Organisasi Islam: Bandingkan perjuangan kesultanan Islam dengan perjuangan organisasi Islam pada awal abad ke-20. Apa perbedaan konteks politik keduanya?`,rub:`Konteks pra-negara bangsa vs kolonial/modern: 10 poin.`,model:`Kesultanan (kedaulatan lokal), Organisasi (nasionalisme, pendidikan modern, mobilisasi massa).`},
+{q:`13. Pembelajaran Interaktif: Rancang satu kegiatan Role Playing untuk materi SKI pilihan Anda. Jelaskan: tujuan, peran, sumber, langkah, refleksi, dan asesmen.`,rub:`Prinsip Role Playing (pengalaman → refleksi → konsep): 10 poin.`,model:`Persiapan, simulasi, debriefing, dan koneksi dengan fakta sejarah.`},
+{q:`14. TPACK: Pilih satu materi SKI. Rancang integrasi: Content Knowledge + Pedagogical Knowledge + Technological Knowledge. Jelaskan mengapa teknologi tersebut diperlukan.`,rub:`Integrasi CK + PK + TK: 10 poin.`,model:`Teknologi dipilih karena membuat tujuan pembelajaran lebih jelas/bermakna, bukan sekadar tren.`},
+{q:`15. Asesmen HOTS: Buatlah: satu soal C4, satu soal C5, dan satu soal C6 untuk satu topik SKI pilihan Anda. Lengkapi dengan pedoman penilaian.`,rub:`Ketepatan level kognitif C4, C5, C6: 10 poin.`,model:`C4 (analisis), C5 (evaluasi berbasis kriteria), C6 (mencipta produk/solusi baru).`}
+];
+
+const H=['A','B','C','D','E'];
+const pgBox=document.getElementById('pgBox');
+const esBox=document.getElementById('esBox');
+
+PG.forEach((s,i)=>{
+  pgBox.insertAdjacentHTML('beforeend',`<div class="q-card" id="qc${i}"><div class="q-text"><span class="q-num">${i+1}</span><span>${s.q}</span></div><div class="opts">${s.o.map((o,j)=>`<label class="opt" id="op${i}-${j}"><input type="radio" name="q${i}" value="${j}"><span><b>${H[j]}.</b> ${o}</span></label>`).join('')}</div><div class="feedback" id="fb${i}"></div></div>`);
+});
+
+ES.forEach((s,i)=>{
+  esBox.insertAdjacentHTML('beforeend',`<div class="q-card"><div class="q-text"><span class="q-num">${i+1}</span><span>${s.q}</span></div><textarea class="essay" id="es${i}" placeholder="Tulis jawaban argumentatif Anda di sini..."></textarea></div>`);
+});
+
+document.getElementById('rubrikBox').innerHTML=ES.map((s,i)=>`<p><b>Soal ${i+1}</b><br><b>Rubrik:</b> ${s.rub}</p>${s.model?`<p><b>Jawaban model/contoh:</b> ${s.model}</p>`:``}`).join('');
+
+let submitted=false;
+
+document.getElementById('btnSubmit').onclick=()=>{
+  const nama=document.getElementById('fNama').value.trim();
+  const nim=document.getElementById('fNim').value.trim();
+  if(!nama||!nim){alert('⚠️ Silakan isi Nama Lengkap dan NIM terlebih dahulu.');document.getElementById('identitas').scrollIntoView({behavior:'smooth'});return;}
+  let benar=0;
+  PG.forEach((s,i)=>{
+    const pick=document.querySelector(`input[name="q${i}"]:checked`);
+    const val=pick?parseInt(pick.value):-1;
+    const fb=document.getElementById('fb'+i);
+    if(val===s.k){benar++;fb.textContent='✔ Benar';fb.className='feedback ok';document.getElementById(`op${i}-${s.k}`).classList.add('correct');}
+    else{fb.textContent=`✘ Salah — Kunci jawaban: ${H[s.k]}`;fb.className='feedback no';if(val>-1){document.getElementById(`op${i}-${val}`).classList.add('wrong');}document.getElementById(`op${i}-${s.k}`).classList.add('correct');}
+    document.querySelectorAll(`input[name="q${i}"]`).forEach(r=>r.disabled=true);
+  });
+  const nilaiKonversi=Math.round((benar/35)*100);
+  let esTerjawab=0;
+  ES.forEach((_,i)=>{const ta=document.getElementById('es'+i);ta.disabled=true;if(ta.value.trim())esTerjawab++;});
+  
+  document.getElementById('sAkhir').textContent=benar;
+  document.getElementById('sBenar').textContent=benar;
+  document.getElementById('sKonversi').textContent=nilaiKonversi;
+  document.getElementById('sEs').textContent=esTerjawab;
+  
+  document.getElementById('rBig').textContent=benar+' / 35';
+  document.getElementById('rName').textContent='👤 '+nama+' · NIM '+nim;
+  document.getElementById('rPG').textContent=benar+'/35 (Nilai Konversi: '+nilaiKonversi+'/100)';
+  document.getElementById('rEs').textContent=esTerjawab+'/15 terjawab';
+  
+  const rb=document.getElementById('reviewBox');rb.innerHTML='';
+  PG.forEach((s,i)=>{
+    const pick=document.querySelector(`input[name="q${i}"]:checked`);
+    const val=pick?parseInt(pick.value):-1;
+    rb.insertAdjacentHTML('beforeend',`<div class="q-card"><div class="q-text"><span class="q-num">${i+1}</span><span>${s.q}</span></div><p style="font-size:.88rem;margin-bottom:.4rem">Jawaban Anda: <b>${val>-1?H[val]:'—'}</b> · Kunci: <b>${H[s.k]}</b></p><div class="pembahasan"><b>Pembahasan:</b> ${s.p}</div></div>`);
+  });
+  
+  document.getElementById('hasil').style.display='block';
+  document.getElementById('reviewSec').style.display='block';
+  document.getElementById('hasil').scrollIntoView({behavior:'smooth'});
+  submitted=true;
+};
+
+document.getElementById('btnTxt').onclick=()=>{
+  if(!submitted){alert('Silakan kirim jawaban terlebih dahulu.');return;}
+  const g=id=>document.getElementById(id).value||'-';
+  let t='=== HASIL UJIAN AKHIR SEMESTER (UAS) — SKI MADRASAH ===\n\n';
+  t+='Nama\t: '+g('fNama')+'\n';t+='NIM\t: '+g('fNim')+'\n';t+='Tanggal\t: '+g('fTgl')+'\n';
+  t+='Fakultas/Institusi\t: '+g('fFak')+'\n';t+='Prodi\t: '+g('fProdi')+'\n';t+='Semester\t: '+g('fSmt')+'\n';t+='Kelas\t: '+g('fKls')+'\n\n';
+  t+='--- BAGIAN I: PILIHAN GANDA (Maks 35) ---\n';let benar=0;
+  PG.forEach((s,i)=>{const pick=document.querySelector(`input[name="q${i}"]:checked`);const val=pick?parseInt(pick.value):-1;const ok=val===s.k;if(ok)benar++;t+=`No ${i+1}: ${val>-1?H[val]:'-'} (kunci ${H[s.k]}) ${ok?'BENAR':'SALAH'}\n`;});
+  t+='\nSkor PG: '+benar+' / 35\n';t+='Nilai Konversi PG: '+Math.round((benar/35)*100)+' / 100\n';
+  t+='\n--- BAGIAN II: ESSAY KOMPREHENSIF ---\n';
+  ES.forEach((s,i)=>{t+=`\nEssay ${i+1}: ${s.q}\nJawaban:\n${document.getElementById('es'+i).value||'(kosong)'}\n`;});
+  t+='\nCatatan: Essay dinilai manual oleh dosen berdasarkan rubrik komprehensif.\n';
+  const blob=new Blob([t],{type:'text/plain;charset=utf-8'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='Hasil-UAS-SKI.txt';a.click();
+};
+
+const rbar=document.getElementById('rbar');
+addEventListener('scroll',()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;rbar.style.width=p+'%';},{passive:true});
+</script>
+</body>
+</html>

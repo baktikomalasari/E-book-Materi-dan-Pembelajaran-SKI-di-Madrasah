@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bab 13: Model, Pendekatan, dan Strategi Pembelajaran SKI Interaktif | SKI Madrasah</title>
+<meta name="description" content="Bab 13 SKI Madrasah: Model, Pendekatan, dan Strategi Pembelajaran SKI Interaktif. Materi lengkap, uji formatif, pembahasan, dan navigasi belajar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--g950:#04281e;--g900:#0b3d2e;--g800:#10503c;--g700:#147d64;--g600:#0f9b7a;--gold:#c9a227;--gold-d:#a8861b;--gold-s:#f6ead0;--cream:#f7f5ee;--card:#fff;--ink:#1d2724;--muted:#5d6b66;--line:#e6e2d4;--red:#c0392b;--green-ok:#1e8e5a;--radius:16px;--shadow:0 8px 28px rgba(11,61,46,.09)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--cream);color:var(--ink);line-height:1.75;font-size:16px}
+.container{width:min(1100px,92%);margin-inline:auto}.read{width:min(880px,92%);margin-inline:auto}
+a{color:var(--g700);text-decoration:none}a:hover{color:var(--gold-d)}
+section,div[id]{scroll-margin-top:120px}
+#rbar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--gold);z-index:99}
+.nav{position:sticky;top:0;z-index:50;background:rgba(11,61,46,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,162,39,.35)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 0}
+.brand{display:flex;align-items:center;gap:.6rem;color:#fff;font-weight:800;font-size:1.02rem}.brand:hover{color:#fff}
+.brand-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--gold),#e8c96a);color:var(--g950);font-weight:800;font-size:.72rem}
+.brand small{display:block;font-weight:500;font-size:.68rem;color:var(--gold-s);letter-spacing:.6px}
+.nav-links{display:flex;gap:1.2rem;align-items:center}
+.nav-links a{color:#e9efe9;font-weight:600;font-size:.9rem}.nav-links a:hover{color:var(--gold)}
+.nav-links a.pill{border:1px solid var(--gold);color:var(--gold);padding:.35rem .85rem;border-radius:99px}
+.crumbs{background:var(--g950);color:#cfe0d6;font-size:.86rem}
+.crumbs .container{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;flex-wrap:wrap}
+.crumbs a{color:#cfe0d6;font-weight:600}.crumbs a:hover{color:var(--gold)}
+.ch-hero{background:radial-gradient(circle at 85% 15%,rgba(201,162,39,.22),transparent 42%),radial-gradient(circle at 12% 90%,rgba(15,155,122,.28),transparent 45%),linear-gradient(150deg,var(--g950),var(--g900) 55%,var(--g800));color:#fff;padding:3.2rem 0 2.8rem;position:relative;overflow:hidden}
+.ch-hero::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.12;background-image:repeating-linear-gradient(45deg,transparent 0 22px,rgba(255,255,255,.5) 22px 23px),repeating-linear-gradient(-45deg,transparent 0 22px,rgba(255,255,255,.5) 22px 23px)}
+.bab-badge{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--gold);color:var(--gold);font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;padding:.4rem 1rem;border-radius:99px;background:rgba(0,0,0,.18);position:relative;z-index:1}
+.ch-hero h1{font-size:clamp(1.7rem,4.2vw,2.6rem);line-height:1.25;margin:1.1rem 0 .8rem;font-weight:800;max-width:24ch;position:relative;z-index:1}
+.ch-hero .lead{color:#dbe8e0;max-width:70ch;position:relative;z-index:1}
+.ch-meta{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem;position:relative;z-index:1}
+.ch-meta span{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);padding:.35rem .9rem;border-radius:99px;font-size:.8rem;color:#eef4ef}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.5rem;position:relative;z-index:1}
+.innav{position:sticky;top:63px;z-index:40;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);box-shadow:0 6px 18px rgba(11,61,46,.06)}
+.innav .container{display:flex;gap:.55rem;overflow:auto;padding:.6rem 0;white-space:nowrap}
+.innav a{background:#fbfaf5;border:1px solid var(--line);color:var(--g800);padding:.38rem .85rem;border-radius:99px;font-size:.82rem;font-weight:700;flex:0 0 auto}
+.innav a:hover{border-color:var(--gold);color:var(--gold-d)}
+.innav a.gold{background:var(--g900);color:var(--gold);border-color:rgba(201,162,39,.45)}
+.article{padding:2.5rem 0 3.2rem}
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:2rem clamp(1.2rem,4vw,2.4rem);margin-bottom:1.8rem}
+.sec-head{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.1rem}
+.sec-badge{flex:0 0 auto;width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--g900),var(--g700));color:var(--gold);font-weight:800;font-size:1.15rem;box-shadow:inset 0 0 0 1px rgba(201,162,39,.5)}
+.sec-title{font-size:clamp(1.15rem,2.4vw,1.45rem);font-weight:800;color:var(--g900);line-height:1.35}
+.sec-sub{font-size:.85rem;color:var(--muted);font-weight:600;letter-spacing:.4px}
+.sec p{margin-bottom:1rem;text-align:justify}
+.sec h3{color:var(--g800);margin:1.4rem 0 .7rem;font-size:1.05rem;font-weight:800}
+.sec h4{color:var(--g700);margin:1.2rem 0 .5rem;font-size:.95rem;font-weight:800}
+.sec ul,.sec ol{margin:0 0 1.1rem 1.4rem}.sec li{margin-bottom:.45rem}.sec li::marker{color:var(--gold-d);font-weight:700}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.map-card{background:#fbfaf5;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:12px;padding:1rem 1.15rem}
+.map-card b{color:var(--g900);font-size:.95rem}.map-card ol{margin:.5rem 0 0 1.1rem}.map-card li{font-size:.85rem;color:var(--muted);margin-bottom:.15rem}
+.callout{border-radius:12px;padding:1rem 1.2rem;margin:1.2rem 0;border-left:5px solid;font-size:.95rem}
+.callout b.tag{display:block;font-size:.75rem;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:.35rem}
+.c-case{background:#fbf7ea;border-color:#b98a1e}.c-case b.tag{color:#8a650f}
+.c-warn{background:#fdf0ee;border-color:var(--red)}.c-warn b.tag{color:var(--red)}
+.c-prin{background:#f0f4fb;border-color:#3b6fb5}.c-prin b.tag{color:#2d578f}
+.c-note{background:#eef7f3;border-color:var(--g600)}.c-note b.tag{color:var(--g700)}
+.table-wrap{overflow-x:auto;margin:1rem 0}
+table.tbl{width:100%;border-collapse:collapse;font-size:.88rem;min-width:650px}
+.tbl th{background:var(--g900);color:#fff;padding:.6rem .7rem;text-align:left;font-weight:700}
+.tbl td{border:1px solid var(--line);padding:.6rem .7rem;vertical-align:top}
+.tbl tr:nth-child(even) td{background:#fbfaf5}
+.cta{background:linear-gradient(135deg,var(--g900),var(--g700));color:#fff;border-radius:var(--radius);padding:2rem;display:flex;flex-wrap:wrap;gap:1.4rem;align-items:center;justify-content:space-between;border:1px solid rgba(201,162,39,.4);margin:1.8rem 0}
+.cta h3{font-size:1.2rem;margin-bottom:.35rem}.cta p{color:#dbe8e0;font-size:.92rem;max-width:56ch}
+.btn{display:inline-block;border:none;cursor:pointer;font-family:inherit;font-weight:800;padding:.85rem 1.6rem;border-radius:12px;font-size:.92rem;transition:.2s;text-align:center}
+.btn-gold{background:linear-gradient(135deg,var(--gold),#e3c25c);color:var(--g950)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(201,162,39,.35);color:var(--g950)}
+.btn-line{background:transparent;border:1.5px solid var(--gold);color:var(--gold)}.btn-line:hover{background:rgba(201,162,39,.12)}
+.btn-dark{background:var(--g900);color:#fff}.btn-dark:hover{background:var(--g800)}
+.pager{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:.5rem}
+.pager a{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.9rem 1.3rem;font-weight:700;font-size:.9rem;box-shadow:var(--shadow)}
+.pager a:hover{border-color:var(--gold)}.pager small{display:block;font-weight:600;color:var(--muted);font-size:.75rem}
+.footer{background:var(--g950);color:#c8d6cd;margin-top:3rem;border-top:3px solid var(--gold)}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2rem;padding:2.8rem 0}
+.footer h4{color:var(--gold);font-size:.85rem;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:.9rem}
+.footer p,.footer li{font-size:.88rem;line-height:1.7}.footer ul{list-style:none}.footer li{margin-bottom:.45rem}
+.footer a{color:#c8d6cd}.footer a:hover{color:var(--gold)}
+.foot-bar{border-top:1px solid rgba(255,255,255,.12);padding:1.1rem 0;font-size:.8rem;text-align:center;color:#9db3a8}
+.scorebar{position:sticky;top:118px;z-index:39;background:var(--g900);color:#fff;border-radius:14px;padding:.8rem 1.2rem;display:flex;flex-wrap:wrap;gap:1.1rem;align-items:center;justify-content:space-between;box-shadow:var(--shadow);margin:1.2rem 0 1.6rem;border:1px solid rgba(201,162,39,.4)}
+.scorebar b{color:var(--gold)}.scorebar .item{font-size:.88rem;font-weight:600}
+.form-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.field label{display:block;font-size:.8rem;font-weight:700;color:var(--g800);margin-bottom:.3rem}
+.field input,.field select,.field textarea{width:100%;font-family:inherit;font-size:.92rem;border:1.5px solid var(--line);border-radius:10px;padding:.65rem .8rem;background:#fff;color:var(--ink)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--g600);box-shadow:0 0 0 3px rgba(15,155,122,.15)}
+.q-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.5rem;margin-bottom:1.1rem;box-shadow:0 4px 16px rgba(11,61,46,.06)}
+.q-num{display:inline-grid;place-items:center;min-width:34px;height:34px;border-radius:10px;background:var(--g900);color:var(--gold);font-weight:800;font-size:.9rem;margin-right:.7rem}
+.q-text{font-weight:700;color:var(--ink);margin-bottom:.9rem;display:flex;align-items:flex-start}
+.opts{display:grid;gap:.5rem}
+.opt{display:flex;gap:.7rem;align-items:flex-start;border:1.5px solid var(--line);border-radius:10px;padding:.6rem .8rem;cursor:pointer;font-size:.92rem;background:#fff;transition:.15s}
+.opt:hover{border-color:var(--g600);background:#f2faf6}.opt input{margin-top:.28rem;accent-color:var(--g700)}
+.opt.correct{border-color:var(--green-ok);background:#eaf7f0}.opt.wrong{border-color:var(--red);background:#fdeeec}
+.feedback{font-size:.82rem;font-weight:800;margin-top:.6rem}.feedback.ok{color:var(--green-ok)}.feedback.no{color:var(--red)}
+.pembahasan{margin-top:.8rem;background:#fbf7ea;border-left:4px solid var(--gold);border-radius:8px;padding:.7rem .9rem;font-size:.86rem}
+.pembahasan b{color:var(--gold-d)}
+textarea.essay{min-height:130px;resize:vertical}
+.result{display:none;background:linear-gradient(150deg,var(--g950),var(--g800));color:#fff;border-radius:var(--radius);padding:2rem;margin:1.6rem 0;border:1px solid rgba(201,162,39,.45)}
+.result .big{font-size:2.4rem;font-weight:800;color:var(--gold)}
+.actions{display:flex;gap:.8rem;flex-wrap:wrap;margin:1.4rem 0}
+details{background:#fbfaf5;border:1px solid var(--line);border-radius:10px;padding:.8rem 1rem;margin-top:.9rem}
+details summary{cursor:pointer;font-weight:700;color:var(--g800);font-size:.9rem}
+details .body{font-size:.86rem;color:var(--muted);padding-top:.6rem}
+@media(max-width:900px){.grid3{grid-template-columns:repeat(2,1fr)}.form-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.nav-links a:not(.pill){display:none}.grid2,.grid3,.form-grid{grid-template-columns:1fr}.sec{padding:1.4rem 1.1rem}.cta{flex-direction:column;align-items:flex-start}.pager{flex-direction:column}.scorebar{top:108px}.innav{top:58px}}
+</style>
+</head>
+<body id="atas">
+<div id="rbar"></div>
+
+<header class="nav">
+  <div class="container nav-in">
+    <a class="brand" href="index.html"><span class="brand-mark">SKI</span><span>SKI Madrasah<small>Sejarah Kebudayaan Islam Interaktif</small></span></a>
+    <nav class="nav-links">
+      <a href="index.html#timeline">Linimasa</a><a href="index.html#silabus">16 Bab</a><a href="index.html#tentang">Tentang</a>
+      <a class="pill" href="#uji-formatif">📝 Uji Formatif</a>
+    </nav>
+  </div>
+</header>
+
+<div class="crumbs">
+  <div class="container">
+    <a href="12.html">← Bab 12</a>
+    <span>Web-Book SKI · Bab 13 dari 16</span>
+    <a href="14.html">Bab 14 →</a>
+  </div>
+</div>
+
+<section class="ch-hero">
+  <div class="container">
+    <span class="bab-badge">✦ Web-Book Progresif · Bab 13 dari 16</span>
+    <h1>Model, Pendekatan, dan Strategi Pembelajaran SKI Interaktif</h1>
+    <p class="lead">Landasan teoritis model pembelajaran interaktif untuk SKI; penerapan Role Playing, Timeline Project, Project-Based Learning (PBL), dan Discovery Learning; integrasi enam keterampilan proses CP; konsep ZPD dan scaffolding Vygotsky; serta perancangan modul ajar dan simulasi pembelajaran yang mendorong berpikir historis.</p>
+    <div class="ch-meta">
+      <span>🏛️ IAIN Curup</span><span>📚 Materi dan Pembelajaran SKI di Madrasah</span>
+      <span>📝 25 Pilihan Ganda + 5 Essay HOTS</span><span>📜 Kepdirjen Pendis No. 9941/2025</span>
+    </div>
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="#materi">📖 Baca Materi</a>
+      <a class="btn btn-line" href="#uji-formatif">📝 Langsung ke Uji Formatif</a>
+      <a class="btn btn-line" href="14.html">Lanjut Bab 14 →</a>
+    </div>
+  </div>
+</section>
+
+<nav class="innav">
+  <div class="container">
+    <a href="#cp">Capaian &amp; Tujuan</a><a href="#peta">Peta Konsep</a>
+    <a href="#s13-1">13.1 Role Playing</a><a href="#s13-2">13.2 Timeline</a>
+    <a href="#s13-3">13.3 PBL</a><a href="#s13-4">13.4 Discovery</a>
+    <a href="#s13-5">13.5 Keterampilan Proses</a><a href="#s13-6">13.6 Vygotsky</a>
+    <a href="#s13-7">13.7 Modul Ajar</a><a href="#s13-8">13.8 Praktik</a>
+    <a href="#s13-9">13.9 HOTS</a>
+    <a href="#rangkuman">Rangkuman</a><a href="#pustaka">Pustaka</a><a href="#penutup">Penutup</a>
+    <a class="gold" href="#uji-formatif">Uji Formatif</a>
+  </div>
+</nav>
+
+<main class="article" id="materi">
+<div class="read">
+
+<!-- ===== A. CAPAIAN & TUJUAN ===== -->
+<section class="sec" id="cp">
+  <div class="sec-head"><span class="sec-badge">A</span><div><div class="sec-sub">CAPAIAN PEMBELAJARAN &amp; TUJUAN PEMBELAJARAN</div><h2 class="sec-title">Arah Belajar Bab 13</h2></div></div>
+  <h3>Capaian Pembelajaran Bab</h3>
+  <p>Setelah mempelajari bab ini, mahasiswa mampu memahami landasan teoritis dan praktis model pembelajaran interaktif untuk Sejarah Kebudayaan Islam (SKI), memilih model pembelajaran berdasarkan karakteristik materi, peserta didik, tujuan pembelajaran, dan keterampilan proses, serta merancang aktivitas pembelajaran SKI yang mendorong keterlibatan aktif, berpikir historis, kolaborasi, refleksi, dan komunikasi.</p>
+  <h3>Tujuan Pembelajaran</h3>
+  <ol>
+    <li>menjelaskan karakteristik pembelajaran SKI interaktif;</li>
+    <li>menjelaskan keterkaitan <em>Experiential Learning</em> Kolb dan konstruktivisme sosial Vygotsky dengan pembelajaran SKI;</li>
+    <li>menerapkan model <em>Role Playing</em> dalam pembelajaran sejarah;</li>
+    <li>merancang <em>Timeline Project</em> dan <em>Timeline Games</em>;</li>
+    <li>menerapkan <em>Project-Based Learning</em> berbasis historiografi;</li>
+    <li>menerapkan <em>Discovery Learning</em> pada materi SKI;</li>
+    <li>mengintegrasikan enam keterampilan proses (mengamati, menanya, meneliti, menganalisis, menyimpulkan, mengomunikasikan);</li>
+    <li>menyusun contoh modul ajar SKI pada jenjang MI, MTs, atau MA;</li>
+    <li>melakukan simulasi satu sesi pembelajaran SKI interaktif;</li>
+    <li>mengevaluasi kesesuaian model pembelajaran berdasarkan karakteristik materi dan jenjang pendidikan.</li>
+  </ol>
+</section>
+
+<!-- ===== B. PETA KONSEP ===== -->
+<section class="sec" id="peta">
+  <div class="sec-head"><span class="sec-badge">B</span><div><div class="sec-sub">KERANGKA MATERI</div><h2 class="sec-title">Peta Konsep Bab 13</h2></div></div>
+  <div class="grid2">
+    <div class="map-card"><b>A. Model Pembelajaran</b><ol type="a"><li>Role Playing (Sosiodrama)</li><li>Timeline Project &amp; Games</li><li>Project-Based Learning (PBL)</li><li>Discovery Learning</li></ol></div>
+    <div class="map-card"><b>B. Landasan Teori</b><ol type="a"><li>Experiential Learning (Kolb)</li><li>Konstruktivisme Sosial (Vygotsky)</li><li>Zone of Proximal Development (ZPD)</li><li>Scaffolding</li></ol></div>
+    <div class="map-card"><b>C. Keterampilan Proses</b><ol type="a"><li>Mengamati</li><li>Menanya</li><li>Meneliti</li><li>Menganalisis</li><li>Menyimpulkan</li><li>Mengomunikasikan</li></ol></div>
+    <div class="map-card"><b>D. Implementasi</b><ol type="a"><li>Modul Ajar (MI, MTs, MA)</li><li>Microteaching</li><li>Peer Review</li><li>Asesmen Autentik</li></ol></div>
+  </div>
+</section>
+
+<!-- ===== C. 13.1 ROLE PLAYING ===== -->
+<section class="sec" id="s13-1">
+  <div class="sec-head"><span class="sec-badge">C</span><div><div class="sec-sub">URAIAN MATERI · 13.1</div><h2 class="sec-title">Model Role Playing (Sosiodrama Sejarah)</h2></div></div>
+  <h3>A. Hakikat Role Playing dalam Pembelajaran SKI</h3>
+  <p><em>Role Playing</em> merupakan model pembelajaran yang memberi kesempatan kepada peserta didik untuk memainkan peran tertentu dalam suatu situasi yang dirancang berdasarkan materi pembelajaran. Dalam pembelajaran SKI, peran yang dimainkan dapat berupa tokoh sejarah, masyarakat, ulama, pedagang, atau kelompok sosial yang terlibat dalam suatu peristiwa.</p>
+  <p>Penggunaan <em>Role Playing</em> tidak dimaksudkan agar siswa berpura-pura menjadi tokoh sejarah secara bebas. Model ini harus tetap dibangun di atas fakta sejarah, konteks waktu, sumber, dan batasan interpretasi yang jelas. Karena itu, <em>Role Playing</em> dalam SKI sebaiknya dipahami sebagai <b>simulasi pedagogis</b>, bukan rekonstruksi sejarah yang mengklaim bahwa dialog siswa benar-benar pernah terjadi.</p>
+  
+  <h3>B. Landasan Experiential Learning (Kolb)</h3>
+  <p>Model <em>Role Playing</em> sangat sesuai dengan pendekatan <em>Experiential Learning</em> David Kolb. Kolb menjelaskan pembelajaran sebagai proses penciptaan pengetahuan melalui transformasi pengalaman. Siklusnya meliputi:</p>
+  <ol>
+    <li><b>Concrete Experience:</b> Siswa mengalami situasi simulatif (misal: memainkan peran sidang Piagam Madinah).</li>
+    <li><b>Reflective Observation:</b> Setelah simulasi, siswa mendiskusikan pengalaman, kesulitan, dan posisi sosial yang memengaruhi keputusan.</li>
+    <li><b>Abstract Conceptualization:</b> Siswa menyusun konsep dari pengalaman tersebut (misal: konsep diplomasi, logistik, atau pengambilan keputusan historis).</li>
+    <li><b>Active Experimentation:</b> Siswa mencoba menerapkan konsep itu pada kasus lain (misal: membandingkan strategi Mataram dengan Aceh).</li>
+  </ol>
+  <div class="callout c-note">
+    <b class="tag">📌 Catatan Penting</b>
+    <p style="margin:0;text-align:left">Siklus ini penting karena pengalaman bermain peran tanpa refleksi dapat berubah hanya menjadi kegiatan hiburan. Refleksi kritis mengubah pengalaman menjadi pembelajaran bermakna.</p>
+  </div>
+
+  <h3>C. Langkah-langkah Role Playing</h3>
+  <ol>
+    <li><b>Menentukan peristiwa:</b> Pilih peristiwa yang memiliki konflik atau pengambilan keputusan (misal: Piagam Madinah, Perjanjian Hudaibiyah, sidang BPUPKI).</li>
+    <li><b>Menetapkan tujuan:</b> Tujuan harus spesifik dan terukur.</li>
+    <li><b>Menentukan tokoh &amp; memberikan sumber:</b> Setiap kelompok memperoleh <em>role card</em> yang berisi identitas, posisi, kepentingan, dan batasan tindakan.</li>
+    <li><b>Pementasan:</b> Berlangsung dengan aturan yang disepakati.</li>
+    <li><b>Debriefing &amp; Refleksi:</b> Tahap paling penting. Guru mengajukan pertanyaan analitis dan siswa membandingkan hasil simulasi dengan fakta sejarah.</li>
+  </ol>
+</section>
+
+<!-- ===== D. 13.2 TIMELINE ===== -->
+<section class="sec" id="s13-2">
+  <div class="sec-head"><span class="sec-badge">D</span><div><div class="sec-sub">URAIAN MATERI · 13.2</div><h2 class="sec-title">Model Timeline Project dan Timeline Games</h2></div></div>
+  <h3>A. Mengapa Timeline Penting?</h3>
+  <p>Sejarah memiliki dimensi waktu. Kesalahan memahami urutan peristiwa dapat menyebabkan kesalahan memahami hubungan sebab-akibat. <em>Timeline</em> bukan sekadar alat untuk menghafalkan tahun, melainkan instrumen untuk memahami kronologi, menemukan kesinambungan, melihat perubahan, mengidentifikasi titik balik, dan menganalisis hubungan sebab-akibat.</p>
+  
+  <h3>B. Timeline Project</h3>
+  <p><em>Timeline Project</em> adalah proyek penyusunan linimasa historis yang dilakukan siswa berdasarkan sumber. Setiap peristiwa perlu memiliki: tanggal/tahun, peristiwa, aktor, lokasi, makna, dan sumber. Format ini memaksa siswa untuk tidak hanya mendaftar kejadian, tetapi juga menjelaskan signifikansi historisnya.</p>
+
+  <h3>C. Timeline Games</h3>
+  <p><em>Timeline</em> dapat dikembangkan menjadi permainan edukatif. Guru menyiapkan kartu peristiwa acak, dan kelompok harus menyusunnya sesuai urutan. Setelah selesai, guru memberikan pertanyaan analitis: "Mengapa peristiwa nomor 3 dapat menjadi konsekuensi dari peristiwa nomor 2?" Dengan demikian, permainan berubah menjadi latihan berpikir historis.</p>
+</section>
+
+<!-- ===== E. 13.3 PBL ===== -->
+<section class="sec" id="s13-3">
+  <div class="sec-head"><span class="sec-badge">E</span><div><div class="sec-sub">URAIAN MATERI · 13.3</div><h2 class="sec-title">Project-Based Learning (PBL) Berbasis Historiografi</h2></div></div>
+  <h3>A. Hakikat PBL</h3>
+  <p><em>Project-Based Learning</em> (PBL) berbeda dari tugas membuat produk biasa. Dalam PBL, proyek menjadi kendaraan untuk mempelajari pengetahuan dan keterampilan penting. Kerangka <em>Gold Standard PBL</em> mengidentifikasi tujuh elemen: persoalan pemantik, penyelidikan berkelanjutan, autentisitas, ruang pilihan siswa, refleksi, revisi berdasarkan umpan balik, dan produk yang dapat dikomunikasikan kepada publik.</p>
+  <div class="callout c-warn">
+    <b class="tag">⚠️ Kesalahan Umum</b>
+    <p style="margin:0;text-align:left">Meminta siswa "membuat poster tentang Walisongo" belum tentu PBL. Jika siswa hanya mencari gambar dari internet lalu menempelkan biodata, aktivitas tersebut lebih tepat disebut tugas produk. Agar menjadi PBL, harus terdapat pertanyaan atau permasalahan yang membutuhkan penyelidikan mendalam.</p>
+  </div>
+  
+  <h3>B. PBL dalam Historiografi SKI</h3>
+  <p>Historiografi merupakan proses penulisan sejarah berdasarkan interpretasi terhadap sumber. Dalam pembelajaran SKI, PBL berbasis historiografi dapat melatih siswa memahami bahwa suatu sejarah dapat memiliki lebih dari satu narasi. Contoh pertanyaan proyek: "Bagaimana kita dapat menjelaskan kedatangan Islam di Nusantara tanpa mengandalkan satu teori saja?"</p>
+</section>
+
+<!-- ===== F. 13.4 DISCOVERY ===== -->
+<section class="sec" id="s13-4">
+  <div class="sec-head"><span class="sec-badge">F</span><div><div class="sec-sub">URAIAN MATERI · 13.4</div><h2 class="sec-title">Discovery Learning dalam Kelas SKI</h2></div></div>
+  <p><em>Discovery Learning</em> menempatkan peserta didik sebagai pencari dan pengolah informasi. Guru tidak memberikan seluruh kesimpulan pada awal pembelajaran, tetapi merancang situasi yang mendorong siswa menemukan pola, hubungan, konsep, atau kesimpulan melalui sumber dan data.</p>
+  <h4>Tahapan Discovery Learning:</h4>
+  <ol>
+    <li><b>Stimulation:</b> Guru menampilkan stimulus (misal: gambar Masjid Agung Demak).</li>
+    <li><b>Problem Statement:</b> Siswa merumuskan masalah ("Mengapa unsur arsitektur lokal muncul dalam bangunan Islam?").</li>
+    <li><b>Data Collection:</b> Siswa mencari sumber.</li>
+    <li><b>Data Processing:</b> Siswa mengelompokkan data.</li>
+    <li><b>Verification:</b> Siswa menguji kesimpulan awal.</li>
+    <li><b>Generalization:</b> Siswa merumuskan prinsip umum (misal: "Islamisasi di Nusantara berlangsung melalui proses adaptasi dan akulturasi").</li>
+  </ol>
+</section>
+
+<!-- ===== G. 13.5 KETERAMPILAN PROSES ===== -->
+<section class="sec" id="s13-5">
+  <div class="sec-head"><span class="sec-badge">G</span><div><div class="sec-sub">URAIAN MATERI · 13.5</div><h2 class="sec-title">Integrasi Enam Elemen Keterampilan Proses CP</h2></div></div>
+  <p>Dokumen CP menetapkan enam unsur yang sebaiknya tidak dipahami sebagai enam kegiatan terpisah, melainkan sebuah siklus penyelidikan:</p>
+  <ol>
+    <li><b>Mengamati:</b> Memperoleh informasi awal melalui sumber. Guru perlu melatih siswa membedakan <em>apa yang terlihat</em> dengan <em>apa yang ditafsirkan</em>.</li>
+    <li><b>Menanya:</b> Pertanyaan historis yang baik harus dapat diteliti. (Contoh HOTS: "Sejauh mana faktor ekonomi menjelaskan serangan Mataram terhadap Batavia?")</li>
+    <li><b>Meneliti:</b> Mencari bukti melalui pencarian sumber, bibliografi, dan kritik sumber.</li>
+    <li><b>Menganalisis:</b> Mencari hubungan sebab-akibat, latar belakang, pemicu, dan dampak.</li>
+    <li><b>Menyimpulkan:</b> Kesimpulan harus proporsional dengan bukti dan menggunakan bahasa yang hati-hati ("Bukti yang tersedia menunjukkan...").</li>
+    <li><b>Mengomunikasikan:</b> Hasil disampaikan melalui presentasi, esai, infografik, atau podcast dengan menekankan akurasi dan argumentasi.</li>
+  </ol>
+</section>
+
+<!-- ===== H. 13.6 VYGOTSKY ===== -->
+<section class="sec" id="s13-6">
+  <div class="sec-head"><span class="sec-badge">H</span><div><div class="sec-sub">URAIAN MATERI · 13.6</div><h2 class="sec-title">Landasan Konstruktivisme Sosial Vygotsky</h2></div></div>
+  <p>Vygotsky memandang perkembangan kognitif dalam hubungan erat dengan lingkungan sosial, budaya, bahasa, dan interaksi. Konsep <em>Zone of Proximal Development</em> (ZPD) berhubungan dengan apa yang dapat dilakukan peserta didik ketika memperoleh dukungan dari pihak yang lebih mampu.</p>
+  <h4>Scaffolding dalam Pembelajaran SKI:</h4>
+  <ul>
+    <li><b>Scaffolding pertanyaan:</b> Guru menyediakan pertanyaan bertingkat.</li>
+    <li><b>Scaffolding sumber:</b> Guru memberikan dua sumber untuk dibandingkan sebelum meminta siswa mencari lima sumber secara mandiri.</li>
+    <li><b>Scaffolding konsep:</b> Guru memberi peta konsep yang sebagian telah terisi.</li>
+    <li><b>Scaffolding bahasa:</b> Guru menyediakan kalimat akademik ("Berdasarkan sumber A..., sedangkan sumber B...").</li>
+  </ul>
+</section>
+
+<!-- ===== I. 13.7 MODUL AJAR ===== -->
+<section class="sec" id="s13-7">
+  <div class="sec-head"><span class="sec-badge">I</span><div><div class="sec-sub">URAIAN MATERI · 13.7</div><h2 class="sec-title">Contoh Modul Ajar SKI Berbasis Model Interaktif</h2></div></div>
+  <p>Perbedaan model bukan sekadar perbedaan tingkat kesulitan soal, tetapi juga perbedaan kedalaman berpikir dan jenis <em>scaffolding</em> yang diberikan.</p>
+  <div class="table-wrap">
+    <table class="tbl">
+      <tr><th>Jenjang</th><th>Karakteristik Aktivitas</th><th>Contoh Materi</th></tr>
+      <tr><td>MI</td><td>Menggunakan benda konkret, cerita, gambar, permainan, dan pengalaman langsung. Tuntutan analisis sumber dibuat lebih sederhana.</td><td>Mencocokkan kartu tokoh Walisongo, menyusun cerita dakwah yang ramah.</td></tr>
+      <tr><td>MTs</td><td>Mulai menggunakan sumber primer/sekunder yang disederhanakan, simulasi strategi, dan peta sebab-akibat.</td><td>Simulasi rapat strategi Sultan Agung menghadapi VOC.</td></tr>
+      <tr><td>MA</td><td>Kompleksitas sumber ditingkatkan. Siswa membandingkan teori, melakukan kritik historiografi, dan menyusun argumentasi.</td><td>Menguji teori masuknya Islam ke Nusantara melalui komparasi sumber.</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ===== J. 13.8 PRAKTIK ===== -->
+<section class="sec" id="s13-8">
+  <div class="sec-head"><span class="sec-badge">J</span><div><div class="sec-sub">URAIAN MATERI · 13.8</div><h2 class="sec-title">Aktivitas: Praktik Merancang Satu Sesi Pembelajaran Interaktif</h2></div></div>
+  <p>Mahasiswa calon guru diberi tugas merancang satu sesi pembelajaran SKI selama 40–50 menit melalui langkah-langkah berikut:</p>
+  <ol>
+    <li><b>Pilih materi &amp; Tentukan tujuan:</b> Gunakan format "Peserta didik mampu + kata kerja operasional + materi + kondisi/produk".</li>
+    <li><b>Tentukan model:</b> Sesuaikan dengan karakteristik materi (Konflik → Role Playing; Kronologi → Timeline; Masalah kompleks → PBL; Bukti observasi → Discovery).</li>
+    <li><b>Rancang aktivitas:</b> Jawab pertanyaan: Apa yang dilakukan guru? Apa yang dilakukan siswa? Apa sumbernya? Apa produknya? Bagaimana dinilai?</li>
+    <li><b>Praktik Microteaching:</b> Lakukan simulasi selama 10–15 menit.</li>
+    <li><b>Peer Review &amp; Revisi:</b> Teman memberikan penilaian berdasarkan kesesuaian model, keterlibatan siswa, kualitas pertanyaan, dan kualitas asesmen.</li>
+  </ol>
+  <div class="callout c-prin">
+    <b class="tag">📌 Prinsip Memilih Model</b>
+    <p style="margin:0;text-align:left">Tidak ada model tunggal yang selalu cocok. <b>Materi menentukan tujuan, tujuan menentukan aktivitas, aktivitas menentukan model, dan asesmen memastikan bahwa semua proses tersebut benar-benar menghasilkan pembelajaran.</b></p>
+  </div>
+</section>
+
+<!-- ===== K. 13.9 HOTS ===== -->
+<section class="sec" id="s13-9">
+  <div class="sec-head"><span class="sec-badge">K</span><div><div class="sec-sub">URAIAN MATERI · 13.9</div><h2 class="sec-title">Latihan HOTS: Mengevaluasi Kesesuaian Model Pembelajaran</h2></div></div>
+  <h3>Studi Kasus Evaluasi</h3>
+  <div class="callout c-case">
+    <b class="tag">🗂️ Kasus 1</b>
+    <p style="margin:0;text-align:left">Guru mengajarkan "Dinasti Abbasiyah" dengan meminta siswa membuat poster tokoh ilmuwan. <b>Pertanyaan:</b> Apakah poster otomatis merupakan PBL?</p>
+  </div>
+  <p><b>Analisis:</b> Tidak. Poster hanya merupakan produk. Agar menjadi PBL, harus ada persoalan atau pertanyaan yang membutuhkan penyelidikan, proses riset, revisi, dan komunikasi hasil.</p>
+  
+  <div class="callout c-case">
+    <b class="tag">🗂️ Kasus 2</b>
+    <p style="margin:0;text-align:left">Guru memberikan 20 halaman sumber kepada siswa MI kelas IV lalu meminta mereka melakukan kritik historiografi. <b>Pertanyaan:</b> Apa yang salah dari desain ini?</p>
+  </div>
+  <p><b>Analisis:</b> Beban kognitif dan literasi sumber terlalu tinggi. Untuk MI, guru dapat menggunakan gambar, potongan teks, kartu informasi, dan pertanyaan terstruktur. Inilah penerapan <em>scaffolding</em>.</p>
+</section>
+
+<!-- ===== L. RANGKUMAN ===== -->
+<section class="sec" id="rangkuman">
+  <div class="sec-head"><span class="sec-badge">L</span><div><div class="sec-sub">SIMAK KEMBALI</div><h2 class="sec-title">Rangkuman Materi</h2></div></div>
+  <ol>
+    <li>Pembelajaran SKI interaktif menempatkan peserta didik sebagai subjek aktif dalam proses memahami sejarah melalui penyelidikan, diskusi, interpretasi, dan komunikasi.</li>
+    <li><em>Role Playing</em> harus didasarkan pada sumber, konteks, dan refleksi agar tidak berubah menjadi hiburan semata. Siklus Kolb (Pengalaman → Refleksi → Konsep → Eksperimen) adalah kuncinya.</li>
+    <li><em>Timeline Project</em> dan <em>Games</em> membantu siswa memahami kronologi, kesinambungan, perubahan, dan hubungan sebab-akibat.</li>
+    <li>PBL berbasis historiografi mengajarkan siswa bahwa sejarah dibangun berdasarkan sumber dan interpretasi yang memerlukan penyelidikan berkelanjutan.</li>
+    <li><em>Discovery Learning</em> cocok digunakan ketika guru memiliki sumber atau data yang memungkinkan siswa menemukan pola dan konsep secara mandiri.</li>
+    <li>Teori Vygotsky (ZPD) dan <em>scaffolding</em> memperkuat pembelajaran kolaboratif dengan memberikan dukungan yang sesuai dan secara bertahap mengurangi bantuan ketika peserta didik berkembang.</li>
+    <li>Enam keterampilan proses (mengamati, menanya, meneliti, menganalisis, menyimpulkan, mengomunikasikan) harus terintegrasi dalam semua model pembelajaran SKI.</li>
+    <li>Prinsip terpenting: model dipilih berdasarkan kesesuaian antara tujuan, materi, peserta didik, sumber, waktu, dan asesmen.</li>
+  </ol>
+</section>
+
+<!-- ===== M. DAFTAR PUSTAKA ===== -->
+<section class="sec" id="pustaka">
+  <div class="sec-head"><span class="sec-badge">M</span><div><div class="sec-sub">RUJUKAN BAB 13</div><h2 class="sec-title">Daftar Pustaka</h2></div></div>
+  <ul style="font-size:.88rem;color:var(--muted)">
+    <li>Arends, R. I. (2012). <em>Learning to teach</em> (9th ed.). McGraw-Hill.</li>
+    <li>Joyce, B., Weil, M., &amp; Calhoun, E. (2015). <em>Models of teaching</em> (9th ed.). Pearson.</li>
+    <li>Kolb, D. A. (1984). <em>Experiential learning: Experience as the source of learning and development</em>. Prentice Hall.</li>
+    <li>Larmer, J., Mergendoller, J. R., &amp; Boss, S. (2015). <em>Setting the standard for project based learning</em>. ASCD.</li>
+    <li>Morris, T. H. (2020). Experiential learning – a systematic review and revision of Kolb’s model. <em>Interactive Learning Environments</em>.</li>
+    <li>PBLWorks. (2023). <em>Gold Standard PBL: Essential project design elements</em>.</li>
+    <li>Smagorinsky, P. (2018). Deconflating the ZPD and instructional scaffolding. <em>Learning, Culture and Social Interaction</em>.</li>
+    <li>Vygotsky, L. S. (1978). <em>Mind in society: The development of higher psychological processes</em>. Harvard University Press.</li>
+  </ul>
+</section>
+
+<!-- ===== N. PENUTUP ===== -->
+<section class="sec" id="penutup">
+  <div class="sec-head"><span class="sec-badge">N</span><div><div class="sec-sub">PENUTUP BAB</div><h2 class="sec-title">Penutup</h2></div></div>
+  <p>Pembelajaran SKI yang interaktif tidak berarti meninggalkan kedalaman sejarah. Justru sebaliknya, interaksi yang dirancang dengan baik dapat membawa siswa lebih dekat pada proses berpikir seorang sejarawan: menemukan bukti, mempertanyakan sumber, menyusun hubungan sebab-akibat, menguji interpretasi, dan mempertanggungjawabkan kesimpulan.</p>
+  <p>Di sinilah letak peran profesional guru SKI. Guru bukan sekadar penyampai cerita sejarah, tetapi perancang pengalaman belajar yang membantu peserta didik memahami masa lalu secara kritis dan menghubungkannya dengan pembentukan cara berpikir, karakter, serta tanggung jawab mereka pada masa kini.</p>
+</section>
+
+<!-- ===== CTA UJI FORMATIF ===== -->
+<div class="cta">
+  <div>
+    <h3>📝 Uji Pemahaman Anda</h3>
+    <p>Setelah mempelajari Bab 13, kerjakan uji formatif berikut: 25 soal pilihan ganda dengan skor otomatis dan pembahasan, serta 5 soal essay HOTS dengan pedoman penskoran.</p>
+  </div>
+  <a class="btn btn-gold" href="#uji-formatif">Mulai Uji Formatif ↓</a>
+</div>
+
+<!-- ===== UJI FORMATIF ===== -->
+<section class="sec" id="uji-formatif">
+  <div class="sec-head"><span class="sec-badge">📝</span><div><div class="sec-sub">UJI FORMATIF BAB 13</div><h2 class="sec-title">Model, Pendekatan, dan Strategi Pembelajaran SKI Interaktif</h2></div></div>
+  <p><b>Materi:</b> Role Playing, Timeline Project, PBL, Discovery Learning, Keterampilan Proses, Vygotsky (ZPD & Scaffolding), serta perancangan modul ajar SKI.</p>
+  <p><b>Bagian A:</b> 25 soal pilihan ganda, skor 4 per soal.<br><b>Bagian B:</b> 5 soal essay HOTS, skor 20 per soal dan dinilai berdasarkan rubrik.</p>
+  
+  <h3>📋 Identitas Mahasiswa</h3>
+  <div class="form-grid" id="identitas">
+    <div class="field"><label>Nama Lengkap *</label><input id="fNama" type="text" placeholder="Nama lengkap"></div>
+    <div class="field"><label>NIM *</label><input id="fNim" type="text" placeholder="Nomor induk mahasiswa"></div>
+    <div class="field"><label>📅 Tanggal Ujian</label><input id="fTgl" type="date"></div>
+    <div class="field"><label>Fakultas / Institusi</label><input id="fFak" type="text" placeholder="mis. Tarbiyah — IAIN Curup"></div>
+    <div class="field"><label>Program Studi</label><input id="fProdi" type="text" placeholder="mis. PAI / SKI"></div>
+    <div class="field"><label>Semester</label>
+      <select id="fSmt"><option value="">Pilih Semester</option><option>Semester 1</option><option>Semester 2</option><option>Semester 3</option><option>Semester 4</option><option>Semester 5</option><option>Semester 6</option></select>
+    </div>
+    <div class="field"><label>Kelas</label><input id="fKls" type="text" placeholder="mis. A / B"></div>
+  </div>
+  
+  <div class="callout c-warn" style="margin-top:1.2rem">
+    <b class="tag">⚠️ Perhatian</b>
+    <p style="margin:0">Harap selesaikan semua 25 soal pilihan ganda dan 5 soal essay dengan teliti! Isi Nama Lengkap dan NIM terlebih dahulu sebelum mengerjakan.</p>
+  </div>
+  
+  <div class="scorebar">
+    <span class="item">🏆 Skor Akhir PG: <b id="sAkhir">0</b>/100</span>
+    <span class="item">📋 PG Benar: <b id="sBenar">0</b>/25</span>
+    <span class="item">✍️ Essay: <b id="sEs">0</b>/5 terjawab</span>
+  </div>
+  
+  <h3>📋 Bagian A: Pilihan Ganda</h3>
+  <div id="pgBox"></div>
+  
+  <h3>✍️ Bagian B: Essay HOTS</h3>
+  <div id="esBox"></div>
+  
+  <div class="actions">
+    <button class="btn btn-gold" id="btnSubmit">✉️ KIRIM JAWABAN &amp; LIHAT HASIL</button>
+    <a class="btn btn-dark" href="#atas">↑ Kembali ke Atas</a>
+  </div>
+  
+  <section class="result" id="hasil">
+    <h2>🎉 Ujian Selesai!</h2>
+    <p style="color:#dbe8e0;margin:.4rem 0 1rem">Selamat! Anda telah menyelesaikan Uji Formatif Bab 13.</p>
+    <div class="big" id="rBig">0 / 100</div>
+    <p id="rName" style="margin-top:.5rem;font-weight:700"></p>
+    <p style="color:#dbe8e0;font-size:.9rem">📋 Pilihan Ganda: <b id="rPG" style="color:var(--gold)"></b> · ✍️ Essay: <b id="rEs" style="color:var(--gold)"></b>.</p>
+    <div class="actions">
+      <button class="btn btn-gold" onclick="window.print()">📥 UNDUH PDF LENGKAP</button>
+      <button class="btn btn-line" id="btnTxt">📄 UNDUH SKOR (TXT)</button>
+      <button class="btn btn-line" onclick="location.reload()">🔄 MULAI ULANG</button>
+    </div>
+    <details><summary>📊 Pedoman Penskoran Essay (untuk dosen)</summary><div class="body" id="rubrikBox"></div></details>
+  </section>
+  
+  <section class="sec" id="reviewSec" style="display:none;margin-top:1.5rem">
+    <div class="sec-head"><span class="sec-badge">🔍</span><div><h2 class="sec-title">Kunci Jawaban &amp; Pembahasan Pilihan Ganda</h2><div class="sec-sub">Tampil otomatis setelah Anda mengirim jawaban</div></div></div>
+    <div id="reviewBox"></div>
+  </section>
+</section>
+
+<div class="pager">
+  <a href="12.html"><small>← Sebelumnya</small>Bab 12</a>
+  <a href="index.html" style="text-align:center"><small>Navigasi</small>Daftar Isi</a>
+  <a href="14.html" style="text-align:right"><small>Selanjutnya →</small>Bab 14</a>
+</div>
+
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><h4>SKI Madrasah</h4><p>Web-Book progresif Pembelajaran Sejarah Kebudayaan Islam di Madrasah, IAIN Curup.</p></div>
+      <div><h4>Referensi</h4><ul><li>Kepdirjen Pendis No. 9941/2025</li><li>Bahan Ajar SKI Berbasis Deep Learning — IAIN Curup</li><li>Kurikulum Madrasah — Kementerian Agama RI</li></ul></div>
+      <div><h4>Infrastruktur</h4><ul><li>Backend: Supabase</li><li>Deploy: GitHub Pages</li></ul></div>
+    </div>
+    <div class="foot-bar">© SKI Madrasah — IAIN Curup. Hak cipta dilindungi.</div>
+  </div>
+</footer>
+
+<script>
+const PG=[
+{q:`Ciri utama pembelajaran SKI interaktif adalah …`,o:[`guru menjadi satu-satunya sumber informasi`,`siswa menghafalkan sebanyak mungkin tahun`,`siswa aktif dalam penyelidikan, diskusi, interpretasi, dan komunikasi`,`penggunaan teknologi sebanyak mungkin`,`semua pembelajaran dilakukan melalui permainan`],k:2,p:`Pembelajaran interaktif menempatkan siswa sebagai pelaku aktif dalam proses belajar.`},
+{q:`Tahap pertama dalam siklus experiential learning Kolb adalah …`,o:[`Reflective Observation`,`Abstract Conceptualization`,`Active Experimentation`,`Concrete Experience`,`Generalization`],k:3,p:`Kolb merumuskan empat tahap, dengan Concrete Experience sebagai salah satu tahapan utama siklus.`},
+{q:`Setelah siswa melakukan simulasi Role Playing, kegiatan yang paling penting dilakukan adalah …`,o:[`langsung memberikan nilai`,`meminta siswa pulang`,`melakukan refleksi dan debriefing`,`mengulang pementasan tanpa diskusi`,`mengganti materi`],k:2,p:`Refleksi mengubah pengalaman menjadi pembelajaran.`},
+{q:`Jika tujuan utama pembelajaran adalah memahami urutan peristiwa, model yang sangat sesuai adalah …`,o:[`Timeline Project`,`Role Playing selalu`,`debat bebas`,`ceramah penuh`,`demonstrasi laboratorium`],k:0,p:`Timeline membantu memahami kronologi.`},
+{q:`Produk poster dalam sebuah kegiatan belum otomatis menjadikannya PBL karena …`,o:[`poster tidak boleh digunakan`,`PBL tidak membutuhkan produk`,`PBL memerlukan penyelidikan dan pertanyaan pemantik yang bermakna`,`poster hanya dapat digunakan di MI`,`PBL harus selalu menggunakan video`],k:2,p:`Produk merupakan salah satu bagian PBL, bukan definisinya secara keseluruhan.`},
+{q:`Salah satu elemen Gold Standard PBL adalah …`,o:[`hafalan`,`sustained inquiry`,`ceramah`,`ujian harian`,`penyalinan buku`],k:1,p:`Sustained inquiry merupakan salah satu dari tujuh elemen utama PBL.`},
+{q:`Discovery Learning paling sesuai apabila …`,o:[`siswa harus menerima semua kesimpulan dari guru`,`tersedia data atau sumber yang dapat dianalisis`,`tidak tersedia sumber apa pun`,`tujuan hanya menghafal`,`guru tidak ingin siswa bertanya`],k:1,p:`Discovery membutuhkan bahan yang memungkinkan siswa melakukan proses penemuan.`},
+{q:`Tahap verifikasi dalam Discovery Learning bertujuan …`,o:[`menghentikan penelitian`,`menguji hasil atau dugaan berdasarkan bukti`,`menghafalkan fakta`,`membuat kelompok baru`,`menghapus data`],k:1,p:`Verifikasi digunakan untuk memeriksa kesimpulan sementara.`},
+{q:`Konsep ZPD dikaitkan dengan teori …`,o:[`Piaget`,`Skinner`,`Vygotsky`,`Thorndike`,`Maslow`],k:2,p:`ZPD merupakan konsep penting dalam pemikiran Vygotsky.`},
+{q:`Scaffolding berarti …`,o:[`memberikan jawaban lengkap sejak awal`,`memberikan dukungan sesuai kebutuhan peserta didik`,`membiarkan siswa tanpa bantuan`,`menurunkan tujuan pembelajaran`,`mengganti siswa yang lambat`],k:1,p:`Scaffolding berupa dukungan yang membantu siswa menjalankan tugas pada tingkat yang lebih tinggi.`},
+{q:`Pertanyaan yang paling menunjukkan berpikir historis adalah …`,o:[`Siapa Sultan Agung?`,`Kapan VOC berdiri?`,`Apa nama Batavia sekarang?`,`Mengapa serangan Mataram terhadap Batavia menghadapi persoalan logistik?`,`Di mana Batavia berada?`],k:3,p:`Pertanyaan tersebut meminta analisis faktor dan hubungan sebab-akibat.`},
+{q:`Dalam penelitian sejarah, “siapa penulis sumber?” merupakan bagian dari …`,o:[`kritik sumber`,`permainan`,`generalisasi`,`Role Playing`,`presentasi`],k:0,p:`Identitas penulis penting untuk menilai konteks dan kredibilitas sumber.`},
+{q:`Kegiatan siswa menyusun kartu peristiwa berdasarkan urutan termasuk …`,o:[`Timeline Games`,`PBL murni`,`ceramah`,`eksperimen`,`demonstrasi`],k:0,p:`Menyusun kartu peristiwa adalah bagian dari Timeline Games.`},
+{q:`Dalam Role Playing, role card berguna untuk …`,o:[`menggantikan sumber sejarah`,`menentukan posisi dan informasi tokoh`,`memberikan nilai otomatis`,`menghapus diskusi`,`membatasi semua kreativitas`],k:1,p:`Role card membantu menjaga simulasi tetap sesuai konteks.`},
+{q:`Peran guru dalam PBL lebih dekat dengan …`,o:[`satu-satunya pemberi jawaban`,`fasilitator, perancang, pembimbing, dan pemberi umpan balik`,`pengamat pasif`,`pemain utama`,`penonton`],k:1,p:`PBL tetap membutuhkan pengajaran, tetapi guru berperan dalam merancang, membimbing, memberi scaffolding, dan menilai proses.`},
+{q:`Enam keterampilan proses dalam bab ini dimulai dari …`,o:[`menyimpulkan`,`mengomunikasikan`,`mengamati`,`mengevaluasi`,`mencipta`],k:2,p:`Urutan yang digunakan adalah mengamati, menanya, meneliti, menganalisis, menyimpulkan, dan mengomunikasikan.`},
+{q:`Pada tahap “menanya”, siswa seharusnya …`,o:[`menghafal semua jawaban`,`merumuskan pertanyaan yang dapat diselidiki`,`langsung menyimpulkan`,`membuat produk akhir`,`menyalin sumber`],k:1,p:`Menanya menuntut siswa merumuskan pertanyaan investigatif.`},
+{q:`Untuk siswa MI, sumber dan aktivitas historiografi sebaiknya …`,o:[`sama persis dengan MA`,`lebih sederhana dan konkret`,`selalu menggunakan jurnal internasional`,`seluruhnya berbasis debat`,`tidak menggunakan gambar`],k:1,p:`Pemilihan aktivitas perlu disesuaikan dengan perkembangan peserta didik.`},
+{q:`Untuk MA, aktivitas analisis sumber dapat dikembangkan dengan …`,o:[`satu sumber dan satu jawaban`,`beberapa sumber dan perbandingan interpretasi`,`menghilangkan kritik sumber`,`hanya memakai video`,`hanya menghafal tokoh`],k:1,p:`Siswa MA harus dilatih membandingkan dan mengkritik berbagai sumber.`},
+{q:`Dalam siklus Kolb, tahap menghasilkan konsep dari pengalaman dan refleksi adalah …`,o:[`Concrete Experience`,`Reflective Observation`,`Abstract Conceptualization`,`Active Experimentation`,`Public Product`],k:2,p:`Abstract Conceptualization adalah tahap pembentukan konsep.`},
+{q:`Kelemahan utama Role Playing tanpa refleksi adalah …`,o:[`terlalu banyak sumber`,`berpotensi berubah menjadi hiburan tanpa pemahaman historis`,`selalu terlalu sulit`,`tidak dapat dilakukan berkelompok`,`tidak dapat menggunakan tokoh sejarah`],k:1,p:`Refleksi adalah kunci agar simulasi menjadi pembelajaran.`},
+{q:`PBL seharusnya dimulai dengan …`,o:[`nilai`,`proyek dekoratif`,`pertanyaan atau masalah yang menantang`,`kesimpulan`,`ujian akhir`],k:2,p:`PBL berawal dari driving question atau masalah autentik.`},
+{q:`Fungsi utama scaffolding adalah …`,o:[`membuat siswa tergantung pada guru`,`membantu siswa mencapai kemampuan yang lebih tinggi secara bertahap`,`menghapus tantangan`,`menurunkan seluruh standar`,`mengganti pembelajaran mandiri`],k:1,p:`Scaffolding bersifat sementara dan disesuaikan dengan ZPD siswa.`},
+{q:`Pemilihan model pembelajaran seharusnya terutama mempertimbangkan …`,o:[`popularitas model`,`kemudahan guru`,`kesesuaian tujuan, materi, peserta didik, sumber, dan asesmen`,`banyaknya media`,`durasi video`],k:2,p:`Model harus disesuaikan dengan ekosistem pembelajaran secara holistik.`},
+{q:`Pernyataan paling tepat adalah …`,o:[`semua materi SKI harus menggunakan Role Playing`,`semua materi SKI harus menggunakan PBL`,`satu model paling unggul untuk semua kondisi`,`model dipilih berdasarkan kebutuhan pembelajaran`,`model tidak berkaitan dengan tujuan`],k:3,p:`Tidak ada satu model yang cocok untuk semua situasi; pemilihan harus berbasis kebutuhan.`}
+];
+
+const ES=[
+{q:`Bandingkan Role Playing dan Discovery Learning untuk materi Piagam Madinah. Jelaskan tujuan mana yang lebih cocok untuk setiap model.`,
+rub:`Penjelasan Role Playing: 5 poin; Penjelasan Discovery: 5 poin; Kesesuaian tujuan: 5 poin; Contoh aktivitas konkret: 5 poin.`,
+model:`Role Playing sesuai ketika tujuan melibatkan simulasi posisi aktor, pengambilan keputusan, empati historis, dan komunikasi (misal: mensimulasikan negosiasi antar-kelompok di Madinah). Discovery lebih sesuai ketika siswa diarahkan menemukan konsep melalui dokumen atau klausul Piagam (misal: menganalisis pasal-pasal untuk menemukan prinsip keadilan dan toleransi).`},
+{q:`Analisis hubungan antara empat tahap Kolb dengan pelaksanaan Role Playing dalam pembelajaran SKI.`,
+rub:`Concrete Experience: 5 poin; Reflective Observation: 5 poin; Abstract Conceptualization: 5 poin; Active Experimentation: 5 poin.`,
+model:`Concrete Experience → simulasi bermain peran. Reflective Observation → debriefing dan diskusi pengalaman. Abstract Conceptualization → pembentukan konsep sejarah (misal: diplomasi, konflik). Active Experimentation → penerapan konsep pada kasus sejarah lain atau konteks modern.`},
+{q:`Jelaskan bagaimana konsep ZPD dan scaffolding dapat membantu guru mengajarkan analisis sumber sejarah kepada siswa dengan kemampuan akademik yang beragam.`,
+rub:`Penjelasan ZPD: 5 poin; Bentuk scaffolding: 5 poin; Diferensiasi kemampuan: 5 poin; Pengurangan bantuan bertahap: 5 poin.`,
+model:`ZPD menjelaskan bahwa siswa dapat mencapai tingkat analisis yang lebih tinggi dengan bantuan. Scaffolding dapat berupa pemberian pertanyaan terstruktur, template analisis, atau pasangan siswa dengan kemampuan berbeda. Bantuan ini dikurangi secara bertahap (fading) saat siswa semakin mandiri.`},
+{q:`Rancang sebuah proyek PBL untuk materi “Jejak Islam di daerah saya”. Tentukan pertanyaan pemantik, sumber, tahapan penyelidikan, produk, dan kriteria asesmen.`,
+rub:`Pertanyaan pemantik: 4 poin; Sumber & tahapan: 4 poin; Produk: 4 poin; Asesmen: 4 poin; Refleksi & Revisi: 4 poin.`,
+model:`Pertanyaan: "Bagaimana sejarah Islam membentuk identitas budaya di daerah kita?" Sumber: Wawancara tokoh lokal, situs makam/masjid tua, arsip daerah. Tahapan: Riset → Observasi → Wawancara → Analisis → Draft Produk → Revisi Peer. Produk: Dokumenter mini atau Pameran Virtual. Asesmen: Kedalaman riset, kualitas argumentasi, kreativitas produk.`},
+{q:`Seorang guru menggunakan Role Playing untuk semua materi SKI. Evaluasilah keputusan tersebut dan berikan kriteria pemilihan model yang lebih tepat.`,
+rub:`Evaluasi keputusan: 5 poin; Keterbatasan Role Playing: 5 poin; Kriteria pemilihan model: 5 poin; Alternatif model: 5 poin.`,
+model:`Keputusan tersebut tidak tepat karena tidak semua materi membutuhkan simulasi peran. Role Playing lemah untuk materi yang menuntut pemahaman kronologi murni atau analisis data kuantitatif. Kriteria pemilihan harus berdasarkan: tujuan pembelajaran, karakteristik materi, profil siswa, dan ketersediaan sumber. Alternatif: Gunakan Timeline untuk kronologi, PBL untuk investigasi mendalam, Discovery untuk analisis artefak.`}
+];
+
+const H=['A','B','C','D','E'];
+const pgBox=document.getElementById('pgBox');
+const esBox=document.getElementById('esBox');
+
+PG.forEach((s,i)=>{
+  pgBox.insertAdjacentHTML('beforeend',`<div class="q-card" id="qc${i}"><div class="q-text"><span class="q-num">${i+1}</span><span>${s.q}</span></div><div class="opts">${s.o.map((o,j)=>`<label class="opt" id="op${i}-${j}"><input type="radio" name="q${i}" value="${j}"><span><b>${H[j]}.</b> ${o}</span></label>`).join('')}</div><div class="feedback" id="fb${i}"></div></div>`);
+});
+
+ES.forEach((s,i)=>{
+  esBox.insertAdjacentHTML('beforeend',`<div class="q-card"><div class="q-text"><span class="q-num">${i+1}</span><span>${s.q}</span></div><textarea class="essay" id="es${i}" placeholder="Tulis jawaban argumentatif Anda di sini..."></textarea></div>`);
+});
+
+document.getElementById('rubrikBox').innerHTML=ES.map((s,i)=>`<p><b>Soal ${i+1} — Bobot 20.</b><br><b>Rubrik:</b> ${s.rub}</p>${s.model?`<p><b>Jawaban model/contoh:</b> ${s.model}</p>`:``}`).join('');
+
+let submitted=false;
+
+document.getElementById('btnSubmit').onclick=()=>{
+  const nama=document.getElementById('fNama').value.trim();
+  const nim=document.getElementById('fNim').value.trim();
+  if(!nama||!nim){alert('⚠️ Silakan isi Nama Lengkap dan NIM terlebih dahulu.');document.getElementById('identitas').scrollIntoView({behavior:'smooth'});return;}
+  let benar=0;
+  PG.forEach((s,i)=>{
+    const pick=document.querySelector(`input[name="q${i}"]:checked`);
+    const val=pick?parseInt(pick.value):-1;
+    const fb=document.getElementById('fb'+i);
+    if(val===s.k){benar++;fb.textContent='✔ Benar';fb.className='feedback ok';document.getElementById(`op${i}-${s.k}`).classList.add('correct');}
+    else{fb.textContent=`✘ Salah — Kunci jawaban: ${H[s.k]}`;fb.className='feedback no';if(val>-1){document.getElementById(`op${i}-${val}`).classList.add('wrong');}document.getElementById(`op${i}-${s.k}`).classList.add('correct');}
+    document.querySelectorAll(`input[name="q${i}"]`).forEach(r=>r.disabled=true);
+  });
+  const skorPG=benar*4;let esTerjawab=0;
+  ES.forEach((_,i)=>{const ta=document.getElementById('es'+i);ta.disabled=true;if(ta.value.trim())esTerjawab++;});
+  document.getElementById('sAkhir').textContent=skorPG;
+  document.getElementById('sBenar').textContent=benar;
+  document.getElementById('sEs').textContent=esTerjawab;
+  document.getElementById('rBig').textContent=skorPG+' / 100';
+  document.getElementById('rName').textContent='👤 '+nama+' · NIM '+nim;
+  document.getElementById('rPG').textContent=skorPG+'/100 ('+benar+' benar dari 25)';
+  document.getElementById('rEs').textContent=esTerjawab+'/5 terjawab';
+  const rb=document.getElementById('reviewBox');rb.innerHTML='';
+  PG.forEach((s,i)=>{
+    const pick=document.querySelector(`input[name="q${i}"]:checked`);
+    const val=pick?parseInt(pick.value):-1;
+    rb.insertAdjacentHTML('beforeend',`<div class="q-card"><div class="q-text"><span class="q-num">${i+1}</span><span>${s.q}</span></div><p style="font-size:.88rem;margin-bottom:.4rem">Jawaban Anda: <b>${val>-1?H[val]:'—'}</b> · Kunci: <b>${H[s.k]}</b></p><div class="pembahasan"><b>Pembahasan:</b> ${s.p}</div></div>`);
+  });
+  document.getElementById('hasil').style.display='block';
+  document.getElementById('reviewSec').style.display='block';
+  document.getElementById('hasil').scrollIntoView({behavior:'smooth'});
+  submitted=true;
+};
+
+document.getElementById('btnTxt').onclick=()=>{
+  if(!submitted){alert('Silakan kirim jawaban terlebih dahulu.');return;}
+  const g=id=>document.getElementById(id).value||'-';
+  let t='=== HASIL UJI FORMATIF BAB 13 — SKI MADRASAH ===\n\n';
+  t+='Nama\t: '+g('fNama')+'\n';t+='NIM\t: '+g('fNim')+'\n';t+='Tanggal\t: '+g('fTgl')+'\n';
+  t+='Fakultas/Institusi\t: '+g('fFak')+'\n';t+='Prodi\t: '+g('fProdi')+'\n';t+='Semester\t: '+g('fSmt')+'\n';t+='Kelas\t: '+g('fKls')+'\n\n';
+  t+='--- BAGIAN A: PILIHAN GANDA ---\n';let benar=0;
+  PG.forEach((s,i)=>{const pick=document.querySelector(`input[name="q${i}"]:checked`);const val=pick?parseInt(pick.value):-1;const ok=val===s.k;if(ok)benar++;t+=`No ${i+1}: ${val>-1?H[val]:'-'} (kunci ${H[s.k]}) ${ok?'BENAR':'SALAH'}\n`;});
+  t+='\nSkor PG: '+(benar*4)+' / 100\n';t+='\n--- BAGIAN B: ESSAY ---\n';
+  ES.forEach((s,i)=>{t+=`\nEssay ${i+1}: ${s.q}\nJawaban:\n${document.getElementById('es'+i).value||'(kosong)'}\n`;});
+  t+='\nCatatan: Essay dinilai manual oleh dosen berdasarkan rubrik (maks 20 poin per soal).\n';
+  const blob=new Blob([t],{type:'text/plain;charset=utf-8'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='Skor-Uji-Formatif-Bab13-SKI.txt';a.click();
+};
+
+const rbar=document.getElementById('rbar');
+addEventListener('scroll',()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;rbar.style.width=p+'%';},{passive:true});
+</script>
+</body>
+</html>
