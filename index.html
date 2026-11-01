@@ -55,10 +55,10 @@
   .map-pin-label {
     background: #04281e;
     color: #f7f5ee;
-    padding: 2px 8px;
+    padding: 5px 12px;
     border-radius: 999px;
-    font-size: 11px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 700;
     white-space: nowrap;
     box-shadow: 0 2px 8px rgba(0,0,0,.15);
   }
@@ -161,7 +161,7 @@
           <div class="h-8 w-px bg-emerald-900/10"></div>
           <div><p class="font-display text-2xl font-semibold text-emerald-900">7</p><p class="text-xs text-emerald-900/60">Fase Sejarah</p></div>
           <div class="h-8 w-px bg-emerald-900/10"></div>
-          <div><p class="font-display text-2xl font-semibold text-emerald-900">87,6%</p><p class="text-xs text-emerald-900/60">Kelayakan Materi</p></div>
+          <div><p class="font-display text-2xl font-semibold text-emerald-900">90,42%</p><p class="text-xs text-emerald-900/60">Kelayakan Materi</p></div>
         </div>
       </div>
 
@@ -341,27 +341,42 @@
     "&copy; OpenStreetMap &copy; CARTO"
   ).addTo(heroMap);
 
-  const routeCities = [
-    { lat: 21.3891, lng: 39.8579, name: "Makkah" },
-    { lat: 24.5247, lng: 39.5692, name: "Madinah" },
-    { lat: 33.5138, lng: 36.2765, name: "Damaskus" },
-    { lat: 33.3152, lng: 44.3661, name: "Baghdad" },
-    { lat: 37.8882, lng: -4.7794, name: "Andalusia" },
-    { lat: 5.1810, lng: 97.1180, name: "Samudra Pasai" },
-  ];
+const routeCities = [
+  { lat: 21.3891, lng: 39.8579, name: "Makkah",        color: "#15803d" }, // hijau: kelahiran Islam
+  { lat: 24.5247, lng: 39.5692, name: "Madinah",       color: "#15803d" },
+  { lat: 33.5138, lng: 36.2765, name: "Damaskus",      color: "#1d4ed8" }, // biru: dinasti klasik
+  { lat: 33.3152, lng: 44.3661, name: "Baghdad",       color: "#1d4ed8" },
+  { lat: 37.8882, lng: -4.7794, name: "Andalusia",     color: "#7e22ce" }, // ungu: Eropa
+  { lat: 5.1810,  lng: 97.1180, name: "Samudra Pasai", color: "#c2410c" }, // oranye tua: Nusantara
+];
 
-  L.polyline(
-    [routeCities[4], routeCities[2], routeCities[3], routeCities[0], routeCities[1], routeCities[5]].map((c) => [c.lat, c.lng]),
-    { color: "#c9a227", weight: 2.5, dashArray: "7 6", opacity: 0.85 }
-  ).addTo(heroMap);
+L.polyline(
+  [routeCities[4], routeCities[2], routeCities[3], routeCities[0], routeCities[1], routeCities[5]].map((c) => [c.lat, c.lng]),
+  { color: "#7c2d12", weight: 4, dashArray: "10 8", opacity: 0.9 }
+).addTo(heroMap);
 
-  routeCities.forEach((c) => {
-    L.circleMarker([c.lat, c.lng], {
-      radius: 6, color: "#f7f5ee", weight: 2, fillColor: "#d9b95a", fillOpacity: 1,
-    }).addTo(heroMap).bindTooltip(c.name, {
-      permanent: true, direction: "top", offset: [0, -6], className: "map-pin-label",
-    });
+routeCities.forEach((c) => {
+  L.circleMarker([c.lat, c.lng], {
+    radius: 9, color: "#ffffff", weight: 3, fillColor: c.color, fillOpacity: 1,
+  }).addTo(heroMap).bindTooltip(c.name, {
+    permanent: true, direction: "top", offset: [0, -8], className: "map-pin-label",
   });
+});
+
+// Legenda warna
+const legend = L.control({ position: "bottomleft" });
+legend.onAdd = function () {
+  const div = L.DomUtil.create("div");
+  div.style.cssText = "background:#fff;padding:10px 12px;border-radius:10px;font-size:14px;line-height:1.7;box-shadow:0 2px 8px rgba(0,0,0,.2)";
+  div.innerHTML =
+    '<b>Keterangan</b><br>' +
+    '<span style="color:#15803d">●</span> Kelahiran Islam<br>' +
+    '<span style="color:#1d4ed8">●</span> Dinasti klasik<br>' +
+    '<span style="color:#7e22ce">●</span> Andalusia<br>' +
+    '<span style="color:#c2410c">●</span> Nusantara';
+  return div;
+};
+legend.addTo(heroMap);
 
   // ---------- Peta mini di modal: pindah otomatis ke lokasi bab yang dibuka ----------
   let modalMap = null;
