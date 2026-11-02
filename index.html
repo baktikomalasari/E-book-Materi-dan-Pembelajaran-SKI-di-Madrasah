@@ -139,7 +139,7 @@
 
         <h1 class="mt-6 font-display text-4xl font-semibold leading-[1.12] text-emerald-950 sm:text-5xl lg:text-[3.4rem]">
           Susuri jejak peradaban Islam,<br class="hidden sm:block" />
-          dari Makkah hingga Nusantara.
+          dari Makkah hingga Nusantara
         </h1>
 
         <p class="mt-6 max-w-md text-base leading-relaxed text-emerald-900/80 sm:text-[1.05rem]">
@@ -322,7 +322,7 @@
     { label: "Umayyah & Abbasiyah", range: "661–1258 M" },
     { label: "Ayyubiyah, Mamluk & Salib", range: "1171–1517 M" },
     { label: "Tiga Kerajaan Besar", range: "1500–1800 M" },
-    { label: "Islam di Nusantara", range: "Abad ke-13 M –" },
+    { label: "Islam di Nusantara", range: "Abad ke-13 M" },
   ];
 
   // ---------- Peta hero: rute penyebaran Islam (Leaflet + tile CARTO) ----------
@@ -529,19 +529,6 @@ function closeChapter() {
 document.getElementById("menuBtn").addEventListener("click", () => {
   document.getElementById("mobileMenu").classList.toggle("hidden");
 });
-  function openLocationPreview(id) {
-  const c = chapters.find((x) => x.id === id);
-  document.getElementById("modalContent").innerHTML = `
-    <p class="text-sm font-semibold uppercase tracking-wide text-[#7a5f0d]">Bab ${c.id} | ${c.phase}</p>
-    <h3 class="mt-2 pr-10 font-display text-xl font-semibold text-emerald-950">${c.title}</h3>
-    <div id="modalMap" class="mt-5 h-72 w-full overflow-hidden rounded-2xl border border-emerald-900/10"></div>
-    <p class="mt-3 text-base text-emerald-900">Lokasi: ${c.loc.name}</p>
-    <a href="${c.id}.html" class="mt-5 block rounded-lg bg-emerald-800 py-3 text-center text-base font-semibold text-sand hover:bg-emerald-700">Baca Bab ${c.id}</a>`;
-  const m = document.getElementById("chapterModal");
-  m.classList.remove("pointer-events-none", "opacity-0");
-  m.querySelector(".modal-panel").classList.remove("translate-y-6", "opacity-0");
-  renderModalMap(c);
-}
 
 function closeChapter() {
   const m = document.getElementById("chapterModal");
@@ -553,11 +540,7 @@ function closeChapter() {
 document.getElementById("menuBtn").addEventListener("click", () => {
   document.getElementById("mobileMenu").classList.toggle("hidden");
 });
-  document.getElementById("year").textContent = new Date().getFullYear();
-
-  lucide.createIcons();
-
-  document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
 
   lucide.createIcons();
 </script>
