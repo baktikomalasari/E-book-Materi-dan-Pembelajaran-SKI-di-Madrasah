@@ -1,0 +1,33 @@
+/* revisi.css: perbaikan berdasarkan validasi ahli media */
+:root{ --muted:#3f4d48; --gold-d:#7a5f0d; }
+body{ font-size:17px; }
+
+/* Peta Konsep: huruf besar, warna berbeda tiap kartu */
+.map-card{ border-top-width:6px; }
+.map-card b{ font-size:1.15rem; }
+.map-card li{ font-size:1.05rem; color:var(--ink); margin-bottom:.3rem; }
+.map-card:nth-child(8n+1){ border-top-color:#15803d; background:#eefaf2; }
+.map-card:nth-child(8n+2){ border-top-color:#1d4ed8; background:#eef3ff; }
+.map-card:nth-child(8n+3){ border-top-color:#7e22ce; background:#f6eefe; }
+.map-card:nth-child(8n+4){ border-top-color:#c2410c; background:#fff2e8; }
+.map-card:nth-child(8n+5){ border-top-color:#0e7490; background:#eaf8fb; }
+.map-card:nth-child(8n+6){ border-top-color:#be123c; background:#fff0f3; }
+.map-card:nth-child(8n+7){ border-top-color:#854d0e; background:#fff8e1; }
+.map-card:nth-child(8n+8){ border-top-color:#475569; background:#f1f5f9; }
+
+/* Diagram alur, tabel, label, kuis */
+.flow .step{ font-size:1rem; padding:.5rem 1rem; }
+.tbl{ font-size:1rem; }
+.chip{ font-size:.95rem; }
+.sec-sub{ font-size:.95rem; }
+.opt{ font-size:1.02rem; }
+.feedback{ font-size:.95rem; }
+.pembahasan{ font-size:1rem; }
+details .body{ font-size:1rem; }
+.callout{ font-size:1.02rem; }
+.footer p,.footer li{ font-size:1rem; }
+.innav a{ font-size:.92rem; }
+.ch-meta span{ font-size:.9rem; }
+.crumbs{ font-size:.95rem; }
+.pager small{ font-size:.85rem; }
+.map-note{ font-size:1rem; color:var(--ink); margin:0 0 1rem; }
