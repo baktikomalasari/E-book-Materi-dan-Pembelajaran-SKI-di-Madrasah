@@ -342,26 +342,29 @@
   ).addTo(heroMap);
 
 const routeCities = [
-  { lat: 21.3891, lng: 39.8579, name: "Makkah",        color: "#15803d" }, // hijau: kelahiran Islam
-  { lat: 24.5247, lng: 39.5692, name: "Madinah",       color: "#15803d" },
-  { lat: 33.5138, lng: 36.2765, name: "Damaskus",      color: "#1d4ed8" }, // biru: dinasti klasik
-  { lat: 33.3152, lng: 44.3661, name: "Baghdad",       color: "#1d4ed8" },
-  { lat: 37.8882, lng: -4.7794, name: "Andalusia",     color: "#7e22ce" }, // ungu: Eropa
-  { lat: 5.1810,  lng: 97.1180, name: "Samudra Pasai", color: "#c2410c" }, // oranye tua: Nusantara
+  { lat: 21.3891, lng: 39.8579, name: "Makkah",        color: "#15803d", dir: "bottom" },
+  { lat: 24.5247, lng: 39.5692, name: "Madinah",       color: "#15803d", dir: "top" },
+  { lat: 33.5138, lng: 36.2765, name: "Damaskus",      color: "#1d4ed8", dir: "left" },
+  { lat: 33.3152, lng: 44.3661, name: "Baghdad",       color: "#1d4ed8", dir: "right" },
+  { lat: 37.8882, lng: -4.7794, name: "Andalusia",     color: "#7e22ce", dir: "top" },
+  { lat: 5.1810,  lng: 97.1180, name: "Samudra Pasai", color: "#c2410c", dir: "top" },
 ];
+const OFFSET = { top: [0, -10], bottom: [0, 10], left: [-10, 0], right: [10, 0] };
 
-L.polyline(
-  [routeCities[4], routeCities[2], routeCities[3], routeCities[0], routeCities[1], routeCities[5]].map((c) => [c.lat, c.lng]),
-  { color: "#7c2d12", weight: 4, dashArray: "10 8", opacity: 0.9 }
-).addTo(heroMap);
+const gayaGaris = { color: "#7c2d12", weight: 4, dashArray: "10 8", opacity: 0.9 };
+[[0, 1, 2, 3], [2, 4], [0, 5]].forEach((jalur) => {
+  L.polyline(jalur.map((i) => [routeCities[i].lat, routeCities[i].lng]), gayaGaris).addTo(heroMap);
+});
 
 routeCities.forEach((c) => {
   L.circleMarker([c.lat, c.lng], {
     radius: 9, color: "#ffffff", weight: 3, fillColor: c.color, fillOpacity: 1,
   }).addTo(heroMap).bindTooltip(c.name, {
-    permanent: true, direction: "top", offset: [0, -8], className: "map-pin-label",
+    permanent: true, direction: c.dir, offset: OFFSET[c.dir], className: "map-pin-label",
   });
 });
+
+heroMap.fitBounds(routeCities.map((c) => [c.lat, c.lng]), { padding: [60, 60] });
 
 // Legenda warna
 const legend = L.control({ position: "bottomleft" });
@@ -502,7 +505,31 @@ legend.addTo(heroMap);
     renderChapterGrid();
   }
   applyRealProgress();
+function openLocationPreview(id) {
+  const c = chapters.find((x) => x.id === id);
+  document.getElementById("modalContent").innerHTML = `
+    <p class="text-sm font-semibold uppercase tracking-wide text-[#7a5f0d]">Bab ${c.id} | ${c.phase}</p>
+    <h3 class="mt-2 pr-10 font-display text-xl font-semibold text-emerald-950">${c.title}</h3>
+    <div id="modalMap" class="mt-5 h-72 w-full overflow-hidden rounded-2xl border border-emerald-900/10"></div>
+    <p class="mt-3 text-base text-emerald-900">Lokasi: ${c.loc.name}</p>
+    <a href="${c.id}.html" class="mt-5 block rounded-lg bg-emerald-800 py-3 text-center text-base font-semibold text-sand hover:bg-emerald-700">Baca Bab ${c.id}</a>`;
+  const m = document.getElementById("chapterModal");
+  m.classList.remove("pointer-events-none", "opacity-0");
+  m.querySelector(".modal-panel").classList.remove("translate-y-6", "opacity-0");
+  renderModalMap(c);
+}
 
+function closeChapter() {
+  const m = document.getElementById("chapterModal");
+  m.classList.add("pointer-events-none", "opacity-0");
+  m.querySelector(".modal-panel").classList.add("translate-y-6", "opacity-0");
+  if (modalMap) { modalMap.remove(); modalMap = null; }
+}
+
+document.getElementById("menuBtn").addEventListener("click", () => {
+  document.getElementById("mobileMenu").classList.toggle("hidden");
+});
+  
   document.getElementById("year").textContent = new Date().getFullYear();
 
   lucide.createIcons();
